@@ -4,6 +4,7 @@
    contain the root `toctree` directive.
 
 .. raw:: html
+
 <font color="red">text</font>
 
 
