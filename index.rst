@@ -17,6 +17,13 @@ Our mission is to build core support and intellectual leadership in the area of 
 
 .. seealso:: This is a simple **seealso** note. Other inline directive may be included (e.g., math :math:`\alpha`) but not al of them.
 
+.. csv-table:: a title
+   :header: "first header", "second header", "third header"
+   :widths: 20, 20, 10
+
+   "item 1", "item 2", 3
+   "item 4", "item 5", 5
+
 .. toctree::
    :maxdepth: 2
    
