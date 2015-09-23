@@ -3,10 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. role:: red
+.. raw:: html
+<font color="red">text</font>
 
-.. container:: red
-sdaksjdkajda
 
 MCIC Computational Biology Lab (MCBL)
 ===========================================
