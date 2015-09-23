@@ -5,7 +5,9 @@
 
 .. role:: red
 
-:red: MCIC Computational Biology Lab (MCBL)
+.. container:: red
+
+MCIC Computational Biology Lab (MCBL)
 ===========================================
 
 
