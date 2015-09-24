@@ -30,7 +30,8 @@ MCBL Services
    :header: "NGS Data Analysis", "Workshops & Training", "Next Generation Sequencing"
    :widths: 20, 20, 20
 
-   "* We will discuss an initial plan to carry out the analysis\n* We will discuss MCIC proposed workflow that you may not aware in your analysis", "item 2", 3
+   * Large sequencing data set handling
+   * Quality control, "item 2", 3
    "", "item 5", 5
    "* We will discuss custom tools need to be installed", "item 2", 3
    "* We will discuss what outputs and the format of the outputs need to be delivered at the end", "item 5", 5
