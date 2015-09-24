@@ -6,8 +6,8 @@
    contain the root `toctree` directive.
 
 
-MCIC Computational Biology Lab (MCBL)
-===========================================
+MCIC Computational Biology Lab
+==============================
 
 
 
