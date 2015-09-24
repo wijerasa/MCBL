@@ -6,7 +6,7 @@
    contain the root `toctree` directive.
 
 
-.. image:: _static/Logo.png MCIC Computational Biology Lab
+.. figure:: _static/Logo.png MCIC Computational Biology Lab
 							==============================
 
 
