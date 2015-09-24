@@ -1,4 +1,5 @@
 
+.. _index
 
 .. MCBL documentation master file, created by
    sphinx-quickstart on Wed Sep 23 17:00:18 2015.
@@ -30,6 +31,26 @@ Our mission is to build core support and intellectual leadership in the area of 
 
    "item 1", "item 2", 3
    "item 4", "item 5", 5
+
+:tocdepth: 3
+
+*******************************
+:mod:`reST` -- reStructuredText
+*******************************
+
+.. module:: reST
+   :synopsis: reStructuredText Memo
+.. moduleauthor:: Marc Zonzon <marc.zonzon@gmail.com>
+
+.. highlight:: rest
+
+A simple markup language for plain text files.
+
+Structural elements
+===================
+
+.. index::
+   single: emacs; mode
 
 .. toctree::
    :maxdepth: 2
