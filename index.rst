@@ -30,8 +30,8 @@ MCBL Services
    :header: "NGS Data Analysis", "Workshops & Training", "Next Generation Sequencing"
    :widths: 20, 20, 20
 
-   * Large sequencing data set handling
-   * Quality control, "item 2", 3
+   "* Large sequencing data set handling
+   * Quality control", "item 2", 3
    "", "item 5", 5
    "* We will discuss custom tools need to be installed", "item 2", 3
    "* We will discuss what outputs and the format of the outputs need to be delivered at the end", "item 5", 5
