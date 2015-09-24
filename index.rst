@@ -7,6 +7,7 @@
 
 
 .. figure:: Logo.jpg
+   :align: right
 
 
 MCIC Computational Biology Lab
