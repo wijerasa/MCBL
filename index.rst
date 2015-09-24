@@ -9,7 +9,7 @@
 .. figure:: Logo.jpg
    :align: right
 
- :tocdepth: 3
+
 
 **********************************************
 MCIC Computational Biology Lab
