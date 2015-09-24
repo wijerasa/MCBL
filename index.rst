@@ -23,19 +23,21 @@ Our mission is to build core support and intellectual leadership in the area of 
 
 
 
-.. seealso:: This is a simple **seealso** note. Other inline directive may be included (e.g., math :math:`\alpha`) but not al of them.
+MCBL Services
+-------------
 
-.. csv-table:: a title
-   :header: "first header", "second header", "third header"
-   :widths: 20, 20, 10
+.. csv-table:: Some of the services we provide
+   :header: "NGS Data Analysis", "Workshops & Training", "Next Generation Sequencing"
+   :widths: 20, 20, 20
 
-   "item 1", "item 2", 3
-   "item 4", "item 5", 5
+   "* We will discuss an initial plan to carry out the analysis", "item 2", 3
+   "* We will discuss MCIC proposed workflow that you may not aware in your analysis", "item 5", 5
+   "* We will discuss custom tools need to be installed", "item 2", 3
+   "* We will discuss what outputs and the format of the outputs need to be delivered at the end", "item 5", 5
 
 
 
-Structural elements
-===================
+
 
 
 .. toctree::
