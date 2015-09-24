@@ -3,9 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. raw:: html
 
-<font color="red">text</font>
 
 
 MCIC Computational Biology Lab (MCBL)
