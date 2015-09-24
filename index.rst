@@ -12,7 +12,7 @@
 :tocdepth: 3
 
 **********************************************
-:mod:`reST` -- MCIC Computational Biology Lab
+:mod: MCIC Computational Biology Lab
 **********************************************
 
 .. module:: reST
