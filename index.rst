@@ -1,4 +1,4 @@
-.. _index:
+
 
 .. MCBL documentation master file, created by
    sphinx-quickstart on Wed Sep 23 17:00:18 2015.
@@ -9,9 +9,12 @@
 .. figure:: Logo.jpg
    :align: right
 
+:tocdepth: 3
 
-MCIC Computational Biology Lab
-==============================
+**********************************************
+:mod:`reST` -- MCIC Computational Biology Lab
+**********************************************
+
 
 
 
@@ -33,10 +36,6 @@ Our mission is to build core support and intellectual leadership in the area of 
 .. toctree::
    :maxdepth: 2
    
-
-   intro
-   chapter1
-   chapter2
 
 
 
