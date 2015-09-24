@@ -8,7 +8,8 @@
 
 .. figure:: Logo.jpg
 
- MCIC Computational Biology Lab
+
+MCIC Computational Biology Lab
 ==============================
 
 
