@@ -15,6 +15,9 @@
 :mod:`reST` -- MCIC Computational Biology Lab
 **********************************************
 
+.. module:: reST
+   :synopsis: reStructuredText Memo
+.. moduleauthor:: Marc Zonzon <marc.zonzon@gmail.com>
 
 
 
