@@ -11,7 +11,7 @@
 MCIC Computational Biology Lab (MCBL)
 ===========================================
 
-- **textcolor** (CSS color): Body text color.
+
 
 Our Goal
 ---------
