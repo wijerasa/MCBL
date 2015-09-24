@@ -30,35 +30,13 @@ MCBL Services
    :header: "NGS Data Analysis", "Workshops & Training", "Next Generation Sequencing"
    :widths: 20, 20, 20
 
-   "* Large sequencing data set handling
-   * Quality control", "item 2", 3
+   "* Handling large data sets
+   * Quality control
+   * Using standard and custome scripts to do data analysis
+   * Big servers for data MCBL users", "item 2", 3
    "", "item 5", 5
    "* We will discuss custom tools need to be installed", "item 2", 3
    "* We will discuss what outputs and the format of the outputs need to be delivered at the end", "item 5", 5
-
-
-.. list-table:: Weather forecast
-   :header-rows: 1
-   :widths: 7 7 7 7 60
-   :stub-columns: 1
-
-   *  -  Day
-      -  Min Temp
-      -  Max Temp
-      -
-      -  Summary
-   *  -  Monday
-      -  11C
-      -  22C
-      -  .. image:: _static/sunny.svg
-            :width: 30
-
-      -  A clear day with lots of sunshine.
-         However, the strong breeze will bring
-         down the temperatures.
-   *  -  Tuesday
-   ...........
-
 
 
 .. toctree::
