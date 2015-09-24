@@ -9,15 +9,12 @@
 .. figure:: Logo.jpg
    :align: right
 
-:tocdepth: 3
+ :tocdepth: 3
 
 **********************************************
-:mod: MCIC Computational Biology Lab
+MCIC Computational Biology Lab
 **********************************************
 
-.. module:: reST
-   :synopsis: reStructuredText Memo
-.. moduleauthor:: Marc Zonzon <marc.zonzon@gmail.com>
 
 
 
