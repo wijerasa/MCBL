@@ -109,7 +109,6 @@ html_theme = 'alabaster'
 
 html_theme_options = {
     "rightsidebar": "true",
-    "relbarbgcolor": "black",
     "collapsiblesidebar" : "true"
 }
 
