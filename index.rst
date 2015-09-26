@@ -27,8 +27,8 @@ MCBL Services
 -------------
 
 .. csv-table::
-   :header: "NGS Data Analysis", ""
-   :widths: 20, 20, 20
+   :header: "NGS Data Analysis", "Contact"
+   :widths: 20, 20
 
    "* Handling large data sets
    * Quality control
