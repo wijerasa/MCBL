@@ -33,7 +33,19 @@ MCBL Services
    "* Handling large data sets
    * Quality control
    * Using standard and custome scripts to do data analysis
-   * Big servers for data MCBL users", "Workshops & Training"
+   * Using Big Standalone servers", "Workshops & Training"
+   "", "item 5"
+   "* We will discuss custom tools need to be installed", "Next Generation Sequencing"
+   "* We will discuss what outputs and the format of the outputs need to be delivered at the end", 5
+
+.. csv-table::
+   :header: "Workshops & Training", "Contact"
+   :widths: 20, 20
+
+   "* Training on various NGS data analysis;
+   * Training Linux enviornment and shell scripting 
+   * Training 
+   * Using Big Standalone servers", "Workshops & Training"
    "", "item 5"
    "* We will discuss custom tools need to be installed", "Next Generation Sequencing"
    "* We will discuss what outputs and the format of the outputs need to be delivered at the end", 5
