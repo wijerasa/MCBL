@@ -58,6 +58,8 @@ MCBL Services
    
 .. seealso::
    `MCIC main webpage for more details <http://mcic.osu.edu/>`_
+   .. figure:: OSU.png
+      :align: left
    
 
 .. toctree::
@@ -65,8 +67,7 @@ MCBL Services
    
 
 
-.. figure:: OSU.png
-   :align: left
+
 
 .. OSU/OARDC,  Selby Hall (map)
 .. 1680 Madison Avenue
