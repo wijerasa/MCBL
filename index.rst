@@ -62,7 +62,8 @@ MCBL Services
 
 .. figure:: OSU.png
    :align: right
-   :alt: OSU/OARDC,Selby Hall (map)
+   :alt: OSU/OARDC Selby Hall
+
    
 
 .. toctree::
