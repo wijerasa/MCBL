@@ -63,9 +63,8 @@ MCBL Services
 .. figure:: OSU.png
    :align: right
    :height: 50px
-
-.. topic::
-
+   :figclass: align-center
+   
    OSU/OARDC Selby Hall
    1680 Madison Avenue
    Wooster OH 44691
