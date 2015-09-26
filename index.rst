@@ -59,16 +59,17 @@ MCBL Services
 .. seealso::
    `MCIC main webpage for more details <http://mcic.osu.edu/>`_
       
-
-.. figure:: OSU.png
+.. |logo| image:: OSU.png
    :align: right
    :height: 50px
 
-      OSU/OARDC Selby Hall
-      1680 Madison Avenue
-      Wooster OH 44691
-      Phone: 330-263-3828
-      Fax: 330-202-3563 201
++---------+
+| |logo|  |
+|OSU/OARDC Selby Hall 1680 Madison AvenueWooster OH 44691Phone: 330-263-382 Fax: 330-202-3563 201 |
++---------+
+   
+
+      
 
    
 
