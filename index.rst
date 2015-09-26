@@ -65,7 +65,6 @@ MCBL Services
 
 +---------+
 | |logo|  |
-|OSU/OARDC Selby Hall 1680 Madison AvenueWooster OH 44691Phone: 330-263-382 Fax: 330-202-3563 201 |
 +---------+
    
 
