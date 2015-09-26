@@ -26,17 +26,17 @@ Our mission is to build core support and intellectual leadership in the area of 
 MCBL Services
 -------------
 
-.. csv-table:: Some of the services we provide
-   :header: "NGS Data Analysis", "Workshops & Training", "Next Generation Sequencing"
+.. csv-table::
+   :header: "NGS Data Analysis", ""
    :widths: 20, 20, 20
 
    "* Handling large data sets
    * Quality control
    * Using standard and custome scripts to do data analysis
-   * Big servers for data MCBL users", "item 2", 3
-   "", "item 5", 5
-   "* We will discuss custom tools need to be installed", "item 2", 3
-   "* We will discuss what outputs and the format of the outputs need to be delivered at the end", "item 5", 5
+   * Big servers for data MCBL users", "Workshops & Training"
+   "", "item 5"
+   "* We will discuss custom tools need to be installed", "Next Generation Sequencing"
+   "* We will discuss what outputs and the format of the outputs need to be delivered at the end", 5
 
 
 .. toctree::
