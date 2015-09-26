@@ -65,11 +65,5 @@ MCBL Services
    
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+.. figure:: OSU.png
+   :align: left
