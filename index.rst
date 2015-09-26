@@ -56,7 +56,8 @@ MCBL Services
    * Dr. Fiorella Cisneros Carter
    * Maria Elena Hernandez-Gonzalez"
    
-   
+.. seealso::
+   `MCIC main webpage for more details <http://mcic.osu.edu/>`_
    
 
 .. toctree::
