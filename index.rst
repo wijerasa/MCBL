@@ -33,23 +33,19 @@ MCBL Services
    "* Handling large data sets
    * Quality control
    * Using standard and custome scripts to do data analysis
-   * Using Big Standalone servers", "Workshops & Training"
-   "", "item 5"
-   "* We will discuss custom tools need to be installed", "Next Generation Sequencing"
-   "* We will discuss what outputs and the format of the outputs need to be delivered at the end", 5
+   * Using Big Standalone servers", " *Dr. Asela Wijeratne
+   * Saranga Wijeratne"
 
 .. csv-table::
    :header: "Workshops & Training", "Contact"
    :widths: 20, 20
 
    "* Training on various NGS data analysis;
-   * Training Linux enviornment and shell scripting 
-   * Training 
-   * Using Big Standalone servers", "Workshops & Training"
-   "", "item 5"
-   "* We will discuss custom tools need to be installed", "Next Generation Sequencing"
-   "* We will discuss what outputs and the format of the outputs need to be delivered at the end", 5
-
+   * Training on Linux enviornment and shell scripting 
+   * Training on Amazon Web Services and OSC, " *Dr. Asela Wijeratne
+   * Saranga Wijeratne"
+   
+   
 
 .. toctree::
    :maxdepth: 2
