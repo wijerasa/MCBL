@@ -58,6 +58,7 @@ MCBL Services
    
 .. seealso::
    `MCIC main webpage for more details <http://mcic.osu.edu/>`_
+   
    .. figure:: OSU.png
       :align: left
    
