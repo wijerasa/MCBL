@@ -27,7 +27,7 @@ MCBL Services
 -------------
 
 .. csv-table::
-   :header: "NGS Data Analysis", "Contact"
+   :header: "NGS Data Analysis", "Contacts"
    :widths: 20, 20
 
    "* Handling large data sets
@@ -37,13 +37,25 @@ MCBL Services
    * Saranga Wijeratne"
 
 .. csv-table::
-   :header: "Workshops & Training", "Contact"
+   :header: "Workshops & Training", "Contacts"
    :widths: 20, 20
 
    "* Training on various NGS data analysis
    * Training on Linux enviornment and shell scripting 
-   * Training on Amazon Web Services and OSC", " *Dr. Asela Wijeratne
+   * Training on Amazon Web Services and OSC", "* Dr. Asela Wijeratne
    * Saranga Wijeratne"
+
+.. csv-table::
+   :header: "Next Generation Sequencing", "Contacts"
+   :widths: 20, 20
+
+   "* High-troughput sequencing using the Illumina Miseq platform
+   * Low-throughput (Sanger) sequencing using the ABI PRISM 3100xl genetic analyzer system 
+   * Genotyping using the Beckman Genetic Analysis System CEQ 8800 for fragment analysis
+   * Luminex 200 System Analyzer or the Illumina BeadXpress System for SNP analysis", "* Dr. Tea Meulia
+   * Dr. Fiorella Cisneros Carter
+   * Maria Elena Hernandez-Gonzalez"
+   
    
    
 
