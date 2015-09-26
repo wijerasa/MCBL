@@ -33,14 +33,14 @@ MCBL Services
    "* Handling large data sets
    * Quality control
    * Using standard and custome scripts to do data analysis
-   * Using Big Standalone servers", " *Dr. Asela Wijeratne
+   * Using Big Standalone servers", " * Dr. Asela Wijeratne
    * Saranga Wijeratne"
 
 .. csv-table::
    :header: "Workshops & Training", "Contact"
    :widths: 20, 20
 
-   "* Training on various NGS data analysis;
+   "* Training on various NGS data analysis
    * Training on Linux enviornment and shell scripting 
    * Training on Amazon Web Services and OSC, " *Dr. Asela Wijeratne
    * Saranga Wijeratne"
