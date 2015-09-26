@@ -62,8 +62,7 @@ MCBL Services
 
 .. figure:: OSU.png
    :align: right
-   :width: 50px
-   :figclass: align-right
+   :height: 50px
 
 
 .. sidebar::
