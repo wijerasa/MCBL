@@ -18,9 +18,20 @@ We are happy to help you to carry out your own analysis. This will include helpi
 
 How to Apply to MCBL Membership
 --------------------------------
-:Step 1: Fill and submit complete MCBL application form: `MCBL Application <http://www.oardc.ohio-state.edu/mcic/MCBL_registration/mcbl_registration.html>`_
+:Step 1: Fill and submit complete MCBL application form: `MCBL Application <http://www.oardc.ohio-state.edu/mcic/MCBL_registration/mcbl_registration.html>`_.
 :Step 2: Submit your membership fee to MCIC.
-:Step 3: Contact `MCBL adminstrator, Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ for login credentials
+:Step 3: Contact `MCBL adminstrator (Saranga Wijeratne) <mailto:wijeratne.3@osu.edu>`_ for login credentials.
 
-.. Note:: Access to the MCBL, to computer and software resources will not be granted till we receive the payment. Once the form is completed and submitted a notification e-mail will be sent to the membership applicant and the PI.
+.. Note:: Access to the MCBL, to the computers and software resources will not be granted till we receive the payment. Once the form is completed and submitted a notification e-mail will be sent to the membership applicant and the PI.
+
+MCBL Membership Benefits
+------------------------
+
+- Access to MCBL and most powerful `MCBL computers <http>`_  24/7.
+- Free access to MCBL Workshops and Bioinformatic user group meetings.
+- Access to 1 TB data storage space for the duraton of the membership.
+- 
+
+MCBL Membership termination
+----------------------------
 
