@@ -1,4 +1,4 @@
-.. index
+:tocdepth: 3
 
 .. MCBL documentation master file, created by
    sphinx-quickstart on Wed Sep 23 17:00:18 2015.
