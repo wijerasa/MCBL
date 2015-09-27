@@ -4,6 +4,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. module:: mcbl
+   :synopsis: Documentation of reStructuredText and Sphinx
+.. moduleauthor:: Marc Zonzon <marc.zonzon@gmail.com>
+
+.. highlight:: rest
 
 .. figure:: Logo.png
    :align: right

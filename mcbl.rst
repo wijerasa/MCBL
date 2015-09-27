@@ -1,11 +1,15 @@
 
-:tocdepth: 3
 
 .. MCBL documentation master file, created by
    sphinx-quickstart on Wed Sep 23 17:00:18 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. module:: reST
+   :synopsis: reStructuredText Memo
+.. moduleauthor:: Marc Zonzon <marc.zonzon@gmail.com>
+
+.. highlight:: rest
 
 .. figure:: Logo.png
    :align: right
