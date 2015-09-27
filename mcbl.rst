@@ -29,7 +29,7 @@ MCBL Services
 
 .. csv-table::
    :header: "NGS Data Analysis", "Contacts"
-   :widths: 20, 20
+   :widths: 40, 10
 
    "* Handling large data sets
    * Quality control
@@ -39,7 +39,7 @@ MCBL Services
 
 .. csv-table::
    :header: "Workshops & Training", "Contacts"
-   :widths: 20, 20
+   :widths: 40, 10
 
    "* Training on various NGS data analysis
    * Training on Linux enviornment and shell scripting 
@@ -50,7 +50,7 @@ MCBL Services
    :widths: 15 10 30
    :header-rows: 1
 
-   * - Treat
+   * - "* Treat * add"
      - Quantity
      - Description
    * - Albatross
