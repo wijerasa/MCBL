@@ -51,8 +51,6 @@ MCBL Services
    :header-rows: 1
    * - Next Generation Sequencing
      - Contacts
-   - * High-troughput sequencing using the Illumina Miseq platform * Low-throughput (Sanger) sequencing using the ABI PRISM 3100xl genetic analyzer system * Genotyping using the Beckman Genetic Analysis System CEQ 8800 for fragment analysis * Luminex 200 System Analyzer or the Illumina BeadXpress System for SNP analysis 
-   - * Dr. Tea Meulia * Dr. Fiorella Cisneros Carter * Maria Elena Hernandez-Gonzalez"
    
 .. seealso::
    `MCIC main webpage for more details <http://mcic.osu.edu/>`_
