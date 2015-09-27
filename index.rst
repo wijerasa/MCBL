@@ -1,5 +1,3 @@
-.. _index
-
 .. MCBL documentation master file, created by
    sphinx-quickstart on Wed Sep 23 17:00:18 2015.
    You can adapt this file completely to your liking, but it should at least
@@ -13,11 +11,6 @@
 MCIC Computational Biology Lab
 **********************************************
 
-.. module:: mcbl
-   :synopsis: Documentations for MCBL
-.. moduleauthor:: Saranga Wijeratne <wijeratne.3@osu.edu>
-
-.. highlight:: rest
 
 Contents:
 
@@ -38,7 +31,6 @@ Indices and tables
 .. figure:: OSU.png
    :align: right
    :height: 50px
-   :width: 100px
-   :figclass: align-center
+   :width: 500px
    
    **OSU/OARDC Selby Hall 1680 Madison Avenue Wooster OH 44691 Phone: 330-263-3828  Fax: 330-202-3563 201**
