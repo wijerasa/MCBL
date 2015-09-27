@@ -50,10 +50,10 @@ MCBL Services
    :header: "Next Generation Sequencing", "Contacts"
    :widths: 40, 10
 
-   "* High-troughput sequencing using the Illumina Miseq platform
-   * Low-throughput (Sanger) sequencing using the ABI PRISM 3100xl genetic analyzer system 
-   * Genotyping using the Beckman Genetic Analysis System CEQ 8800 for fragment analysis
-   * Luminex 200 System Analyzer or the Illumina BeadXpress System for SNP analysis", "* Dr. Tea Meulia
+   "* High-troughput sequencing(Illumina Miseq platform)
+   * Low-throughput (Sanger) sequencing (ABI PRISM 3100xl) 
+   * Genotyping Beckman Genetic Analysis System CEQ 8800 for fragment analysis
+   * Luminex 200, Illumina BeadXpress System for SNP analysis", "* Dr. Tea Meulia
    * Dr. Fiorella Cisneros Carter
    * Maria Elena Hernandez-Gonzalez"
    
