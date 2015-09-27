@@ -21,7 +21,7 @@ MCIC Computational Biology Lab
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: User Documentation
 
    mcbl
@@ -36,7 +36,7 @@ Indices and tables
 * :ref:`search`
 
 .. figure:: OSU.png
-   :align: left
+   :align: right
    :height: 37.5pt
    :width: 200pt
    :figclass: align-left
