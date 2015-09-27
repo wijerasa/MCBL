@@ -101,16 +101,17 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
+html_theme = 'Default'
 
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
-html_theme_options = {
-    'logo': 'Logo.png'
-    }
+#html_theme_options = {
+#    'logo': 'Logo.png'
+#    }
 
 
 	
@@ -237,6 +238,8 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'mcbl', u'MCBL Documentation',
+     [u'Saranga'], 1),
+    ('index', 'mcbl-application', u'MCBL application',
      [u'Saranga'], 1)
 ]
 
