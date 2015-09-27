@@ -1,4 +1,3 @@
-:tocdepth: 3
 
 .. MCBL documentation master file, created by
    sphinx-quickstart on Wed Sep 23 17:00:18 2015.
@@ -18,6 +17,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :caption: User Documentation
 
    mcbl
    mcbl-application
