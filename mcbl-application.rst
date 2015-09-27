@@ -1,4 +1,8 @@
-:tocdepth: 3
+.. module:: mcbl-app
+   :synopsis: Documentation of MCBL
+.. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
+
+.. highlight:: rest
 
 ********************
 How to Apply to MCBL

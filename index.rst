@@ -5,8 +5,8 @@
    contain the root `toctree` directive.
 
 .. module:: mcbl
-   :synopsis: Documentation of reStructuredText and Sphinx
-.. moduleauthor:: Marc Zonzon <marc.zonzon@gmail.com>
+   :synopsis: Documentation of MCBL
+.. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
 .. highlight:: rest
 
