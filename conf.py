@@ -239,8 +239,6 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'mcbl', u'MCBL Documentation',
-     [u'Saranga'], 1),
-    ('index', 'mcbl-application', u'MCBL application',
      [u'Saranga'], 1)
 ]
 
