@@ -41,6 +41,6 @@ Indices and tables
    :width: 200pt
    :figclass: align-left
    
-   **OSU/OARDC Selby Hall 1680 Madison Avenue Wooster OH 44691 Phone: 330-263-3828**
+   **OSU/OARDC Selby Hall 1680 Madison Avenue Wooster OH 44691**
 
 ----------------
