@@ -6,14 +6,14 @@
    contain the root `toctree` directive.
 
 
-.. figure:: Logo.jpg
+.. figure:: _static/Logo.png
    :align: right
 
 **********************************************
 MCIC Computational Biology Lab
 **********************************************
 
-.. module:: mcbl1
+.. module:: mcbl
    :synopsis: Documentations for MCBL
 .. moduleauthor:: Saranga Wijeratne <wijeratne.3@osu.edu>
 
