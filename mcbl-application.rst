@@ -22,3 +22,5 @@ How to Apply to MCBL Membership
 :Step 2: Submit your membership fee to MCIC.
 :Step 3: Contact `MCBL adminstrator, Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ for login credentials
 
+.. Note:: Access to the MCBL, to computer and software resources will not be granted till we receive the payment. Once the form is completed and submitted a notification e-mail will be sent to the membership applicant and the PI.
+
