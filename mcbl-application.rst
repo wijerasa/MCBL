@@ -1,4 +1,4 @@
-.. _index
+:tocdepth: 3
 
 ********************
 How to Apply to MCBL
