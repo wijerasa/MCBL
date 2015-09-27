@@ -9,15 +9,15 @@
 .. figure:: Logo.png
    :align: right
 
-**********************************************
+
 MCIC Computational Biology Lab
-**********************************************
+===============================
 
 
 Contents:
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    mcbl
    mcbl-application
