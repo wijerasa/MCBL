@@ -61,13 +61,6 @@ MCBL Services
    `MCIC main webpage for more details <http://mcic.osu.edu/>`_
       
 
-.. figure:: OSU.png
-   :align: right
-   :height: 37.5pt
-   :width: 200pt
-   :figclass: align-left
-   
-   **OSU/OARDC Selby Hall 1680 Madison Avenue Wooster OH 44691  **
 
    
 
