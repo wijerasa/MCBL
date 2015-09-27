@@ -34,13 +34,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-.. figure:: OSU.png
-   :align: right
-   :height: 37.5pt
-   :width: 200pt
-   :figclass: align-right
-   
-   **OSU/OARDC Selby Hall 1680 Madison Avenue Wooster OH 44691**
-
-----------------
