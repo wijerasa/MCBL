@@ -5,9 +5,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. module:: reST
-   :synopsis: reStructuredText Memo
-.. moduleauthor:: Marc Zonzon <marc.zonzon@gmail.com>
+.. module:: mcbl2
+   :synopsis: Documentation of MCBL
+.. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
 .. highlight:: rest
 
