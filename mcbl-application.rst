@@ -4,6 +4,9 @@
 
 .. highlight:: rest
 
+.. figure:: Logo.png
+   :align: right
+
 ********************
 How to Apply to MCBL
 ********************
