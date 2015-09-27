@@ -46,11 +46,24 @@ MCBL Services
    * Training on Amazon Web Services and OSC", "* Dr. Asela Wijeratne
    * Saranga Wijeratne"
 
-.. list-table::
-   :widths: 20, 20
+.. list-table:: Frozen Delights!
+   :widths: 15 10 30
    :header-rows: 1
-   * - Next Generation Sequencing
-     - Contacts
+
+   * - Treat
+     - Quantity
+     - Description
+   * - Albatross
+     - 2.99
+     - On a stick!
+   * - Crunchy Frog
+     - 1.49
+     - If we took the bones out, it wouldn't be
+       crunchy, now would it?
+   * - Gannet Ripple
+     - 1.99
+     - On a stick!
+
    
 .. seealso::
    `MCIC main webpage for more details <http://mcic.osu.edu/>`_
