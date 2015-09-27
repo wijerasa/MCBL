@@ -6,7 +6,7 @@
    contain the root `toctree` directive.
 
 
-.. figure:: Logo1.png
+.. figure:: Logo.png
    :align: right
 
 **********************************************
