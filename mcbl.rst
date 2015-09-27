@@ -1,5 +1,5 @@
 
-.. _index
+:tocdepth: 3
 
 .. MCBL documentation master file, created by
    sphinx-quickstart on Wed Sep 23 17:00:18 2015.
@@ -7,7 +7,7 @@
    contain the root `toctree` directive.
 
 
-.. figure:: Logo.jpg
+.. figure:: Logo.png
    :align: right
 
 **********************************************
