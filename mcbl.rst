@@ -46,24 +46,16 @@ MCBL Services
    * Training on Amazon Web Services and OSC", "* Dr. Asela Wijeratne
    * Saranga Wijeratne"
 
-.. list-table:: Frozen Delights!
-   :widths: 15 10 30
-   :header-rows: 1
+.. csv-table::
+   :header: "Next Generation Sequencing", "Contacts"
+   :widths: 40, 10
 
-   * - "* Treat * add"
-     - Quantity
-     - Description
-   * - Albatross
-     - 2.99
-     - On a stick!
-   * - Crunchy Frog
-     - 1.49
-     - If we took the bones out, it wouldn't be
-       crunchy, now would it?
-   * - Gannet Ripple
-     - 1.99
-     - On a stick!
-
+   "* High-troughput sequencing using the Illumina Miseq platform
+   * Low-throughput (Sanger) sequencing using the ABI PRISM 3100xl genetic analyzer system 
+   * Genotyping using the Beckman Genetic Analysis System CEQ 8800 for fragment analysis
+   * Luminex 200 System Analyzer or the Illumina BeadXpress System for SNP analysis", "* Dr. Tea Meulia
+   * Dr. Fiorella Cisneros Carter
+   * Maria Elena Hernandez-Gonzalez"
    
 .. seealso::
    `MCIC main webpage for more details <http://mcic.osu.edu/>`_
