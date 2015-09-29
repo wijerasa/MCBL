@@ -21,11 +21,6 @@ MCBL Servers and Computing Resources
 Servers Overview
 ----------------
 
-=======	==========	=====	======	==========
-Server 	Processors	Cores	Memory	Local Disk
-=======	==========	=====	======	==========
-1
-=======	==========	======	======	==========
 
 =====  ======
 Vokal  Umlaut
