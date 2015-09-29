@@ -39,3 +39,5 @@ MCBL Membership Termination
 ----------------------------
 MCBL Membership will be terminated after membership period over or upon written request from user or PI to terminate the membership. 
 
+<h1>{% trans "Heading" %}</h1>
+
