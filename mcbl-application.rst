@@ -1,4 +1,4 @@
-.. module:: mcbl-app
+.. module:: Membership
    :synopsis: Documentation of MCBL
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
