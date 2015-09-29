@@ -33,7 +33,7 @@ MCBL Membership Benefits
 
 MCBL Membership Duration
 ------------------------
-Membership is offered for 6 months or 1 year period. Minimum membership period is 6 months and membership request for short period less than 6 months won't be considered.
+Membership is offered for 6 months or 1 year period. Minimum membership period is 6 months and membership request for shorter period(less than 6 months) won't be considered.
 
 MCBL Membership Termination
 ----------------------------
