@@ -30,8 +30,12 @@ MCBL Membership Benefits
 - Access to MCBL and most powerful `MCBL computers <http>`_  24/7.
 - Free access to MCBL Workshops and Bioinformatic user group meetings.
 - Access to 1 TB data storage space for the duraton of the membership.
-- 
 
-MCBL Membership termination
+MCBL Membership Duration
+------------------------
+Membership is offered for 6 months or 1 year period. Minimum membership period is 6 months and membership request for short period less than 6 months won't be considered.
+
+MCBL Membership Termination
 ----------------------------
+MCBL Membership will be terminated after membership period over or upon written request from user or PI to terminate the membership. 
 
