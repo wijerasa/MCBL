@@ -2,6 +2,8 @@
    :synopsis: Documentation of MCBL
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
+.. index::
+
 .. highlight:: rest
 
 .. figure:: Logo.png
