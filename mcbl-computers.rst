@@ -21,10 +21,8 @@ MCBL Servers and Computing Resources
 Servers Overview
 ----------------
 
+.. csv-table::
+   :header: "Server", "Processors","Cores","Memory", "Local Disk"
+   :widths: 10, 40, 5,5,5
 
-=====  ======
-Vokal  Umlaut
-=====  ======
-aA     äÄ
-oO     öÖ
-=====  ====
+   mcic-ender-svr,four 2.40GHz ten-core Intel® Xeon processors E7-4870,	40,	1TB,16TB
