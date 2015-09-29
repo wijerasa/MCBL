@@ -23,6 +23,7 @@ MCIC Computational Biology Lab
 
    mcbl
    mcbl-application
+   mcbl-computers
    
 
 Indices and tables
