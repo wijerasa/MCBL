@@ -47,7 +47,7 @@ Contacts
    :widths: 10, 40
 
    `Dr. Asela Wijeratne <mailto:wijeratne.1@osu.edu>`_,Questions regarding membership
-   this, 40
+   `Jody Whittier <whittier.2@osu.edu>`_,MCBL payments
 
    
 
