@@ -39,4 +39,15 @@ MCBL Membership Termination
 ----------------------------
 MCBL Membership will be terminated after membership period over or upon written request from user or PI to terminate the membership. 
 
+Contacts
+---------
+
+.. csv-table::
+   :header: "Person", "Information"
+   :widths: 10, 40
+
+   `Dr. Asela Wijeratne <mailto:wijeratne.1@osu.edu>`_, Questions regarding membership
+   `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_, MCBL Server access, remote access
+   `Jody Whittier <whittier.2@osu.edu>`_, MCBL payments
+
 
