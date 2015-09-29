@@ -6,7 +6,7 @@
    contain the root `toctree` directive.
 
 .. module:: Introduction
-   :synopsis: Documentation of MCBL
+   :synopsis: Introduction to MCBL
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
 .. highlight:: rest

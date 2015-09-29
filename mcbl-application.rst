@@ -1,5 +1,5 @@
 .. module:: Membership
-   :synopsis: Documentation of MCBL
+   :synopsis: MCBL Membership Information 
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
 .. index::
