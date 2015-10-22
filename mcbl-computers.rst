@@ -42,7 +42,7 @@
 ----------------------
 Following bioinformatics software are availabe through MCBL.
 
-Commercial Software:
+3.3.1 Commercial Software:
 ~~~~~~~~~~~~~~~~~~~~
 
 .. csv-table::
@@ -52,7 +52,8 @@ Commercial Software:
    CLCBio Workbench,8.5.1,A comprehensive and user-friendly analysis package for analyzing comparing and visualizing next generation sequencing data,`Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
    Blast2GO Pro,Pro,A complete framework for functional annotation and analysis,`Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
-**Open Source Software:**
+3.3.2 Open Source Software:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. csv-table::
    :header: "Application", "Version","Description","Module Name"
