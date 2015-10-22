@@ -15,10 +15,10 @@
    :align: right
 
 **********************************************
-MCBL Servers and Computing Resources
+3. MCBL Servers and Computing Resources
 **********************************************
 
-Servers Overview
+3.1 Servers Overview
 ----------------
 
 .. csv-table::
@@ -29,7 +29,7 @@ Servers Overview
    mcic-ender-svr2,four 2.00GHz ten-core Intel® Xeon processors E7-4850,40,1.2 TB,10TB
    mcic-ent-srvr,two 2.67GHz six-core Intel® Xeon processors X7542,12, 250GB, 2.0TB
 
-Workstations Overview
+3.2 Workstations Overview
 ----------------------
 .. csv-table::
    :header: "Workstation", "Processors","Cores","Memory", "Local Disk"

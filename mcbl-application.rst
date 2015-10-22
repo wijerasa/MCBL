@@ -10,15 +10,15 @@
    :align: right
 
 ********************
-1. MCBL Membership
+2. MCBL Membership
 ********************
 
 
-Why you need a MCBL Membership
+2.1 Why you need a MCBL Membership
 ------------------------------
 We are happy to help you to carry out your own analysis. This will include helping on your experiment design; discussion on the most effective way to carry out your data analysis; providing necessary computational infrastructure (Software,Scripts and Computers) and answering your questions you might come across along the way.
 
-How to Apply to MCBL Membership
+2.2 How to Apply to MCBL Membership
 --------------------------------
 :Step 1: Fill and submit complete MCBL application form: `MCBL Application <http://www.oardc.ohio-state.edu/mcic/MCBL_registration/mcbl_registration.html>`_.
 :Step 2: Submit your membership fee to MCIC.
@@ -26,22 +26,22 @@ How to Apply to MCBL Membership
 
 .. Note:: Access to the MCBL, to the computers and software resources will not be granted till we receive the payment. Once the form is completed and submitted a notification e-mail will be sent to the membership applicant and the PI.
 
-MCBL Membership Benefits
+2.3 MCBL Membership Benefits
 ------------------------
 
 - Access to MCBL and most powerful `MCBL computers <http>`_  24/7.
 - Free access to MCBL Workshops and Bioinformatic user group meetings.
 - Access to 1 TB data storage space for the duraton of the membership.
 
-MCBL Membership Duration
+2.4 MCBL Membership Duration
 ------------------------
 Membership is offered for 6 months or 1 year period. Minimum membership period is 6 months and membership request for shorter period(less than 6 months) won't be considered.
 
-MCBL Membership Termination
+2.5 MCBL Membership Termination
 ----------------------------
 MCBL Membership will be terminated after membership period over or upon written request from user or PI to terminate the membership. 
 
-Contacts
+2.6 Contacts
 ---------
 
 .. csv-table::
