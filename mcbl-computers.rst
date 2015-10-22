@@ -40,13 +40,13 @@
 
 3.3 Software Overview
 ----------------------
-Following bioinformatics software is availabe through MCBL.
+Following bioinformatics software are availabe through MCBL.
 
 .. csv-table::
    :header: "Application", "Version","Description","Module Name"
-   :widths: 12, 12, 40,10
+   :widths: 10, 12, 40,10
 
-   Bowtie,1.1.0 2-2.2.3,An ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences,Bowtie-<version>
+   Bowtie,1.1.0/2-2.2.3,An ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences,Bowtie-<version>
    
 
 
