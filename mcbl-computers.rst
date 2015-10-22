@@ -42,7 +42,8 @@
 ----------------------
 Following bioinformatics software are availabe through MCBL.
 
-**Commercial Software:**
+Commercial Software:
+~~~~~~~~~~~~~~~~~~~~
 
 .. csv-table::
    :header: "Application", "Version","Description","Contact"
