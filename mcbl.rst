@@ -48,7 +48,7 @@ Our mission is to build core support and intellectual leadership in the area of 
 
 .. csv-table::
    :header: "Next Generation Sequencing", "Contacts"
-   :widths: 35, 20
+   :widths: 35, 25
 
    "* High-troughput sequencing(Illumina Miseq platform)", "* Dr. Tea Meulia
    * Dr. Fiorella Cisneros Carter
