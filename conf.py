@@ -15,7 +15,7 @@
 import sys
 import os
 import alabaster
-import sphinx_rtd_theme, mkdocs
+import sphinx_rtd_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -103,8 +103,8 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #html_theme = 'alabaster'
-#html_theme = 'sphinx_rtd_theme'
-html_theme = 'mkdocs'
+html_theme = 'sphinx_rtd_theme'
+
 
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -279,3 +279,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # otherwise, readthedocs.org uses their theme by default, so no need to specify it
+
+def setup(app):
+   app.add_javascript("custom.js")
+   app.add_stylesheet("custom.css")
