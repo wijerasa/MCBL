@@ -40,7 +40,8 @@
 
 3.3 Software Overview
 ----------------------
-Following bioinformatics software are availabe through MCBL.
+Following bioinformatics software are availabe through MCBL.Some of the commercial software are available for MCBL users.
+Please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>` for availability of the software.
 
 3.3.1 Commercial Software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,8 +61,21 @@ Following bioinformatics software are availabe through MCBL.
    :widths: 10, 12, 40,10
 
    Bowtie,1.1.0/2-2.2.3,An ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences,Bowtie-<version>
-   cd-hit,4.6.1,A very widely used program for clustering and comparing protein or nucleotide sequences,cd-hit-v<version>
+   Cd-hit,4.6.1,A very widely used program for clustering and comparing protein or nucleotide sequences,cd-hit-v<version>
    Cutadapt,1.4.2/1.8.1,Removes adapter sequences from high-throughput sequencing data,Cutadapt/<version>
+   Exonerate,2.2.0,A generic tool for pairwise sequence comparison,Exonerate/<version>
+   Express,1.5.1,eXpress is a streaming tool for quantifying the abundances of a set of target sequences from sampled subsequences,express-<version>
+   Fastqc,1.5.1,Aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines,Fastqc-<version>
+   GenomeAnalysisTK,3.2-2,GATK tools for error modeling data compression and variant calling,GenomeAnalysisTK-<version>
+   Maker,2.31.8,MAKER is a portable and easily configurable genome annotation pipeline.,Maker/<version>
+   Mothur,1.33/1.35,Tool for analyzing 16S rRNA gene sequences.,Mothur-<version>
+   Mummer,3.23,A system for rapidly aligning entire genomes whether in complete or draft form.,Mummer/<version>
+   Pandaseq,2.8,A program to align Illumina reads optionally with PCR primers embedded in the sequence and reconstruct an overlapping sequence.,Pandaseq/<version>
+   Qiime,1.8,A program for comparison and analysis of microbial communities primarily based on high-throughput amplicon sequencing data.,Qiime-<version>
+
+
+
+
    
 
 
