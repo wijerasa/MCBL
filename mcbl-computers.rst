@@ -47,6 +47,8 @@ Following bioinformatics software are availabe through MCBL.
    :widths: 10, 12, 40,10
 
    Bowtie,1.1.0/2-2.2.3,An ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences,Bowtie-<version>
+   cd-hit,4.6.1,A very widely used program for clustering and comparing protein or nucleotide sequences,cd-hit-v<version>
+   Cutadapt,1.4.2/1.8.1,Removes adapter sequences from high-throughput sequencing data,Cutadapt/<version>
    
 
 
