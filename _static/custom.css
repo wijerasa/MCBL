@@ -1,6 +1,6 @@
 
 .wy-nav-content {
-    max-width: 1050px
+    max-width: 1000px
 }
 
 /* override table width restrictions */
@@ -9,7 +9,6 @@
 }
 
 .wy-table-responsive {
-    margin-bottom: 2px;
     max-width: 100%;
     overflow: visible;
 }
