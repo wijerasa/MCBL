@@ -49,6 +49,7 @@ Following bioinformatics software are availabe through MCBL.
    :widths: 10, 12, 40,15
 
    CLCBio Workbench,8.5.1,A comprehensive and user-friendly analysis package for analyzing comparing and visualizing next generation sequencing data,`Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
+   Blast2GO Pro,Pro,A complete framework for functional annotation and analysis,`Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
 **Open Source Software:**
 
