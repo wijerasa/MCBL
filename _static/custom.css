@@ -4,7 +4,9 @@
 }
 
 .wy-table-responsive {
-    margin-bottom: 24px;
-    max-width: 800px;
+    
+    color: #333;
+    max-width: 100%;
     overflow: visible;
+    border-collapse: collapse; border-spacing: 0;
 }
