@@ -29,7 +29,7 @@ Our mission is to build core support and intellectual leadership in the area of 
 
 .. csv-table::
    :header: "NGS Data Analysis", "Contacts"
-   :widths: 40, 10
+   :widths: 35, 10
 
    "* Handling large data sets
    * Quality control
@@ -39,7 +39,7 @@ Our mission is to build core support and intellectual leadership in the area of 
 
 .. csv-table::
    :header: "Workshops & Training", "Contacts"
-   :widths: 40, 10
+   :widths: 35, 10
 
    "* Training on various NGS data analysis
    * Training on Linux enviornment and shell scripting 
@@ -48,7 +48,7 @@ Our mission is to build core support and intellectual leadership in the area of 
 
 .. csv-table::
    :header: "Next Generation Sequencing", "Contacts"
-   :widths: 30, 20
+   :widths: 35, 20
 
    "* High-troughput sequencing(Illumina Miseq platform)", "* Dr. Tea Meulia
    * Dr. Fiorella Cisneros Carter
