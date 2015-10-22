@@ -27,7 +27,7 @@ Servers Overview
 
    mcic-ender-svr,four 2.40GHz ten-core Intel® Xeon processors E7-4870,40,1.0 TB,16TB
    mcic-ender-svr2,four 2.00GHz ten-core Intel® Xeon processors E7-4850,40,1.2 TB,10TB
-   mcic-ent-srvr,two 2.67GHz six-core Intel® Xeon processors X7542, 250GB, 2.0TB
+   mcic-ent-srvr,two 2.67GHz six-core Intel® Xeon processors X7542,12, 250GB, 2.0TB
 
 Workstations Overview
 ----------------------
