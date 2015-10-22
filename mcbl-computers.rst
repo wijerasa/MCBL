@@ -41,7 +41,7 @@
 3.3 Software Overview
 ----------------------
 Following bioinformatics software are availabe through MCBL.Some of the commercial software are available for MCBL users.
-Please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>` for availability of the software.
+Please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ for availability of the software.
 
 3.3.1 Commercial Software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
