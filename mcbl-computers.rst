@@ -79,6 +79,8 @@ Please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ for availabilit
    Trinity,r20140717,a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-seq data.,Trinity
 
 
+3.3.3. Python Modules
+~~~~~~~~~~~~~~~~~~~~~~
 
 
    
