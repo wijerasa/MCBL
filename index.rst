@@ -25,6 +25,8 @@ MCIC Computational Biology Lab
    mcbl-application
    mcbl-computers
 
+.. _download_doc
+
 .. toctree::
    :maxdepth: 3
    :caption: Data Download
