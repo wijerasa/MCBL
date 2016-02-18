@@ -5,7 +5,7 @@
    contain the root `toctree` directive.
 
 
-.. module:: Computing Resources
+.. module:: Data Download
    :synopsis: Servers at MCBL
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
