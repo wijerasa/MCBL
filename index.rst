@@ -26,6 +26,8 @@ MCIC Computational Biology Lab
    mcbl-application
    mcbl-computers
 
+.. _custom-docs:
+
 .. toctree::
    :numbered:
    :maxdepth: 3

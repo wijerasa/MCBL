@@ -6,10 +6,10 @@
 
 
 .. module:: Data Download
-   :synopsis: Servers at MCBL
+   :synopsis: Data Download
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
-.. highlight:: rest
+
 
 .. figure:: Logo.png
    :align: right
