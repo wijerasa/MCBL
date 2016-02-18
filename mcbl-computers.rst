@@ -15,10 +15,10 @@
    :align: right
 
 **********************************************
-3. MCBL Servers and Computing Resources
+MCBL Servers and Computing Resources
 **********************************************
 
-3.1. Servers Overview
+Servers Overview
 ----------------
 
 .. csv-table::
@@ -29,7 +29,7 @@
    mcic-ender-svr2,four 2.00GHz ten-core Intel® Xeon processors E7-4850,40,1.2 TB,10TB
    mcic-ent-srvr,two 2.67GHz six-core Intel® Xeon processors X7542,12, 250GB, 2.0TB
 
-3.2. Workstations Overview
+Workstations Overview
 ----------------------
 .. csv-table::
    :header: "Workstation", "Processors","Cores","Memory", "Local Disk"
@@ -38,12 +38,12 @@
    mcic-galaxy-srvr,two 3.47GHz six-core Intel® Xeon processors X5690,12, 94 GB,2.6 TB
    mcic-mac-srvr,two 2.93GHz six-core Intel® Xeon processors X5670,12, 64 GB,4.0 TB
 
-3.3. Software Overview
+Software Overview
 ----------------------
 Following bioinformatics software are availabe through MCBL.Some of the commercial software are available for MCBL users.
 Please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ for availability of the software.
 
-3.3.1. Commercial Software
+Commercial Software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. csv-table::
@@ -53,7 +53,7 @@ Please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ for availabilit
    CLCBio Workbench,8.5.1,A comprehensive and user-friendly analysis package for analyzing comparing and visualizing next generation sequencing data,`Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
    Blast2GO Pro,Pro,A complete framework for functional annotation and analysis,`Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
-3.3.2. Open Source Software
+Open Source Software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. csv-table::
@@ -79,7 +79,7 @@ Please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ for availabilit
    Trinity,r20140717,a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-seq data.,Trinity
 
 
-3.3.3. Python Modules
+Python Modules
 ~~~~~~~~~~~~~~~~~~~~~~
 
 
