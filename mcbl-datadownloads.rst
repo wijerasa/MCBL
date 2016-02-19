@@ -24,9 +24,10 @@ Data Downloading from Cloud Services
 
 	:Software: wget / curl
 
-         Terminal emulator
+      Terminal emulator
             - Terminal (OS x)
             - Genome Terminal or Other Emulator (Linux)
+
 
    :Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
@@ -56,14 +57,14 @@ Downloading from hudsonalpha.org
 	.. code-block:: bash
       :linenos:
 
-		$ for f in $(cat Samples.txt ); do curl --progress-bar -O $f; done
+         $ for f in $(cat Samples.txt ); do curl --progress-bar -O $f; done
 
 #. On Linux, issue the following command to download your files,
 
 	.. code-block:: bash
       :linenos:
 
-		$ for f in $(cat Samples.txt ); do wget -v $f; done
+         $ for f in $(cat Samples.txt ); do wget -v $f; done
 
 
 Check *checksum*

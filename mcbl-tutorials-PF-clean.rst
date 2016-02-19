@@ -28,6 +28,15 @@ Filter a Fastq File (CASAVA generated)
 Software Installation
 --------
 
+.. Note::
+	If you are runing this on MCBL *mcic-ender-svr*, please skip the installation. Following command will load the software module to your environment.
+
+.. code-block:: bash
+	:linenos:
+
+	$ module load fasq_filter/0.1
+
+
 .. warning::
 
 	If you don't have administrator privilages on the machine, you wouldn't be able run ``sudo`` (last command in the following code block) commands. 
@@ -44,7 +53,12 @@ Software Installation
 
 
 
-#. Use the Terminal and navigate to the location where Samples.txt is saved.
+.. tip::
+
+	Put your executables in ``~/bin`` or full path to executables in ``$PATH`` in the absence of ``sudo`` privilages.
+
+
+
 
 	.. code-block:: bash
 
