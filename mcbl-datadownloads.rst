@@ -62,7 +62,7 @@ Downloading from hudsonalpha.org
 		$ for f in $(cat Samples.txt ); do wget -v $f; done
 
 
-Check _checksum_
+Check *checksum*
 ~~~~~~~~~~~~~~~~~~~
 To detect errors which may have been introduced during the downloading, you have to run checksum on your downloaded files.
 
@@ -76,9 +76,8 @@ To detect errors which may have been introduced during the downloading, you have
 
 #. Then, on OS x Terminal, type in the following command:
 
-  .. code-block:: bash
-
-         $ md5 * 
+   .. code-block:: bash
+      $ md5 * 
 
    .. parsed-literal::
 
