@@ -23,12 +23,10 @@ Downloading from hudsonalpha.org
 
 .. Note::
 
-	Required Operating System:
-
+	**Required Operating System:**
 		OS x or Linux. Windows users, please contact `Maria Elena Hernandez-Gonzalez <mailto:hernandez-gonzal.2@osu.edu>`_ 
 
-	Software:
-
+	**Software:**
 		wget/curl
 
 #. Create a Sample.txt file with your sample URLs as follows::
