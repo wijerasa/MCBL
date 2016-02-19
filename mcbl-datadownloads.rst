@@ -15,16 +15,14 @@
    :align: right
 
 **********************************************
-Data Download from Cloud Services
+Data Downloading from Cloud Services
 **********************************************
 
-Download from hudsonalpha.org
+Downloading from hudsonalpha.org
 ----------------
-sdasd
-dasa
-da
 
-
+*Required*
+:Operating System: OS x or Linux
 
 
    
