@@ -25,12 +25,7 @@ Downloading from hudsonalpha.org
 
 	:Required OS: OS x or Linux. Windows users, please contact `Maria Elena Hernandez-Gonzalez <mailto:hernandez-gonzal.2@osu.edu>`_ 
 
-	:Software:::
-
-      - wget/curl
-
-
-      - Terminal emulator
+	:Software: wget/curl, Terminal emulator
 
          - Terminal (OS x)
          - Genome Terminal or Other Emulator (Linux)
