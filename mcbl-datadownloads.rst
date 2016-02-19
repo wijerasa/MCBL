@@ -28,10 +28,13 @@ Downloading from hudsonalpha.org
 
 	**Software:**
 		wget/curl
+      Terminal emulator
+      - Terminal (OS x)
+      - Genome Terminal or Other Emulator (Linux)
 
-#. Create a Samples.txt file with your sample links(as provided in the Excel sheet) as follows:
+#. Create a Samples.txt file with your sample links(the links are provided in the Excel sheet) as follows:
 
-	.. code-block:: bash
+   .. parsed-literal::
 
 	 	#Content of the Samples.txt
 		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz
@@ -39,14 +42,14 @@ Downloading from hudsonalpha.org
 		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz
 		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz
 
-#. Navigate to the location where Samples.txt is saved.
+#. Use the Terminal and navigate to the location where Samples.txt is saved.
 
 	.. code-block:: bash
 
 		#If your Samples.txt is saved under ~/Downloads
 		$ cd ~/Downloads
 
-#. On OS x, issue following command to download your files,
+#. On OS x, issue the following command to download your files:
 
 	.. code-block:: bash
 
@@ -59,7 +62,30 @@ Downloading from hudsonalpha.org
 		$ for f in $(cat Samples.txt ); do wget -v $f; done
 
 
+Check _checksum_
+~~~~~~~~~~~~~~~~~~~
+To detect errors which may have been introduced during the downloading, you have to run checksum on your downloaded files.
 
+#. Navigate to the location where you have downloaded your files.
+
+   .. code-block:: bash
+
+         #If your files are saved under ~/Downloads
+         $ cd ~/Downloads
+
+
+#. Then, on OS x Terminal, type in the following command:
+
+  .. code-block:: bash
+
+         $ md5 * 
+
+   .. parsed-literal::
+
+      MD5 (C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz) = d41d8cd98f00b204e9800998ecf8427e
+      MD5 (C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz) = d41d8cd98f00b204e9800998ecf8427e
+      MD5 (C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz) = d41d8cd98f00b204e9800998ecf8427e
+      MD5 (C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz) = d41d8cd98f00b204e9800998ecf8427e
 
    
 
