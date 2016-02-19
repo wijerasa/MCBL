@@ -29,10 +29,10 @@ Downloading from hudsonalpha.org
 	**Software:**
 		wget/curl
 
+#. Create a Sample.txt file with your sample links(as provided in the Excel sheet) as follows:
 
 .. code-block:: bash
-
-	#. Create a Sample.txt file with your sample links(as provided in the Excel sheet) as follows: 
+ 
 
 	http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz
 	http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz
