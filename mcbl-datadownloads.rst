@@ -46,8 +46,8 @@ Downloading from hudsonalpha.org
 
 #. Use the Terminal and navigate to the location where Samples.txt is saved.
 
-.. code-block:: bash
-   :linenos:
+   .. code-block:: bash
+      :linenos:
 
       #If your Samples.txt is saved under ~/Downloads
       $ cd ~/Downloads
@@ -57,14 +57,14 @@ Downloading from hudsonalpha.org
    .. code-block:: bash
       :linenos:
 
-         $ for f in $(cat Samples.txt ); do curl --progress-bar -O $f; done
+      $ for f in $(cat Samples.txt ); do curl --progress-bar -O $f; done
 
 #. On Linux, issue the following command to download your files,
 
-	.. code-block:: bash
+   .. code-block:: bash
       :linenos:
 
-         $ for f in $(cat Samples.txt ); do wget -v $f; done
+      $ for f in $(cat Samples.txt ); do wget -v $f; done
 
 
 Check *checksum*
@@ -76,8 +76,8 @@ To detect errors which may have been introduced during the downloading, you have
    .. code-block:: bash
       :linenos:
 
-         #If your files are saved under ~/Downloads
-         $ cd ~/Downloads
+      #If your files are saved under ~/Downloads
+      $ cd ~/Downloads
 
 
 #. Then, if your on OS x Terminal, type in the following command:

@@ -41,6 +41,7 @@ Software Installation
 
 	If you don't have administrator privilages on the machine, you wouldn't be able run ``sudo`` (last command in the following code block) commands. 
 	
+On your own server,
 
 .. code-block:: bash
 	:linenos:
@@ -55,12 +56,7 @@ Software Installation
 
 .. tip::
 
-	Put your executables in ``~/bin`` or full path to executables in ``$PATH`` in the absence of ``sudo`` privilages.
+	Put your executables in ``~/bin`` or full-path to executables in ``$PATH`` in the absence of ``sudo`` privilages.
 
-
-
-
-	.. code-block:: bash
-
-		#If your Samples.txt is saved under ~/Downloads
-		$ cd ~/Downloads
+Run 
+--------
