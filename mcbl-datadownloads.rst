@@ -18,9 +18,6 @@
 Data Downloading from Cloud Services
 **********************************************
 
-Downloading from hudsonalpha.org
-----------------
-
 .. Note::
 
 	:Required OS: OS x or Linux. Windows users, please contact `Maria Elena Hernandez-Gonzalez <mailto:hernandez-gonzal.2@osu.edu>`_ 
@@ -33,6 +30,9 @@ Downloading from hudsonalpha.org
             - Genome Terminal or Other Emulator (Linux)
 
    :Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
+
+Downloading from hudsonalpha.org
+----------------
 
 #. Create a Samples.txt file with your sample links(the links are provided in the Excelsheet) as follows:
 
