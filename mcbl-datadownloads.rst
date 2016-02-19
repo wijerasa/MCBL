@@ -21,9 +21,12 @@ Data Downloading from Cloud Services
 Downloading from hudsonalpha.org
 ----------------
 
-*Required*
+.. glossary::
 
-:Operating System: OS x or Linux
+	Operating System: 
+	    OS x or Linux. Windows users, please contact `Maria Elena Hernandez-Gonzalez <mailto:hernandez-gonzal.2@osu.edu>`_ 
+
+
 
 
    
