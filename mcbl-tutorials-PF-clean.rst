@@ -9,6 +9,7 @@
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
 
+.. highlight:: rest
 
 .. figure:: Logo.png
    :align: right
@@ -101,7 +102,7 @@ Filter Multiple Fastqs
    .. code-block:: bash
       :linenos:
 
-      $for f in $(cat Fastq_filenames.txt); do zcat $f | fastq_illumina_filter -vvN | gzip > {f%.*.fastq.gz}.filtered.fastq.gz;done
+      $ for f in $(cat Fastq_filenames.txt); do zcat $f | fastq_illumina_filter -vvN | gzip > {f%.*.fastq.gz}.filtered.fastq.gz;done
 
 
 

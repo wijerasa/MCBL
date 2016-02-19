@@ -10,6 +10,7 @@
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
 
+.. highlight:: rest
 
 .. figure:: Logo.png
    :align: right
