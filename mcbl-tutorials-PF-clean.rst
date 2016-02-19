@@ -30,10 +30,11 @@ Software Installation
 
 .. warning::
 
-	If you dont have administrator privilages on the machine, you wouldn't be able run ``sudo`` (last command in the following code block) commands. 
+	If you don't have administrator privilages on the machine, you wouldn't be able run ``sudo`` (last command in the following code block) commands. 
 	
 
 .. code-block:: bash
+	:linenos:
 
 	$ wget http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/fastq_illumina_filter-0.1.tar.gz
 	$ tar -xzf fastq_illumina_filter-0.1.tar.gz
@@ -42,12 +43,6 @@ Software Installation
 	$ sudo cp fastq_illumina_filter /usr/local/bin
 
 
-   .. parsed-literal::
-
-		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz
-		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz
-		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz
-		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz
 
 #. Use the Terminal and navigate to the location where Samples.txt is saved.
 
