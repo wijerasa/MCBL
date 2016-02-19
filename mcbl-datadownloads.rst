@@ -23,17 +23,19 @@ Downloading from hudsonalpha.org
 
 .. Note::
 
-	**Required Operating System:**
-		OS x or Linux. Windows users, please contact `Maria Elena Hernandez-Gonzalez <mailto:hernandez-gonzal.2@osu.edu>`_ 
+	:Required OS: OS x or Linux. Windows users, please contact `Maria Elena Hernandez-Gonzalez <mailto:hernandez-gonzal.2@osu.edu>`_ 
 
-	**Software:**
-      wget/curl
-      
-      Terminal emulator
+	:Software:
+
+      - wget/curl
+
+
+      - Terminal emulator
+
          - Terminal (OS x)
          - Genome Terminal or Other Emulator (Linux)
 
-#. Create a Samples.txt file with your sample links(the links are provided in the Excel sheet) as follows:
+#. Create a Samples.txt file with your sample links(the links are provided in the Excelsheet) as follows:
 
    .. parsed-literal::
 
@@ -89,7 +91,7 @@ To detect errors which may have been introduced during the downloading, you have
       MD5 (C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz) = d42d8cd98f00bdfse9800998ecf8427e
 
    
-   If On Linux terminal, type in the following commmand:
+   If your on Linux terminal, type in the following commmand:
 
    .. code-block:: bash
       
@@ -105,4 +107,4 @@ To detect errors which may have been introduced during the downloading, you have
 
 .. tip::
    
-   Match these checksum values with the values provided in the Excelsheet. For any sample/samples with mismatching checksum/s, you have to re-download the sample/samples.
+   Match these checksum values with the values provided in the Excelsheet. For any sample with mismatching checksum, you have to re-download the sample/s.
