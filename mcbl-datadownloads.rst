@@ -74,7 +74,7 @@ To detect errors which may have been introduced during the downloading, you have
          $ cd ~/Downloads
 
 
-#. Then, on OS x Terminal, type in the following command:
+#. Then, if your on OS x Terminal, type in the following command:
 
    .. code-block:: bash
       
@@ -82,12 +82,26 @@ To detect errors which may have been introduced during the downloading, you have
 
    .. parsed-literal::
 
-      MD5 (C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz) = d41d8cd98f00b204e9800998ecf8427e
-      MD5 (C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz) = d41d8cd98f00b204e9800998ecf8427e
-      MD5 (C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz) = d41d8cd98f00b204e9800998ecf8427e
-      MD5 (C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz) = d41d8cd98f00b204e9800998ecf8427e
+      MD5 (C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz) = d41d8cd428f00b204e9800998ecf8427e
+      MD5 (C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz) = d49d8cdf00j204e9800998ecf8427e
+      MD5 (C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz) = d47d8cd98dfds0b204e9800998ecf8427e
+      MD5 (C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz) = d42d8cd98f00bdfse9800998ecf8427e
 
    
+   If On Linux terminal, type in the following commmand:
+
+   .. code-block:: bash
+      
+      $ md5sum *
+
+   .. parsed-literal::
+
+      d41d8cd428f00b204e9800998ecf8427e   C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz
+      d49d8cdf00j204e9800998ecf8427ed56   C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz
+      d47d8cd98dfds0b204e9800998ecf8427e  C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz
+      d47d8cd98dfds0b204e9800998ecf8427e  C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz
 
 
-
+.. tip::
+   
+   Match these checksum values with the values provided in the Excelsheet. For any sample/samples with mismatching checksum/s, you have to re-download the sample/samples.
