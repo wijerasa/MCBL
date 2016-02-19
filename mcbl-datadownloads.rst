@@ -28,6 +28,7 @@ Downloading from hudsonalpha.org
 
 	**Software:**
       wget/curl
+      
       Terminal emulator
          - Terminal (OS x)
          - Genome Terminal or Other Emulator (Linux)
