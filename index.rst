@@ -33,6 +33,13 @@ MCIC Computational Biology Lab
    :caption: Data Downloading
 
    mcbl-datadownloads
+
+.. toctree::
+   :numbered:
+   :maxdepth: 3
+   :caption: MCBL Tutorial
+
+   mcbl-tutorials-PF-clean
    
 
 Indices and tables
