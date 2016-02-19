@@ -25,7 +25,7 @@ Downloading from hudsonalpha.org
 
 	:Required OS: OS x or Linux. Windows users, please contact `Maria Elena Hernandez-Gonzalez <mailto:hernandez-gonzal.2@osu.edu>`_ 
 
-	:Software:
+	:Software:::
 
       - wget/curl
 
@@ -107,4 +107,4 @@ To detect errors which may have been introduced during the downloading, you have
 
 .. tip::
    
-   Match these checksum values with the values provided in the Excelsheet. For any sample with mismatching checksum, you have to re-download the sample/s.
+   Match these checksum values with the values provided in the Excelsheet. For any samples with mismatching checksum, you have to re-download the samples.
