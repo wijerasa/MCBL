@@ -46,6 +46,7 @@ Downloading from hudsonalpha.org
 #. Use the Terminal and navigate to the location where Samples.txt is saved.
 
 	.. code-block:: bash
+      :linenos:
 
 		#If your Samples.txt is saved under ~/Downloads
 		$ cd ~/Downloads
@@ -53,12 +54,14 @@ Downloading from hudsonalpha.org
 #. On OS x, issue the following command to download your files:
 
 	.. code-block:: bash
+      :linenos:
 
 		$ for f in $(cat Samples.txt ); do curl --progress-bar -O $f; done
 
 #. On Linux, issue the following command to download your files,
 
 	.. code-block:: bash
+      :linenos:
 
 		$ for f in $(cat Samples.txt ); do wget -v $f; done
 
@@ -70,6 +73,7 @@ To detect errors which may have been introduced during the downloading, you have
 #. Navigate to the location where you have downloaded your files.
 
    .. code-block:: bash
+      :linenos:
 
          #If your files are saved under ~/Downloads
          $ cd ~/Downloads
@@ -78,6 +82,7 @@ To detect errors which may have been introduced during the downloading, you have
 #. Then, if your on OS x Terminal, type in the following command:
 
    .. code-block:: bash
+      :linenos:
       
       $ md5 * 
 
@@ -92,6 +97,7 @@ To detect errors which may have been introduced during the downloading, you have
    If your on Linux terminal, type in the following commmand:
 
    .. code-block:: bash
+      :linenos:
       
       $ md5sum *
 
