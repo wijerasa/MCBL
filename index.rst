@@ -16,6 +16,7 @@
 
 MCIC Computational Biology Lab
 ===============================
+Contents:
 
 .. toctree::
    :numbered:
