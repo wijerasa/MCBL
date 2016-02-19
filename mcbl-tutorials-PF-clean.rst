@@ -4,8 +4,8 @@
    contain the root `toctree` directive.
 
 
-.. module:: Data Downloading
-   :synopsis: Data Download
+.. module:: Illumina PF 
+   :synopsis: Data Filtering Illumina
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
 
@@ -14,7 +14,7 @@
    :align: right
 
 **********************************************
-Data Downloading from Cloud Services
+Filter a Fastq File (CASAVA generated)
 **********************************************
 
 Downloading from hudsonalpha.org
@@ -23,12 +23,12 @@ Downloading from hudsonalpha.org
 .. Note::
 
 	:Required OS: OS x or Linux. Windows users, please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ 
-
 	:Software: `Illumina CASAVA-1.8 FASTQ Filter <http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/>`_
+	:Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
+	:Purpose: This document provides instructions how to remove Passing Filter (PF) failed reads from a Fastq file
+	:More: Read more about `PF here: <http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_PercentageofClustersP.htm/>`_ and `here <http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/>`_
 
 #. Create a Samples.txt file with your sample links(the links are provided in the Excelsheet) as follows:
-
-.. Content of the Samples.txt
 
    .. parsed-literal::
 

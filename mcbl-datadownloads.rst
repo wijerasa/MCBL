@@ -28,9 +28,11 @@ Downloading from hudsonalpha.org
 	:Software: wget / curl
 
          Terminal emulator
-         
+
             - Terminal (OS x)
             - Genome Terminal or Other Emulator (Linux)
+
+   :Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
 #. Create a Samples.txt file with your sample links(the links are provided in the Excelsheet) as follows:
 
