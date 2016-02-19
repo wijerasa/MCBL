@@ -101,8 +101,7 @@ Filter Multiple Fastqs
    .. code-block:: bash
       :linenos:
 
-      #If your Fastq_filenames.txt is saved under ~/Downloads
-      $ cd ~/Downloads
+      for f in $(cat Fastq_filenames.txt); do zcat $f | fastq_illumina_filter -vvN | gzip > ${f%.*}.gz;done
 
 
 
