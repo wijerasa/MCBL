@@ -16,11 +16,10 @@
 
 MCIC Computational Biology Lab
 ===============================
-Contents:
 
 .. toctree::
    :numbered:
-   :maxdepth: 4
+   :maxdepth: 5
    :caption: User Documentation
 
    mcbl
