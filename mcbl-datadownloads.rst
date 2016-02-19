@@ -21,7 +21,7 @@ Data Downloading from Cloud Services
 Downloading from hudsonalpha.org
 ----------------
 
-.. glossary::
+.. Note::
 
 	Required Operating System:
 
