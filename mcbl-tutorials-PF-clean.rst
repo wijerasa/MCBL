@@ -21,7 +21,7 @@ Filter a Fastq File (CASAVA generated)
 
 	:Required OS: OS x or Linux. Windows users, please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ 
 	:Software: `Illumina CASAVA-1.8 FASTQ Filter <http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/>`_
-	:Purpose: This document provides instructions how to remove Passing Filter (PF) failed reads from a Fastq file
+	:Purpose: This document provides instructions about how to remove Passing Filter (PF) failed reads from a Fastq file
 	:More: Read more about `PF here: <http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_PercentageofClustersP.htm/>`_ and `here <http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/>`_
 	:Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
@@ -36,12 +36,13 @@ Software Installation
 
 	$ module load fasq_filter/0.1
 
+On your own server,
 
 .. warning::
 
 	If you don't have administrator privilages on the machine, you wouldn't be able run ``sudo`` (last command in the following code block) commands. 
 	
-On your own server,
+
 
 .. code-block:: bash
 	:linenos:
@@ -58,5 +59,21 @@ On your own server,
 
 	Put your executables in ``~/bin`` or full-path to executables in ``$PATH`` in the absence of ``sudo`` privilages.
 
-Run 
+Filter a Fastq
 --------
+
+:Input File: C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq.gz
+:Output File: C8EC8ANXX_s2_1_illumina12index_1_SL143785.filtered.fastq.gz
+
+.. code-block:: bash
+	:linenos:
+
+	$ zcat C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq.gz | fastq_illumina_filter -vvN | gzip > C8EC8ANXX_s2_1_illumina12index_1_SL143785.filtered.fastq.gz
+
+Filter Multiple Fastqs
+-----
+
+
+
+
+

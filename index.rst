@@ -37,7 +37,7 @@ MCIC Computational Biology Lab
 .. toctree::
    :numbered:
    :maxdepth: 3
-   :caption: MCBL Tutorial
+   :caption: MCBL Tutorials
 
    mcbl-tutorials-PF-clean
    
