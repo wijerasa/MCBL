@@ -28,7 +28,6 @@ Data Downloading from Cloud Services
 
             - Terminal (OS x)
             - Genome Terminal or Other Emulator (Linux)
-
    :Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
 Downloading from hudsonalpha.org
