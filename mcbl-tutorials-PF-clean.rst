@@ -101,7 +101,7 @@ Filter Multiple Fastqs
    .. code-block:: bash
       :linenos:
 
-      for f in $(cat Fastq_filenames.txt); do zcat $f | fastq_illumina_filter -vvN | gzip > ${f%.*}.gz;done
+      $for f in $(cat Fastq_filenames.txt); do zcat $f | fastq_illumina_filter -vvN | gzip > {f%.*.fastq.gz}.filtered.fastq.gz;done
 
 
 
