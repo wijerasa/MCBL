@@ -22,7 +22,7 @@ Filter a Fastq File (CASAVA generated)
 	:Required OS: OS x or Linux. Windows users, please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ 
 	:Software: `Illumina CASAVA-1.8 FASTQ Filter <http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/>`_
 	:Purpose: This document provides instructions about how to remove Passing Filter (PF) failed reads from a Fastq file
-	:More: Read more about `PF here: <http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_PercentageofClustersP.htm/>`_ and `here <http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/>`_
+	:More: Read more about `PF here: <http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_PercentageofClustersP.htm>`_ and `here <http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/>`_
 	:Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
 Software Installation
@@ -72,6 +72,39 @@ Filter a Fastq
 
 Filter Multiple Fastqs
 -----
+
+:Input File: Fastq_filenames.txt
+:Output Files: Individual Fastq files
+
+#. Create a Fastq_filenames.txt file with your Fastq filenames in seperate lines as follows:
+
+   .. parsed-literal::
+
+	 	#Content of the Samples.txt
+	 	C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz
+		C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz
+		C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz
+		C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz
+
+#. Save the above file in the same folder with your Fastq files.
+
+#. Use the Terminal and navigate to the location where Fastq_filenames.txt is saved.
+
+   .. code-block:: bash
+      :linenos:
+
+      #If your Fastq_filenames.txt is saved under ~/Downloads
+      $ cd ~/Downloads
+
+#. Type in the following command to filter Fastqs in the Fastq_filenames.txt.
+
+   .. code-block:: bash
+      :linenos:
+
+      #If your Fastq_filenames.txt is saved under ~/Downloads
+      $ cd ~/Downloads
+
+
 
 
 
