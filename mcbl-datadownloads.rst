@@ -27,10 +27,10 @@ Downloading from hudsonalpha.org
 		OS x or Linux. Windows users, please contact `Maria Elena Hernandez-Gonzalez <mailto:hernandez-gonzal.2@osu.edu>`_ 
 
 	**Software:**
-		wget/curl
+      wget/curl
       Terminal emulator
-      - Terminal (OS x)
-      - Genome Terminal or Other Emulator (Linux)
+         - Terminal (OS x)
+         - Genome Terminal or Other Emulator (Linux)
 
 #. Create a Samples.txt file with your sample links(the links are provided in the Excel sheet) as follows:
 
@@ -77,6 +77,7 @@ To detect errors which may have been introduced during the downloading, you have
 #. Then, on OS x Terminal, type in the following command:
 
    .. code-block:: bash
+      
       $ md5 * 
 
    .. parsed-literal::
