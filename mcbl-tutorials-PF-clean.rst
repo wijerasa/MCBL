@@ -25,7 +25,22 @@ Filter a Fastq File (CASAVA generated)
 	:More: Read more about `PF here: <http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_PercentageofClustersP.htm/>`_ and `here <http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/>`_
 	:Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
-#. Create a Samples.txt file with your sample links(the links are provided in the Excelsheet) as follows:
+Software Installation
+--------
+
+.. warning::
+
+	If you dont have administrator privilages on the machine, you wouldn't be able run ``sudo`` (last command in the following code block) commands. 
+	
+
+.. code-block:: bash
+
+	$ wget http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/fastq_illumina_filter-0.1.tar.gz
+	$ tar -xzf fastq_illumina_filter-0.1.tar.gz
+	$ cd fastq_illumina_filter-0.1
+	$ make
+	$ sudo cp fastq_illumina_filter /usr/local/bin
+
 
    .. parsed-literal::
 
