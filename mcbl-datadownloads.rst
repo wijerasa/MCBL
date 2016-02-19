@@ -25,9 +25,9 @@ Data Downloading from Cloud Services
 	:Software: wget / curl
 
          Terminal emulator
-
             - Terminal (OS x)
             - Genome Terminal or Other Emulator (Linux)
+
    :Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
 Downloading from hudsonalpha.org
