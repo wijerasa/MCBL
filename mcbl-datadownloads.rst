@@ -47,6 +47,13 @@ Downloading from hudsonalpha.org
 		#If your Sample.txt is saved under ~/Downloads
 		$ cd ~/Downloads
 
+#. On OS x, issue following command to download your files,
+
+	.. code-block:: bash
+
+		$ for f in $(cat samples.txt ); do curl --progress-bar -O $f; done
+
+
 
 
    
