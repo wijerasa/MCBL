@@ -41,7 +41,7 @@ On your own server,
 
 .. warning::
 
-	If you don't have administrator privilages on the machine, you wouldn't be able run ``sudo`` (last command in the following code block) commands. 
+	If you don't have administrator privileges on the machine, you wouldn't be able run ``sudo`` (last command in the following code block) commands. 
 	
 
 
