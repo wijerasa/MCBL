@@ -79,7 +79,7 @@ To detect errors which may have been introduced during the downloading, you have
       $ cd ~/Downloads
 
 
-#. Then, if your on OS x Terminal, type in the following command:
+#. Then, if you're on OS x Terminal, type in the following command:
 
    .. code-block:: bash
       :linenos:
@@ -94,7 +94,7 @@ To detect errors which may have been introduced during the downloading, you have
       MD5 (C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz) = d42d8cd98f00bdfse9800998ecf8427e
 
    
-   If your on Linux terminal, type in the following commmand:
+   If you're on Linux terminal, type in the following commmand:
 
    .. code-block:: bash
       :linenos:
