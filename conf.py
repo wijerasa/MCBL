@@ -143,11 +143,6 @@ html_theme_path = ["_themes", ]
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_context = {
-    'css_files': [
-        '_static/cutome2.css',  # overrides for wide tables in RTD theme
-        ],
-    }
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -287,6 +282,6 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 
 # otherwise, readthedocs.org uses their theme by default, so no need to specify it
 
-#def setup(app):
-#   app.add_javascript("custom.js")
-#   app.add_stylesheet("custom.css")
+def setup(app):
+  # overrides for wide tables in RTD theme
+  app.add_stylesheet('cutome2.css')
