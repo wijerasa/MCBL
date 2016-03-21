@@ -284,4 +284,4 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 
 def setup(app):
   # overrides for wide tables in RTD theme
-  app.add_stylesheet('cutome2.css')
+  app.add_stylesheet('cutome.css')
