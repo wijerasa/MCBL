@@ -46,92 +46,44 @@ File Formats
    - `Table Report <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
    - `TOPM (Tags on Physical Map) <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
 
-Files You Need to Start 
+Files You Need to Have 
 ----------------
 
-#. Following files need to be created before you start the pipeline:
+Following files need to be created before you start the pipeline:
 
-   - Sequencing data files (.fastq or .fastq.gz)
+#. Sequencing data files (.fastq or .fastq.gz)
 
 .. Note::
    
-   Fastq files should rename following way,
+   Fastq files should rename as follows, `more on page 7 <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
 
-   :FLOWCELL_LANE_fastq.txt:  example: AL2P1XXX_2_fastq.txt
-   :FLOWCELL_LANE_fastq.txt.gz: example: AL2P1XXX_2_fastq.txt.gz
-   :FLOWCELL_LANE_sequence.txt: example: AL2P1XXX_2_sequence.txt 
-   :FLOWCELL_LANE_sequence.txt.gz: example: AL2P1XXX_2_sequence.txt.gz 
-   :FLOWCELL_s_LANE_fastq.txt:  example: AL2P1XXX_s_2_fastq.txt 
-   :FLOWCELL_s_LANE_fastq.txt.gz:  example: AL2P1XXX_s_2_fastq.txt.gz 
-   :code_FLOWCELL_s_LANE_fastq.txt:   example: 00000000_AL2P1XXX_s_2_fastq.txt  
-   :code_FLOWCELL_s_LANE_fastq.txt.gz:   example: 00000000_AL2P1XXX_s_2_fastq.txt.gz
+   :FLOWCELL_LANE_fastq.gz: example: AL2P1XXX_2_fastq.gz 
+   :FLOWCELL_s_LANE_fastq.gz:  example: AL2P1XXX_s_2_fastq.gz 
+   :code_FLOWCELL_s_LANE_fastq.gz:   example: 00000000_AL2P1XXX_s_2_fastq.gz
 
+
+.. code-block:: bash
+      :linenos:
+
+      #To rename original .fastq.gz file, 
+      $ mv  AE_S1_L001_R1_001.fastq.gz AL2P1XXX_1_fastq.gz
 
    
-#. Use the Terminal and navigate to the location where Samples.txt is saved.
-
-   .. code-block:: bash
-      :linenos:
-
-      #If your Samples.txt is saved under ~/Downloads
-      $ cd ~/Downloads
-
-#. On OS x, issue the following command to download your files:
-
-   .. code-block:: bash
-      :linenos:
-
-      $ for f in $(cat Samples.txt ); do curl --progress-bar -O $f; done
-
-#. On Linux, issue the following command to download your files,
-
-   .. code-block:: bash
-      :linenos:
-
-      $ for f in $(cat Samples.txt ); do wget -v $f; done
-
-
-Check *checksum*
-~~~~~~~~~~~~~~~~~~~
-To detect errors which may have been introduced during the downloading, you have to run checksum on your downloaded files.
-
-#. Navigate to the location where you have downloaded your files.
-
-   .. code-block:: bash
-      :linenos:
-
-      #If your files are saved under ~/Downloads
-      $ cd ~/Downloads
-
-
-#. Then, if you're on OS x Terminal, type in the following command:
-
-   .. code-block:: bash
-      :linenos:
-      
-      $ md5 * 
-
-   .. parsed-literal::
-
-      MD5 (C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz) = d41d8cd428f00b204e9800998ecf8427e
-      MD5 (C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz) = d49d8cdf00j204e9800998ecf8427e
-      MD5 (C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz) = d47d8cd98dfds0b204e9800998ecf8427e
-      MD5 (C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz) = d42d8cd98f00bdfse9800998ecf8427e
+#. GBSv2 Key File. Example `key file <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt>`_, `more <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample>`_
 
    
-   If you're on Linux terminal, type in the following commmand:
 
-   .. code-block:: bash
-      :linenos:
-      
-      $ md5sum *
 
-   .. parsed-literal::
+GBSv2 Pipeline Plugins
+----------------
 
-      d41d8cd428f00b204e9800998ecf8427e   C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz
-      d49d8cdf00j204e9800998ecf8427ed56   C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz
-      d47d8cd98dfds0b204e9800998ecf8427e  C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz
-      d47d8cd98dfds0b204e9800998ecf8427e  C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz
+.. csv-table::
+   :header: "Plugin", "Description"
+   :widths: 10, 40
+
+   GBSSeqToTagDBPlugin, executed to pull distinct tags from the database and export them in the fastq format, more <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/GBSSeqToTagDBPlugin>`_
+   TagExportToFastqPlugin, retrieves distinct tags stored in the database and reformats them to a FASTQ file, `more <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/TagExportToFastqPlugin>`_
+   `Jody Whittier <whittier.2@osu.edu>`_,MCBL payments
 
 
 .. tip::
