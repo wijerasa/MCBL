@@ -120,4 +120,27 @@ To check all the parameters for given Plugin, *Ex: GBSSeqToTagDBPlugin*, type
 
 .. tip::
    
-   Users are recommended to read more about GBS command line option `here. Page 1-2 <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
+   Users are recommended to read more about GBS command line options in `here. Page 1-2 <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
+
+3. Create necessary folder and copy your raw data (fastqs), Reference file and key files to appropriate folder,
+
+
+.. code-block:: bash
+   :linenos:
+
+   $ mkdir fastq ref key db tagsForAlign
+
+4. Commands for pipeline
+
+.. code-block:: bash
+   :linenos:
+
+   $ run_pipeline.pl -Xmx200g -fork1 -GBSSeqToTagDBPlugin -i fastq  -k key/Tomato_key.txt -e ApeKI -db db/Tomato.db  -kmerLength 85 -mnQS 20  -endPlugin -runfork1
+   $ run_pipeline.pl -fork1 -TagExportToFastqPlugin  -db db/Tomato.db -o tagsForAlign/tagsForAlign.fa.gz -c 5  -endPlugin -runfork1
+   $ cd ref
+   $ bwa index -a is S_lycopersicum_chromosomes.2.50.fa
+   $ cd ../
+   $ bwa samse ref/S_lycopersicum_chromosomes.2.50.fa tagsForAlign/tagsForAlign.sai tagsForAlign/tagsForAlign.fa.gz > tagsForAlign/tagsForAlign.sam
+   $ run_pipeline.pl -fork1 -SAMToGBSdbPlugin -i tagsForAlign/tagsForAlign.sam  -db db/Tomato.db  -aProp 0.0 -aLen 0 -endPlugin -runfork1
+   $ run_pipeline.pl -fork1 -DiscoverySNPCallerPluginV2 -db db/Tomato.db  -sC "chr00" -eC "chr12" -mnLCov 0.1 -mnMAF 0.01  -endPlugin -runfork1
+
