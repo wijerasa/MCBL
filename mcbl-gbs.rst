@@ -57,14 +57,14 @@ Files You Need to Start
    
    Fastq files has to be renamed following way:
 
-   FLOWCELL_LANE_fastq.txt (example: AL2P1XXX_2_fastq.txt)
-   FLOWCELL_LANE_fastq.txt.gz (example: AL2P1XXX_2_fastq.txt.gz)
-   FLOWCELL_LANE_sequence.txt (example: AL2P1XXX_2_sequence.txt) 
-   FLOWCELL_LANE_sequence.txt.gz (example: AL2P1XXX_2_sequence.txt.gz) 
-   FLOWCELL_s_LANE_fastq.txt  (example: AL2P1XXX_s_2_fastq.txt) 
-   FLOWCELL_s_LANE_fastq.txt.gz  (example: AL2P1XXX_s_2_fastq.txt.gz) 
-   code_FLOWCELL_s_LANE_fastq.txt   (example: 00000000_AL2P1XXX_s_2_fastq.txt)  
-   code_FLOWCELL_s_LANE_fastq.txt.gz   (example: 00000000_AL2P1XXX_s_2_fastq.txt.gz)
+   :FLOWCELL_LANE_fastq.txt: (example: AL2P1XXX_2_fastq.txt)
+   :FLOWCELL_LANE_fastq.txt.gz: (example: AL2P1XXX_2_fastq.txt.gz)
+   :FLOWCELL_LANE_sequence.txt: (example: AL2P1XXX_2_sequence.txt) 
+   :FLOWCELL_LANE_sequence.txt.gz: (example: AL2P1XXX_2_sequence.txt.gz) 
+   :FLOWCELL_s_LANE_fastq.txt:  (example: AL2P1XXX_s_2_fastq.txt) 
+   :FLOWCELL_s_LANE_fastq.txt.gz:  (example: AL2P1XXX_s_2_fastq.txt.gz) 
+   :code_FLOWCELL_s_LANE_fastq.txt:   (example: 00000000_AL2P1XXX_s_2_fastq.txt)  
+   :code_FLOWCELL_s_LANE_fastq.txt.gz:   (example: 00000000_AL2P1XXX_s_2_fastq.txt.gz)
 
 
    
