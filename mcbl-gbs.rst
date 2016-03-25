@@ -36,12 +36,37 @@ File Formats
    - `Projection Alignment <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
    - `Phylip <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
    - `FASTA <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_, `more <http://en.wikipedia.org/wiki/FASTA_format>`_
+   - `Fastq <https://en.wikipedia.org/wiki/FASTQ_format>`_
    - `Numerical Data <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
       - `Phenotype Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
       - `Trait Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
       - `Covariate Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
       - `Marker Values as Numerical Co-variates <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Square Numerical Matrix <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Table Report <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `TOPM (Tags on Physical Map) <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+
+Files You Need to Start 
+----------------
+
+#. Following files need to be created before you start the pipeline:
+
+   - Sequencing data files (.fastq or .fastq.gz)
+
+.. Note::
    
+   Fastq files has to be renamed following way:
+
+   FLOWCELL_LANE_fastq.txt (example: AL2P1XXX_2_fastq.txt)
+   FLOWCELL_LANE_fastq.txt.gz (example: AL2P1XXX_2_fastq.txt.gz)
+   FLOWCELL_LANE_sequence.txt (example: AL2P1XXX_2_sequence.txt) 
+   FLOWCELL_LANE_sequence.txt.gz (example: AL2P1XXX_2_sequence.txt.gz) 
+   FLOWCELL_s_LANE_fastq.txt  (example: AL2P1XXX_s_2_fastq.txt) 
+   FLOWCELL_s_LANE_fastq.txt.gz  (example: AL2P1XXX_s_2_fastq.txt.gz) 
+   code_FLOWCELL_s_LANE_fastq.txt   (example: 00000000_AL2P1XXX_s_2_fastq.txt)  
+   code_FLOWCELL_s_LANE_fastq.txt.gz   (example: 00000000_AL2P1XXX_s_2_fastq.txt.gz)
+
+
    
 #. Use the Terminal and navigate to the location where Samples.txt is saved.
 
