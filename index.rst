@@ -25,6 +25,7 @@ MCIC Computational Biology Lab
    mcbl
    mcbl-application
    mcbl-computers
+   mcbl-gbs
 
 
 .. toctree::
