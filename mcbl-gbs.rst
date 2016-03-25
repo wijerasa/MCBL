@@ -71,7 +71,7 @@ Following files need to be created before you start the pipeline:
    
 2. GBSv2 Key File. Example `key file <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt>`_, `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample>`_
 
-   
+3. Referance Genome.   
 
 
 GBSv2 Pipeline Plugins
@@ -92,8 +92,22 @@ GBSv2 Pipeline Plugins
    ProductionSNPCallerPluginV2,Converts data from fastq and keyfile to genotypes then adds these to a genotype file in VCF or HDF5 format. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/ProductionSNPCallerPluginV2>`_
 
 
+GBSv2 Pipeline 
+----------------
 
+#. Load Tassel 5.0 module 
 
+.. code-block:: bash
+   :linenos:
+
+   $ module load Tassel/5.0
+
+#. Useful commands
+
+.. code-block:: bash
+   :linenos:
+
+   $ run_pipeline.pl -Xmx20g -ListPlugins
 
 .. tip::
    
