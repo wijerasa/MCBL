@@ -122,13 +122,13 @@ To check all the parameters for given Plugin, *Ex: GBSSeqToTagDBPlugin*, type
    
    Users are recommended to read more about GBS command line options in `here. Page 1-2 <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
 
-3. Create necessary folder and copy your raw data (fastqs), Reference file and key files to appropriate folder,
+3. Create necessary folders and copy your raw data (fastqs), reference file and key file to appropriate folder,
 
 
 .. code-block:: bash
    :linenos:
 
-   $ mkdir fastq ref key db tagsForAlign
+   $ mkdir fastq ref key db tagsForAlign hd5
 
 4. Commands for pipeline
 
@@ -143,4 +143,5 @@ To check all the parameters for given Plugin, *Ex: GBSSeqToTagDBPlugin*, type
    $ bwa samse ref/S_lycopersicum_chromosomes.2.50.fa tagsForAlign/tagsForAlign.sai tagsForAlign/tagsForAlign.fa.gz > tagsForAlign/tagsForAlign.sam
    $ run_pipeline.pl -fork1 -SAMToGBSdbPlugin -i tagsForAlign/tagsForAlign.sam  -db db/Tomato.db  -aProp 0.0 -aLen 0 -endPlugin -runfork1
    $ run_pipeline.pl -fork1 -DiscoverySNPCallerPluginV2 -db db/Tomato.db  -sC "chr00" -eC "chr12" -mnLCov 0.1 -mnMAF 0.01  -endPlugin -runfork1
+   $ run_pipeline.pl -fork1 -ProductionSNPCallerPluginV2 -db db/Tomato.db  -e ApeKI -i fastq -k key/Tomato_key2.txt  -kmerLength 85 -mnQS 20 -o hd5/HapMap_tomato.h5 -endPlugin -runfork1
 
