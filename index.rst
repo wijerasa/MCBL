@@ -19,14 +19,20 @@ MCIC Computational Biology Lab
 
 .. toctree::
    :numbered:
-   :maxdepth: 20
+   :maxdepth: 30
    :caption: User Documentation
 
    mcbl
    mcbl-application
    mcbl-computers
-   mcbl-gbs
+   
 
+.. toctree::
+   :numbered:
+   :maxdepth: 30
+   :caption: Pipelines
+
+   mcbl-gbs
 
 .. toctree::
    :numbered:

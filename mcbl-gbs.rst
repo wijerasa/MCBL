@@ -107,7 +107,7 @@ GBSv2 Pipeline
 .. code-block:: bash
    :linenos:
 
-   $ run_pipeline.pl -Xmx20g -ListPlugins
+   $ run_pipeline.pl -Xmx200g -ListPlugins
 
 .. tip::
    
