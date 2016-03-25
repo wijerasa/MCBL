@@ -130,7 +130,7 @@ To check all the parameters for given Plugin, *Ex: GBSSeqToTagDBPlugin*, type
 
    $ mkdir fastq ref key db tagsForAlign hd5
 
-4. Commands for pipeline
+4. Commands for the pipeline
 
 .. code-block:: bash
    :linenos:
