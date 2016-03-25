@@ -22,22 +22,27 @@ Genotyping by Sequencing (GBS) pipeline documentation
    :Required OS: OS x or Linux. 
    :Software: `Tassel 5 <http://www.maizegenetics.net/#!tassel/c17q9>`_ 
    :Documentation: `Tassel 5.0 Wiki <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Home>`_
-
    :Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
-Downloading from hudsonalpha.org
+File Formats
 ----------------
 
-#. Create a Samples.txt file with your sample links(the links are provided in the Excelsheet) as follows:
+#. File formats that will be using in this analysis:
 
-   .. parsed-literal::
-
-	 	#Content of the Samples.txt
-		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz
-		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz
-		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz
-		http://mysample.download.org/dl/d4/Meulia/myprojectnumber/data_150522/C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz
-
+   - `HDF5 <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `VCF <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Hapmap <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Plink <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Projection Alignment <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Phylip <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `FASTA <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_, `more <http://en.wikipedia.org/wiki/FASTA_format>`_
+   - `Numerical Data <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+      - `Phenotype Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+      - `Trait Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+      - `Covariate Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+      - `Marker Values as Numerical Co-variates <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   
+   
 #. Use the Terminal and navigate to the location where Samples.txt is saved.
 
    .. code-block:: bash
