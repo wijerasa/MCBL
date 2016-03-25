@@ -51,7 +51,7 @@ Files You Need to Have
 
 Following files need to be created before you start the pipeline:
 
-#. Sequencing data files (.fastq or .fastq.gz)
+1. Sequencing data files (.fastq or .fastq.gz)
 
 .. Note::
    
@@ -69,7 +69,7 @@ Following files need to be created before you start the pipeline:
       $ mv  AE_S1_L001_R1_001.fastq.gz AL2P1XXX_1_fastq.gz
 
    
-#. GBSv2 Key File. Example `key file <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt>`_, `more <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample>`_
+2. GBSv2 Key File. Example `key file <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt>`_, `more <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample>`_
 
    
 
@@ -81,8 +81,8 @@ GBSv2 Pipeline Plugins
    :header: "Plugin", "Description"
    :widths: 10, 40
 
-   GBSSeqToTagDBPlugin, executed to pull distinct tags from the database and export them in the fastq format, more <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/GBSSeqToTagDBPlugin>`_
-   TagExportToFastqPlugin, retrieves distinct tags stored in the database and reformats them to a FASTQ file, `more <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/TagExportToFastqPlugin>`_
+   GBSSeqToTagDBPlugin,executed to pull distinct tags from the database and export them in the fastq format. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/GBSSeqToTagDBPlugin>`_
+   TagExportToFastqPlugin,retrieves distinct tags stored in the database and reformats them to a FASTQ file. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/TagExportToFastqPlugin>`_
    `Jody Whittier <whittier.2@osu.edu>`_,MCBL payments
 
 
