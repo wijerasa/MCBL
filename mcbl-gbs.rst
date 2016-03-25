@@ -49,7 +49,7 @@ File Formats
 Files You Need to Have 
 ----------------
 
-Following files need to be created before you start the pipeline:
+Following files need to be created or present before you start the pipeline:
 
 1. Sequencing data files (.fastq or .fastq.gz)
 
