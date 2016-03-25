@@ -85,12 +85,12 @@ GBSv2 Pipeline Plugins
    TagExportToFastqPlugin,Retrieves distinct tags stored in the database and reformats them to a FASTQ file. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/TagExportToFastqPlugin>`_
    SAMToGBSdbPlugin_,used to identify SNPs from aligned tags using the GBS DB. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SAMToGBSdbPlugin>`_
    DiscoverySNPCallerPluginV2,takes a GBSv2 database file as input and identifies SNPs from the aligned tags. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/DiscoverySNPCallerPluginV2>`_
-   SNPQualityProfilerPlugin,scores all discovered SNPs for various coverage, depth and genotypic statistics for a given set of taxa. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SNPQualityProfilerPlugin>`_
+   SNPQualityProfilerPlugin,scores all discovered SNPs for various coverage depth and genotypic statistics for a given set of taxa. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SNPQualityProfilerPlugin>`_
    UpdateSNPPositionQualityPlugin, reads a quality score file to obtain quality score data for positions stored in the snpposition table. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SNPCutPosTagVerificationPlugin>`_
    SNPCutPosTagVerificationPlugin,allows a user to specify a Cut or SNP position for which they would like data printed. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SNPCutPosTagVerificationPlugin>`_
    GetTagSequenceFromDBPlugin,takes an existing GBSv2 SQLite database file as input and returns a tab-delimited file containing a list of Tag Sequences stored in the specified database file. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/GetTagSequenceFromDBPlugin>`_
-   ProductionSNPCallerPluginV2,converts data from fastq and keyfile to genotypes, then adds these to a genotype file in VCF or HDF5 format. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/ProductionSNPCallerPluginV2>`_
-   
+   ProductionSNPCallerPluginV2,converts data from fastq and keyfile to genotypes then adds these to a genotype file in VCF or HDF5 format. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/ProductionSNPCallerPluginV2>`_
+
 
 
 
