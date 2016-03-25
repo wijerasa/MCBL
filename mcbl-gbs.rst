@@ -95,20 +95,29 @@ GBSv2 Pipeline Plugins
 GBSv2 Pipeline 
 ----------------
 
-#. Load Tassel 5.0 module 
+1. Load Tassel 5.0 module 
 
 .. code-block:: bash
    :linenos:
 
    $ module load Tassel/5.0
 
-#. Useful commands
+2. Useful commands
+
+To check all the plugins available, type
 
 .. code-block:: bash
    :linenos:
 
    $ run_pipeline.pl -Xmx200g -ListPlugins
 
+To check all the parameters for given Plugin, *Ex: GBSSeqToTagDBPlugin*, type
+
+.. code-block:: bash
+   :linenos:
+
+   $ run_pipeline.pl -fork1 -GBSSeqToTagDBPlugin   -endPlugin -runfork1
+
 .. tip::
    
-   Match these checksum values with the values provided in the Excelsheet. For any samples with mismatching checksum, you have to re-download the samples.
+   Users are recommended to read more about GBS command line option `here. Page 1-2 <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
