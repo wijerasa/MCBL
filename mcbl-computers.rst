@@ -38,6 +38,21 @@ Workstations Overview
    mcic-galaxy-srvr,two 3.47GHz six-core Intel® Xeon processors X5690,12, 94 GB,2.6 TB
    mcic-mac-srvr,two 2.93GHz six-core Intel® Xeon processors X5670,12, 64 GB,4.0 TB
 
+Desktops Overview
+----------------------
+.. csv-table::
+   :header: "Desktop", "Processors","Cores","Memory", "Local Disk"
+   :widths: 12, 38, 5,5,5
+
+   mcic-sel019-d1,one 3.00GHz four-core Intel® Xeon processors i7-4578U,7, 32 GB,1.0 TB
+   mcic-sel019-d2,one 3.00GHz four-core Intel® Xeon processors i7-4578U,7, 32 GB,1.0 TB
+   mcic-sel019-d3,one 3.00GHz four-core Intel® Xeon processors i7-4578U,7, 32 GB,1.0 TB
+   mcic-sel019-d4,one 3.00GHz four-core Intel® Xeon processors i7-4578U,7, 32 GB,1.0 TB
+   mcic-sel019-d5,one 3.00GHz four-core Intel® Xeon processors i7-4578U,7, 32 GB,1.0 TB
+   mcic-sel019-d6,one 3.00GHz four-core Intel® Xeon processors i7-4578U,7, 32 GB,1.0 TB
+   mcic-sel019-d7,one 3.00GHz four-core Intel® Xeon processors i7-4578U,7, 32 GB,1.0 TB
+
+
 Software Overview
 ----------------------
 Following bioinformatics software are availabe through MCBL.Some of the commercial software are available for MCBL users.
