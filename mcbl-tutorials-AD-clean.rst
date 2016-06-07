@@ -47,11 +47,12 @@ File Needed
 
 :Input Files: In put files should be in fastq format/compressed fastq( .fq, .fastq, .fq.gz, .fastq.gz). Read `Introduction <http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf>`_ e.g :C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq, C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq.gz, s_1_1_sequence.txt.gz lane1_forward.fq.gz 
 :Adapter File:	Currently, following Adapter sequence files are hosted in MCBL server.
-			  	TruSeq2-PE.fa  
-			  	TruSeq2-SE.fa  
-				TruSeq3-PE.fa  
-				TruSeq3-SE.fa
-				NexteraPE-PE.fa
+			  	
+			  	* TruSeq2-PE.fa  
+			  	* TruSeq2-SE.fa  
+				* TruSeq3-PE.fa  
+				* TruSeq3-SE.fa
+				* NexteraPE-PE.fa
 
 .. warning::
 
