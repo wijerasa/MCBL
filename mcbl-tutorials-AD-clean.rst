@@ -60,13 +60,24 @@ File Needed
 	If you want to make your own adapter sequence file, please read the `The Adapter Fasta section and Making cutome clipping files here <http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf>`_ before you make your Adapter sequence file.
 
 
-Adapter Removing Single End Fastq
+Code Examples
 ----------
+
+*Single End Fastq Files*
 
 .. code-block:: bash
 	:linenos:
 
-	$ java -jar $TRIMHOME/trimmomatic-0.33.jar SE s_1_1_sequence.txt.gz lane1_forward.fq.gz ILLUMINACLIP:$TRIMHOME/adapters/TruSeq3-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+	$ java -jar $TRIMHOME/trimmomatic-0.33.jar SE -threads 12 s_1_1_sequence.txt.gz lane1_forward.fq.gz ILLUMINACLIP:$TRIMHOME/adapters/TruSeq3-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+*Paired End Fastq Files*
+
+.. code-block:: bash
+	:linenos:
+
+	$ java -jar $TRIMHOME/trimmomatic-0.33.jar PE -threads 12 C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq.gz C8EC8ANXX_s2_2_illumina12index_1_SL143785.fastq.gz C8EC8ANXX_s2_1_Trimmed_1P.fastq.gz C8EC8ANXX_s2_1_Trimmed_1U.fastq.gz C8EC8ANXX_s2_2_Trimmed_1P.fastq.gz C8EC8ANXX_s2_2_Trimmed_1U.fastq.gz ILLUMINACLIP:$TRIMHOME/adapters/TruSeq3-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
 
 Filter Multiple Fastqs
 -----
