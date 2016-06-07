@@ -45,7 +45,8 @@ then you can get the help how to run Trimmomatic,
 File Needed
 --------
 
-:Input Files: In put files should be in fastq format/compressed fastq( .fq, .fastq, .fq.gz, .fastq.gz). Read `Introduction <http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf>`_ e.g :C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq, C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq.gz, s_1_1_sequence.txt.gz lane1_forward.fq.gz 
+:Input Files: In put files should be in fastq format/compressed fastq( .fq, .fastq, .fq.gz, .fastq.gz). Read `Introduction <http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf>`_ 
+				e.g :C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq, C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq.gz, s_1_1_sequence.txt.gz lane1_forward.fq.gz 
 :Adapter File:	Currently, following Adapter sequence files are hosted in MCBL server.
 			  	
 			  	* TruSeq2-PE.fa  
@@ -56,7 +57,7 @@ File Needed
 
 .. warning::
 
-	If you want to make your own adapter sequence file, please read the `The Adapter Fasta section here <http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf>`_ and **"Making cutome clipping files"** before you make your Adapter sequence file.
+	If you want to make your own adapter sequence file, please read the `The Adapter Fasta section and Making cutome clipping files here <http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf>`_ before you make your Adapter sequence file.
 
 
 Adapter Removing Single End Fastq
