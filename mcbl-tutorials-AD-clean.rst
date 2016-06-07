@@ -101,10 +101,10 @@ Code Examples
 
 
 
-   .. code-block:: bash
-      :linenos:
+.. code-block:: bash
+	:linenos:
 
-      files_1=(*_s3_1_*.fastq.gz);files_2=(*_s4_2_*_2.fastq.gz);sorted_files_1=($(printf "%s\n" "${files_1[@]}" | sort -u));sorted_files_2=($(printf "%s\n" "${files_2[@]}" | sort -u));for ((i=0; i<${#sorted_files_1[@]}; i+=1));java -jar $TRIMHOME/trimmomatic-0.33.jar PE -threads 12  -trimlog log-j3.stat -phred33   ${sorted_files_1[i]} ${sorted_files_2[i]}  $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}.fastq.gz $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}-U.fastq.gz $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_2[i]%%.*}.fastq.gz $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}-U.fastq.gz ILLUMINACLIP:$KHOME/RNA-Seq/Adapters/adapter.fasta:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:40  2&>$KHOME/RNA-Seq/QC/Trimmed_Data/stat.txt
+	files_1=(*_s3_1_*.fastq.gz);files_2=(*_s4_2_*_2.fastq.gz);sorted_files_1=($(printf "%s\n" "${files_1[@]}" | sort -u));sorted_files_2=($(printf "%s\n" "${files_2[@]}" | sort -u));for ((i=0; i<${#sorted_files_1[@]}; i+=1));java -jar $TRIMHOME/trimmomatic-0.33.jar PE -threads 12  -trimlog log-j3.stat -phred33   ${sorted_files_1[i]} ${sorted_files_2[i]}  $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}.fastq.gz $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}-U.fastq.gz $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_2[i]%%.*}.fastq.gz $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}-U.fastq.gz ILLUMINACLIP:$KHOME/RNA-Seq/Adapters/adapter.fasta:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:40  2&>$KHOME/RNA-Seq/QC/Trimmed_Data/stat.txt
 
 
 
