@@ -47,6 +47,7 @@ MCIC Computational Biology Lab
    :caption: MCBL Tutorials
 
    mcbl-tutorials-PF-clean
+   mcbl-tutorials-AD-clean
    
 
 Indices and tables
