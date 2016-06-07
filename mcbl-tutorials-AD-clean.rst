@@ -79,38 +79,34 @@ Code Examples
 
 
 
-Filter Multiple Fastqs
------
+*Multiple Fastqs*
 
-:Input File: Fastq_filenames.txt
+
+:Input File:	C6EF7ANXX_s3_1_illumina12index_10_SL100996.fastq.gz
+				C6EF7ANXX_s3_1_illumina12index_19_SL100997.fastq.gz
+				C6EF7ANXX_s3_1_illumina12index_22_SL100998.fastq.gz
+				C6EF7ANXX_s3_1_illumina12index_25_SL100999.fastq.gz
+				C6EF7ANXX_s3_1_illumina12index_27_SL101000.fastq.gz
+				C6EF7ANXX_s3_1_illumina12index_3_SL100994.fastq.gz
+				C6EF7ANXX_s3_1_illumina12index_5_SL100995.fastq.gz
+				C6EF7ANXX_s3_2_illumina12index_10_SL100996.fastq.gz
+				C6EF7ANXX_s3_2_illumina12index_19_SL100997.fastq.gz
+				C6EF7ANXX_s3_2_illumina12index_22_SL100998.fastq.gz
+				C6EF7ANXX_s3_2_illumina12index_25_SL100999.fastq.gz
+				C6EF7ANXX_s3_2_illumina12index_27_SL101000.fastq.gz
+				C6EF7ANXX_s3_2_illumina12index_3_SL100994.fastq.gz
+				C6EF7ANXX_s3_2_illumina12index_5_SL100995.fastq.gz
+
 :Output Files: Individual Fastq files
 
-#. Create a Fastq_filenames.txt file with your Fastq filenames in seperate lines as follows:
 
-   .. parsed-literal::
-
-	 	#Content of the Samples.txt
-	 	C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz
-		C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz
-		C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz
-		C6V7FANXX_s8_0_TruseqHTDual_D705-TruseqHTDual_D501_SL104565.fastq.gz
-
-#. Save the above file in the same folder with your Fastq files.
-
-#. Use the Terminal and navigate to the location where Fastq_filenames.txt is saved.
 
    .. code-block:: bash
       :linenos:
 
-      #If your Fastq_filenames.txt is saved under ~/Downloads
-      $ cd ~/Downloads
+      files_1=(*_s3_1_*.fastq.gz);files_2=(*_s4_2_*_2.fastq.gz);sorted_files_1=($(printf "%s\n" "${files_1[@]}" | sort -u));sorted_files_2=($(printf "%s\n" "${files_2[@]}" | sort -u));for ((i=0; i<${#sorted_files_1[@]}; i+=1));java -jar $TRIMHOME/trimmomatic-0.33.jar PE -threads 12  -trimlog log-j3.stat -phred33   ${sorted_files_1[i]} ${sorted_files_2[i]}  $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}.fastq.gz $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}-U.fastq.gz $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_2[i]%%.*}.fastq.gz $KHOME/RNA-Seq/QC/Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}-U.fastq.gz ILLUMINACLIP:$KHOME/RNA-Seq/Adapters/adapter.fasta:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:40  2&>$KHOME/RNA-Seq/QC/Trimmed_Data/stat.txt
 
-#. Type in the following command to filter Fastqs in the Fastq_filenames.txt.
 
-   .. code-block:: bash
-      :linenos:
-
-      $ for f in $(cat Fastq_filenames.txt); do zcat $f | fastq_illumina_filter -vvN | gzip > ${f%.*.fastq.gz}.filtered.fastq.gz;done
 
 
 
