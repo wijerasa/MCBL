@@ -19,7 +19,7 @@ MCIC Computational Biology Lab
 
 .. toctree::
    :numbered:
-   :maxdepth: 30
+   :maxdepth: 40
    :caption: User Documentation
 
    mcbl
@@ -29,21 +29,21 @@ MCIC Computational Biology Lab
 
 .. toctree::
    :numbered:
-   :maxdepth: 30
+   :maxdepth: 40
    :caption: Pipelines
 
    mcbl-gbs
 
 .. toctree::
    :numbered:
-   :maxdepth: 30
+   :maxdepth: 40
    :caption: Data Downloading
 
    mcbl-datadownloads
 
 .. toctree::
    :numbered:
-   :maxdepth: 30
+   :maxdepth: 40
    :caption: MCBL Tutorials
 
    mcbl-tutorials-PF-clean

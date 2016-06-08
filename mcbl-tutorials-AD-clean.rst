@@ -105,7 +105,6 @@ Code Examples
 	:linenos:
 
 	$mkdir Trimmed_Data # Output will be stored here
-
 	$files_1=(*_s3_1_*.fastq.gz);files_2=(*_s3_2_*.fastq.gz);sorted_files_1=($(printf "%s\n" "${files_1[@]}" | sort -u));sorted_files_2=($(printf "%s\n" "${files_2[@]}" | sort -u));for ((i=0; i<${#sorted_files_1[@]}; i+=1));java -jar $TRIMHOME/trimmomatic-0.33.jar PE -threads 12  -trimlog Trimmed_Data/log-j3.stat -phred33   ${sorted_files_1[i]} ${sorted_files_2[i]} Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}.fastq.gz Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}-U.fastq.gz Trimmed_Data/Q_trimmed_${sorted_files_2[i]%%.*}.fastq.gz Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}-U.fastq.gz ILLUMINACLIP:$TRIMHOME/adapters/TruSeq3-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:40  &>Trimmed_Data/stat.txt
 
 
