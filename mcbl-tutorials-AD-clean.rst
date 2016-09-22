@@ -20,7 +20,7 @@
 
 	:Required OS: OS x or Linux. Windows users, please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ 
 	:Software: `Trimmomatic <http://www.usadellab.org/cms/?page=trimmomatic>`_
-	:Purpose: This document provides instructions about how to remove adapters and filter low quality reads from a Fastq file
+	:Purpose: This document provides instructions about how to remove adapters and filter low quality bases from a Fastq file
 	:More: Read more about `Read trimming adapter removing  here: <http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf>`_ 
 	:Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
