@@ -32,8 +32,8 @@ File Formats
 
 #. This section includes descrption of varies file formats, including Qiime scripts, and parameters files. Read more `here <http://qiime.org/documentation/index.html>`_
 
-   - :`Qiime Script index <http://qiime.org/scripts/index.html#qiime-script-index>`_: Index of all the scripts used in Qiime.
-       - :`Metadata mapping files <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_.:  Metadata mapping files  provide per-sample metadata. 
+   -     :`Qiime Script index <http://qiime.org/scripts/index.html#qiime-script-index>`_: Index of all the scripts used in Qiime.
+           -     :`Metadata mapping files <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_.:  Metadata mapping files  provide per-sample metadata. 
 
    .. tip::
 
