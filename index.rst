@@ -33,6 +33,7 @@ MCIC Computational Biology Lab
    :caption: Pipelines
 
    mcbl-gbs
+   microbiome-analysis
 
 .. toctree::
    :numbered:

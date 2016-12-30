@@ -48,7 +48,7 @@ Contacts
    :header: "Person", "Information"
    :widths: 10, 40
 
-   `Dr. Dr. Vitor Antonio Corrêa Pavinato <mailto:correapavinato.1@osu.edu>`_,Questions regarding membership
+   `Dr. Vitor Pavinato <mailto:correapavinato.1@osu.edu>`_,Questions regarding membership
    `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_, MCBL Server access and remote access
    `Jody Whittier <whittier.2@osu.edu>`_,MCBL payments
 

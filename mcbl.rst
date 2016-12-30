@@ -34,7 +34,7 @@ MCBL Services
    "* Handling large data sets
    * Quality control
    * Using standard and custome scripts to do data analysis
-   * Using Big Standalone servers", "* Dr. Vitor Antonio Corrêa Pavinato
+   * Using Big Standalone servers", "* Dr. Vitor Pavinato
    * Saranga Wijeratne"
 
 .. csv-table::
@@ -43,7 +43,7 @@ MCBL Services
 
    "* Training on various NGS data analysis
    * Training on Linux enviornment and shell scripting 
-   * Training on Amazon Web Services and OSC", "* Dr. Vitor Antonio Corrêa Pavinato
+   * Training on Amazon Web Services and OSC", "* Dr. Vitor Pavinato
    * Saranga Wijeratne"
 
 .. csv-table::
