@@ -45,19 +45,19 @@ File Formats
    PC.607 AACTGTGCGTAC YATGCTGCCTCCCGTAGGAGT Fast 20071112 Fasting_mouse__I.D._607
    PC.634 ACAGAGTCGGCT YATGCTGCCTCCCGTAGGAGT Fast 20080116 Fasting_mouse__I.D._634
 
-   - `Plink <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-   - `Projection Alignment <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-   - `Phylip <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-   - `FASTA <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_, `more <http://en.wikipedia.org/wiki/FASTA_format>`_
-   - `Fastq <https://en.wikipedia.org/wiki/FASTQ_format>`_
-   - `Numerical Data <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-      - `Phenotype Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-      - `Trait Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-      - `Covariate Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-      - `Marker Values as Numerical Co-variates <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-   - `Square Numerical Matrix <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-   - `Table Report <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-   - `TOPM (Tags on Physical Map) <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+- `Plink <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+- `Projection Alignment <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+- `Phylip <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+- `FASTA <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_, `more <http://en.wikipedia.org/wiki/FASTA_format>`_
+- `Fastq <https://en.wikipedia.org/wiki/FASTQ_format>`_
+- `Numerical Data <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Phenotype Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Trait Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Covariate Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Marker Values as Numerical Co-variates <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+- `Square Numerical Matrix <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+- `Table Report <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+- `TOPM (Tags on Physical Map) <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
 
 Files You Need to Have 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
