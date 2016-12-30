@@ -36,15 +36,9 @@ File Formats
    - `Input Files <http://qiime.org/documentation/file_formats.html>`_
        - `Metadata mapping files <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_. Metadata mapping files  provide per-sample metadata. 
 
-.. tip::
+   .. tip::
 
-   #SampleID BarcodeSequence LinkerPrimerSequence Treatment DOB Description
-   
-   PC.354 AGCACGAGCCTA YATGCTGCCTCCCGTAGGAGT Control 20061218 Control_mouse__I.D._354
-   PC.355 AACTCGTCGATG YATGCTGCCTCCCGTAGGAGT Control 20061218 Control_mouse__I.D._355
-   PC.356 ACAGACCACTCA YATGCTGCCTCCCGTAGGAGT Control 20061126 Control_mouse__I.D._356
-   PC.607 AACTGTGCGTAC YATGCTGCCTCCCGTAGGAGT Fast 20071112 Fasting_mouse__I.D._607
-   PC.634 ACAGAGTCGGCT YATGCTGCCTCCCGTAGGAGT Fast 20080116 Fasting_mouse__I.D._634
+      Example is given `here <http://qiime.org/documentation/file_formats.html#mapping-file-overview>`_
 
 - `Plink <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
 - `Projection Alignment <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
