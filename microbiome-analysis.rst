@@ -39,6 +39,7 @@ File Formats
 .. tip::
 
    #SampleID BarcodeSequence LinkerPrimerSequence Treatment DOB Description
+   
    PC.354 AGCACGAGCCTA YATGCTGCCTCCCGTAGGAGT Control 20061218 Control_mouse__I.D._354
    PC.355 AACTCGTCGATG YATGCTGCCTCCCGTAGGAGT Control 20061218 Control_mouse__I.D._355
    PC.356 ACAGACCACTCA YATGCTGCCTCCCGTAGGAGT Control 20061126 Control_mouse__I.D._356
