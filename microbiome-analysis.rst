@@ -32,26 +32,17 @@ File Formats
 
 #. This section includes descrption of varies file formats, including Qiime scripts, and parameters files. Read more `here <http://qiime.org/documentation/index.html>`_
 
-   *Qiime Script index:* `Index of all the scripts used in Qiime. <http://qiime.org/scripts/index.html#qiime-script-index>`_
+   **Qiime Script index:** `Index of all the scripts used in Qiime. <http://qiime.org/scripts/index.html#qiime-script-index>`_
 
-   *Metadata mapping files:* `Metadata mapping files  provide per-sample metadata. <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   **Metadata mapping files:** `Metadata mapping files  provide per-sample metadata.
+
 .. tip::
 
    Example is given `here <http://qiime.org/documentation/file_formats.html#mapping-file-overview>`_. Read the section carefully.
+   If you are planing to creat the mapping file by hand read `this section. <http://qiime.org/documentation/file_formats.html#generating-a-mapping-file-by-hand>_`
 
-- `Plink <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-- `Projection Alignment <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-- `Phylip <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-- `FASTA <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_, `more <http://en.wikipedia.org/wiki/FASTA_format>`_
-- `Fastq <https://en.wikipedia.org/wiki/FASTQ_format>`_
-- `Numerical Data <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-   - `Phenotype Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-   - `Trait Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-   - `Covariate Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-   - `Marker Values as Numerical Co-variates <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-- `Square Numerical Matrix <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-- `Table Report <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
-- `TOPM (Tags on Physical Map) <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   **Biom File:** OTU observation file. Read more `here <http://qiime.org/documentation/file_formats.html#biom-table-e-g-otu-table>`_
+
 
 Files You Need to Have 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
