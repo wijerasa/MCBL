@@ -39,7 +39,8 @@ File Formats
 .. tip::
 
    Example is given `here <http://qiime.org/documentation/file_formats.html#mapping-file-overview>`_. Read the section carefully.
-   If you are planing to creat the mapping file by hand read `this section. <http://qiime.org/documentation/file_formats.html#generating-a-mapping-file-by-hand>_`
+   If you are planing to creat the mapping file by hand read `this section. <http://qiime.org/documentation/file_formats.html#generating-a-mapping-file-by-hand>`_
+
 
    **Biom File:** OTU observation file. Read more `here <http://qiime.org/documentation/file_formats.html#biom-table-e-g-otu-table>`_
 
