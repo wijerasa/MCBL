@@ -49,6 +49,7 @@ MCIC Computational Biology Lab
 
    mcbl-tutorials-PF-clean
    mcbl-tutorials-AD-clean
+   mcbl-tutorials-DESeq2-phyloseq
    
 
 Indices and tables
