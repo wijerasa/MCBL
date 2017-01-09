@@ -30,7 +30,7 @@ Software Installation
 --------
 
 .. Note::
-	If you are runing this on MCBL *mcic-sel019-d*, please skip the installation. Following command in R-Studio will load the software module to your environment.
+	If you are runing this on MCBL *mcic-sel019-d*, please skip the installation. The following command in R-Studio will load the software module to your environment.
 
 .. code-block:: r
 	:linenos:
@@ -137,11 +137,11 @@ Differential Abundance OTU call
 
 #. Create a Fastq_filenames.txt file with your Fastq filenames in seperate lines as follows:
 
-	.. code-block:: r
-		:linenos:
+   .. code-block:: r
+	  :linenos:
 
-		library("DESeq2")
-	    packageVersion("DESeq2")
+	  library("DESeq2")
+	  packageVersion("DESeq2")
 
 
 	.. parsed-literal::
