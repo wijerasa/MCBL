@@ -130,7 +130,7 @@ To remove taxonomy level tags assigned to each level (k__, p__, etc..) issue the
 
 
 Differential Abundance OTU call
------
+------
 
 :Input File: merged_mapping_biom
 :Output Files: DESeq2_Out.txt
@@ -148,7 +148,7 @@ Differential Abundance OTU call
 
 	 	[1] ‘1.12.4’
 
-	 	
+
 #. Save the above file in the same folder with your Fastq files.
 
 #. Use the Terminal and navigate to the location where Fastq_filenames.txt is saved.
