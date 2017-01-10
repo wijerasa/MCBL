@@ -192,12 +192,16 @@ Differential Abundance OTU call
       diagdds = estimateSizeFactors(diagdds, geoMeans = geoMeans)
       diagdds = DESeq(diagdds, test="Wald", fitType="parametric")
 
-#. The ``results`` function creats a table of results. Then the `res` table is filtered by `padj < alpha`.
+#. The ``results`` function creats a table of results. Then the ``res`` table is filtered by ``padj < alpha``.
 
    .. code-block:: r
       :linenos:
 
-      $ for f in $(cat Fastq_filenames.txt); do zcat $f | fastq_illumina_filter -vvN | gzip > ${f%.*.fastq.gz}.filtered.fastq.gz;done
+      res = results(diagdds, cooksCutoff = FALSE)
+      sigtab = res[which(res$padj < alpha), ]
+      sigtab = cbind(as(sigtab, "data.frame"), as(tax_table(merged_mapping_biom)[rownames(sigtab), ], "matrix")) #Bind taxanomic information to final results table.
+      write.csv(sigtab, as.character(filename_out)) #Writing `sigtab` to 
+
 
 
 
