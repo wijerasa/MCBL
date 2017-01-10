@@ -178,8 +178,8 @@ Differential Abundance OTU call
    .. warning::
 	If you are getting the following error, please execute the code block below. `More... <https://github.com/joey711/phyloseq/issues/387>`_
 
-	Error in estimateSizeFactorsForMatrix(counts(object), locfunc, geoMeans = geoMeans) : every gene contains at least one zero, cannot compute log geometric means
-    Calls: estimateSizeFactors ... estimateSizeFactors -> .local -> estimateSizeFactorsForMatrix
+	| Error in estimateSizeFactorsForMatrix(counts(object), locfunc, geoMeans = geoMeans) : every gene contains at least one zero, cannot compute log geometric means
+    | Calls: estimateSizeFactors ... estimateSizeFactors -> .local -> estimateSizeFactorsForMatrix
 
 
    .. code-block:: bash
