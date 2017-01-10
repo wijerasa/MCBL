@@ -137,8 +137,8 @@ Differential Abundance OTU call
 
 #. Create a Fastq_filenames.txt file with your Fastq filenames in seperate lines as follows:
 
-  .. code-block:: r
-	:linenos:
+   .. code-block:: bash
+      :linenos:
 
 	  library("DESeq2")
 	  packageVersion("DESeq2")
