@@ -135,13 +135,13 @@ Differential Abundance OTU call
 :Input File: merged_mapping_biom
 :Output Files: DESeq2_Out.txt
 
-#. Create a Fastq_filenames.txt file with your Fastq filenames in seperate lines as follows:
+#. Load the DESeq2 into your R enviornment:
 
    .. code-block:: bash
       :linenos:
 
-	  library("DESeq2")
-	  packageVersion("DESeq2")
+      library("DESeq2")
+      packageVersion("DESeq2")
 
 
    .. parsed-literal::
@@ -149,15 +149,20 @@ Differential Abundance OTU call
 	 	[1] ‘1.12.4’
 
 
-#. Save the above file in the same folder with your Fastq files.
-
-#. Use the Terminal and navigate to the location where Fastq_filenames.txt is saved.
+#. Assign DESeq2 output name and padj-cutoff 
 
    .. code-block:: bash
       :linenos:
 
-      #If your Fastq_filenames.txt is saved under ~/Downloads
-      $ cd ~/Downloads
+      filename_out<-"DESeq2_Out"
+      alpha<-0.01
+
+#. *phyloseq_to_deseq2* function in the following lines converts phyloseq-format microbiom data (i.e merged_mapping_biom) into a *DESeqDataSet* with dispersion estimated, using experimental design formula (i.e ~ Treatment). 
+
+   .. code-block:: bash
+      :linenos:
+
+      $ diagdds <- phyloseq_to_deseq2(merged_mapping_biom, ~ Treatment)
 
 #. Type in the following command to filter Fastqs in the Fastq_filenames.txt.
 
