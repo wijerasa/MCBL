@@ -162,7 +162,35 @@ Differential Abundance OTU call
    .. code-block:: bash
       :linenos:
 
-      $ diagdds <- phyloseq_to_deseq2(merged_mapping_biom, ~ Treatment)
+      diagdds <- phyloseq_to_deseq2(merged_mapping_biom, ~ Treatment)
+      diagdds <- DESeq(diagdds, test="Wald", fitType="parametric")
+
+   .. parsed-literal::
+
+	 	## estimating size factors
+		## estimating dispersions
+		## gene-wise dispersion estimates
+		## mean-dispersion relationship
+		## final dispersion estimates
+		## fitting model and testing
+
+
+   .. warning::
+	If you are getting the following error, please execute the code block below. `More... <https://github.com/joey711/phyloseq/issues/387>`_
+
+	Error in estimateSizeFactorsForMatrix(counts(object), locfunc, geoMeans = geoMeans) : every gene contains at least one zero, cannot compute log geometric means
+    Calls: estimateSizeFactors ... estimateSizeFactors -> .local -> estimateSizeFactorsForMatrix
+
+
+   .. code-block:: bash
+      :linenos:
+
+      gm_mean = function(x, na.rm=TRUE){
+        exp(sum(log(x[x > 0]), na.rm=na.rm) / length(x))
+      }
+      geoMeans = apply(counts(diagdds), 1, gm_mean)
+      diagdds = estimateSizeFactors(diagdds, geoMeans = geoMeans)
+      diagdds = DESeq(diagdds, test="Wald", fitType="parametric")
 
 #. Type in the following command to filter Fastqs in the Fastq_filenames.txt.
 
