@@ -137,7 +137,7 @@ Differential Abundance OTU call
 
 #. Load the DESeq2 into your R enviornment:
 
-   .. code-block:: bash
+   .. code-block:: r
       :linenos:
 
       library("DESeq2")
@@ -151,15 +151,15 @@ Differential Abundance OTU call
 
 #. Assign DESeq2 output name and padj-cutoff 
 
-   .. code-block:: bash
+   .. code-block:: r
       :linenos:
 
-      filename_out<-"DESeq2_Out"
+      filename_out<-"DESeq2_Out.txt"
       alpha<-0.01
 
 #. *phyloseq_to_deseq2* function in the following lines converts phyloseq-format microbiom data (i.e merged_mapping_biom) into a *DESeqDataSet* with dispersion estimated, using experimental design formula (i.e ~ Treatment). 
 
-   .. code-block:: bash
+   .. code-block:: r
       :linenos:
 
       diagdds <- phyloseq_to_deseq2(merged_mapping_biom, ~ Treatment)
@@ -180,11 +180,11 @@ Differential Abundance OTU call
 
 	.. parsed-literal::
 
-	   | *Error in estimateSizeFactorsForMatrix(counts(object), locfunc, geoMeans = geoMeans) : every gene contains at least one zero, cannot compute log geometric means*
-	   | *Calls: estimateSizeFactors ... estimateSizeFactors -> .local -> estimateSizeFactorsForMatrix*
+	   *Error in estimateSizeFactorsForMatrix(counts(object), locfunc, geoMeans = geoMeans) : every gene contains at least one zero, cannot compute log geometric means*
+	   *Calls: estimateSizeFactors ... estimateSizeFactors -> .local -> estimateSizeFactorsForMatrix*
 
 
-   .. code-block:: bash
+   .. code-block:: r
       :linenos:
 
       gm_mean = function(x, na.rm=TRUE){ exp(sum(log(x[x > 0]), na.rm=na.rm) / length(x))}
@@ -192,9 +192,9 @@ Differential Abundance OTU call
       diagdds = estimateSizeFactors(diagdds, geoMeans = geoMeans)
       diagdds = DESeq(diagdds, test="Wald", fitType="parametric")
 
-#. Type in the following command to filter Fastqs in the Fastq_filenames.txt.
+#. The ``results`` function creats a table of results. Then the `res` table is filtered by `padj < alpha`.
 
-   .. code-block:: bash
+   .. code-block:: r
       :linenos:
 
       $ for f in $(cat Fastq_filenames.txt); do zcat $f | fastq_illumina_filter -vvN | gzip > ${f%.*.fastq.gz}.filtered.fastq.gz;done
