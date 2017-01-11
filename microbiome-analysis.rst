@@ -30,7 +30,7 @@ QIIME
 File Formats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. This section includes descrption of varies file formats, including Qiime scripts, and parameters files. Read more `here <http://qiime.org/documentation/index.html>`_
+This section includes descrption of varies file formats, including Qiime scripts, and parameters files. Read more `here <http://qiime.org/documentation/index.html>`_
 
    **Qiime Script index:** `Index of all the scripts used in Qiime. <http://qiime.org/scripts/index.html#qiime-script-index>`_
 
@@ -62,20 +62,22 @@ Make a new directory ``MCICQiime`` and then `cd` to move into the dirctory.
 
 2. Download data from `Schloss Wiki <https://www.mothur.org/wiki/MiSeq_SOP>`_
 
-For this tutorial download only dataset shown in the image below.
+For this tutorial download only dataset shown in the image below (i.e Example data from Scholoss lab).
 
 .. image:: img/qiime-data-scholos.png
    :width: 100%
 
-.. code-block:: bash
-   :linenos:
-   
-   $ mkdir  MCICQiime
-   $ cd MCICQiime
+Inside the ``MCICQiime``, issue following command to get the data. Data is archived. ``unzip -j`` will extract all the files to same directory where you are on right now.
+
+
+   .. code-block:: bash
+      :linenos:
+      
+      $ wget http://www.mothur.org/w/images/d/d6/MiSeqSOPData.zip  
+      $ unzip -j  MiSeqSOPData.zip
 
    
-2. GBSv2 Key File. Example `key file <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt>`_, `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample>`_
-
+3. 
 3. Referance Genome.   
 
 
