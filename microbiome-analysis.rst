@@ -48,24 +48,25 @@ File Formats
 Files You Need to Have 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Following files need to be created or present before you start the pipeline:
+Following files need to be downloaded or presented before you start the pipeline. For this tutorial, Mothur tutorial data published in `Schloss Wiki <https://www.mothur.org/wiki/MiSeq_SOP>`_  will use. These data are 16s rRRNA Amplicons sequenced with MiSeq technology.
 
-1. Sequencing data files (.fastq or .fastq.gz)
+1. Create Folders
 
-.. Note::
-   
-   Fastq files should rename as follows, `more on page 7 <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
+Make a new directory ``MCICQiime`` and then `cd` to move into the dirctory. 
 
-   :FLOWCELL_LANE_fastq.gz: example: AL2P1XXX_2_fastq.gz 
-   :FLOWCELL_s_LANE_fastq.gz:  example: AL2P1XXX_s_2_fastq.gz 
-   :code_FLOWCELL_s_LANE_fastq.gz:   example: 00000000_AL2P1XXX_s_2_fastq.gz
-
-
-.. code-block:: bash
+   .. code-block:: bash
       :linenos:
 
-      #To rename original .fastq.gz file, 
-      $ mv  AE_S1_L001_R1_001.fastq.gz AL2P1XXX_1_fastq.gz
+      $ mkdir  MCICQiime
+      $ cd MCICQiime
+
+2. Download data from`Schloss Wiki <https://www.mothur.org/wiki/MiSeq_SOP>`_
+
+   .. code-block:: bash
+      :linenos:
+
+      $ mkdir  MCICQiime
+      $ cd MCICQiime
 
    
 2. GBSv2 Key File. Example `key file <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt>`_, `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample>`_
