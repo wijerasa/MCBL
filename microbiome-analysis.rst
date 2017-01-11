@@ -34,11 +34,11 @@ File Formats
 
    **Qiime Script index:** `Index of all the scripts used in Qiime. <http://qiime.org/scripts/index.html#qiime-script-index>`_
 
-   **Metadata mapping files:** `Metadata mapping files  provide per-sample metadata.
+   **Metadata mapping files:** Metadata mapping files  provide per-sample metadata.
 
 .. tip::
 
-   Example is given `here <http://qiime.org/documentation/file_formats.html#mapping-file-overview>`_. Read the section carefully.
+   Metadata mapping file example is given `here <http://qiime.org/documentation/file_formats.html#mapping-file-overview>`_. Read the section carefully.
    If you are planing to creat the mapping file by hand read `this section. <http://qiime.org/documentation/file_formats.html#generating-a-mapping-file-by-hand>`_
 
 
@@ -61,6 +61,11 @@ Make a new directory ``MCICQiime`` and then `cd` to move into the dirctory.
       $ cd MCICQiime
 
 2. Download data from`Schloss Wiki <https://www.mothur.org/wiki/MiSeq_SOP>`_
+
+For this tutorial download only dataset shown in the image below.
+
+.. image:: img/qiime-data-scholos.png
+      :width: 100%
 
    .. code-block:: bash
       :linenos:
