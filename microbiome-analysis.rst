@@ -76,9 +76,22 @@ Inside the ``MCICQiime``, issue following command to get the data. Data is archi
       $ wget http://www.mothur.org/w/images/d/d6/MiSeqSOPData.zip  
       $ unzip -j  MiSeqSOPData.zip
 
+Rename the filenames to make it easy to downstream analysis.
+
+.. code-block:: bash
+      :linenos:
+      
+      $ for f in *.fastq; do mv $f  ${f%%_L*}.fastq;done 
+
+Command explanation.
+
+- ``for f in *.fastq;`` reads anyfile ends wiht `.fastq` one at a time
+- ``do`` start body of the `for` loop
+- ``mv $f do mv $f  ${f%%_L*}.fastq;`` rename $f  (i.e F3D0_S188_L001_R1_001.fastq) to ${f%%_L*}.fastq (i.e F3D0_S188.fastq)
+- ``done`` finish the loop
+
    
-3. 
-3. Referance Genome.   
+3. .   
 
 
 GBSv2 Pipeline Plugins
