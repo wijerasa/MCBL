@@ -60,18 +60,18 @@ Make a new directory ``MCICQiime`` and then `cd` to move into the dirctory.
       $ mkdir  MCICQiime
       $ cd MCICQiime
 
-2. Download data from`Schloss Wiki <https://www.mothur.org/wiki/MiSeq_SOP>`_
+2. Download data from `Schloss Wiki <https://www.mothur.org/wiki/MiSeq_SOP>`_
 
 For this tutorial download only dataset shown in the image below.
 
 .. image:: img/qiime-data-scholos.png
-      :width: 100%
+   :width: 100%
 
-   .. code-block:: bash
-      :linenos:
-
-      $ mkdir  MCICQiime
-      $ cd MCICQiime
+.. code-block:: bash
+   :linenos:
+   
+   $ mkdir  MCICQiime
+   $ cd MCICQiime
 
    
 2. GBSv2 Key File. Example `key file <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt>`_, `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample>`_
