@@ -95,7 +95,7 @@ Command explanation.
 
 Files and experiment are discribed as follows in `Schloss Wiki <https://www.mothur.org/wiki/MiSeq_SOP>`_.
 
-..
+::
 
        Because of the large size of the original dataset (3.9 GB) we are giving you 21 of the 362 pairs of fastq files.For example, you will see two files: F3D0_S188_L001_R1_001.fastq and F3D0_S188_L001_R2_001.fastq. These two files correspond to Female 3 on Day 0 (i.e. the day of weaning). The first and all those with R1 correspond to read 1 while the second and all those with R2 correspond to the second or reverse read. These sequences are 250 bp and overlap in the V4 region of the 16S rRNA gene; this region is about 253 bp long. So looking at the files in the MiSeq_SOP folder that you've downloaded you will see 22 fastq files representing 10 time points from Female 3 and 1 mock community. You will also see HMP_MOCK.v35.fasta which contains the sequences used in the mock community that we sequenced in fasta format.
 
