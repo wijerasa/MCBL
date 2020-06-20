@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Basic Microbiome Analysis &mdash; MCBL 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/cutome.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Data Downloading from Cloud Services" href="mcbl-datadownloads.html" />
+    <link rel="prev" title="1. Genotyping by Sequencing (GBS) pipeline documentation" href="mcbl-gbs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> MCBL
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mcbl.html">1. MCIC Computational Biology Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">2. MCBL Membership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">3. MCBL Servers and Computing Resources</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pipelines</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="mcbl-gbs.html">1. Genotyping by Sequencing (GBS) pipeline documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Basic Microbiome Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#qiime">2.1. QIIME</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#file-formats">2.1.1. File Formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#files-you-need-to-have">2.1.2. Files You Need to Have</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gbsv2-pipeline-plugins">2.1.3. GBSv2 Pipeline Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gbsv2-pipeline">2.1.4. GBSv2 Pipeline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mothur">2.2. Mothur</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Data Downloading</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">1. Data Downloading from Cloud Services</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MCBL Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">1. Filter a Fastq File (CASAVA generated)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">2. Adapter Removing and Quality Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">3. DESeq2 with phyloseq</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MCBL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>2. Basic Microbiome Analysis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/microbiome-analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-microbiome-analysis">
+<h1>2. Basic Microbiome Analysis<a class="headerlink" href="#basic-microbiome-analysis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="qiime">
+<h2>2.1. QIIME<a class="headerlink" href="#qiime" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="field-list simple">
+<dt class="field-odd">Required OS</dt>
+<dd class="field-odd"><p>OS x or Linux.</p>
+</dd>
+<dt class="field-even">Software</dt>
+<dd class="field-even"><p><a class="reference external" href="http://qiime.org/index.html">Qiime 1.9</a></p>
+</dd>
+<dt class="field-odd">Documentation</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://qiime.org/tutorials/index.html">Qiime Tutorial</a></p>
+</dd>
+<dt class="field-even">Author</dt>
+<dd class="field-even"><p>This document is created by <a class="reference external" href="mailto:wijeratne&#46;3&#37;&#52;&#48;osu&#46;edu">Saranga Wijeratne</a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="file-formats">
+<h3>2.1.1. File Formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h3>
+<p>This section includes descrption of varies file formats, including Qiime scripts, and parameters files. Read more <a class="reference external" href="http://qiime.org/documentation/index.html">here</a></p>
+<blockquote>
+<div><p><strong>Qiime Script index:</strong> <a class="reference external" href="http://qiime.org/scripts/index.html#qiime-script-index">Index of all the scripts used in Qiime.</a></p>
+<p><strong>Metadata mapping files:</strong> Metadata mapping files  provide per-sample metadata.</p>
+</div></blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Metadata mapping file example is given <a class="reference external" href="http://qiime.org/documentation/file_formats.html#mapping-file-overview">here</a>. Read the section carefully.
+If you are planing to creat the mapping file by hand read <a class="reference external" href="http://qiime.org/documentation/file_formats.html#generating-a-mapping-file-by-hand">this section.</a></p>
+<p><strong>Biom File:</strong> OTU observation file. Read more <a class="reference external" href="http://qiime.org/documentation/file_formats.html#biom-table-e-g-otu-table">here</a></p>
+</div>
+</div>
+<div class="section" id="files-you-need-to-have">
+<h3>2.1.2. Files You Need to Have<a class="headerlink" href="#files-you-need-to-have" title="Permalink to this headline">¶</a></h3>
+<p>Following files need to be downloaded or presented before you start the pipeline. For this tutorial, Mothur tutorial data published in <a class="reference external" href="https://www.mothur.org/wiki/MiSeq_SOP">Schloss Wiki</a>  will use. These data are 16s rRRNA Amplicons sequenced with MiSeq technology.</p>
+<ol class="arabic simple">
+<li><p>Create Folders</p></li>
+</ol>
+<p>Make a new directory <code class="docutils literal notranslate"><span class="pre">MCICQiime</span></code> and then <cite>cd</cite> to move into the dirctory.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ mkdir  MCICQiime
+$ <span class="nb">cd</span> MCICQiime
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Download data from <a class="reference external" href="https://www.mothur.org/wiki/MiSeq_SOP">Schloss Wiki</a></p></li>
+</ol>
+<p>For this tutorial download only dataset shown in the image below (i.e Example data from Scholoss lab).</p>
+<a class="reference internal image-reference" href="_images/qiime-data-scholos.png"><img alt="_images/qiime-data-scholos.png" src="_images/qiime-data-scholos.png" style="width: 100%;" /></a>
+<p>Inside the <code class="docutils literal notranslate"><span class="pre">MCICQiime</span></code>, issue following command to get the data. Data is archived. <code class="docutils literal notranslate"><span class="pre">unzip</span> <span class="pre">-j</span></code> will extract all the files to same directory where you are on right now.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ wget http://www.mothur.org/w/images/d/d6/MiSeqSOPData.zip
+$ unzip -j  MiSeqSOPData.zip
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+<p>Rename the filenames to make it easy to downstream analysis.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ <span class="k">for</span> f in *.fastq<span class="p">;</span> <span class="k">do</span> mv <span class="nv">$f</span>  <span class="si">${</span><span class="nv">f</span><span class="p">%%_L*</span><span class="si">}</span>.fastq<span class="p">;</span><span class="k">done</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+<p>Command explanation.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">f</span> <span class="pre">in</span> <span class="pre">*.fastq;</span></code> reads anyfile ends wiht <cite>.fastq</cite> one at a time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">do</span></code> start body of the <cite>for</cite> loop</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">$f</span> <span class="pre">do</span> <span class="pre">mv</span> <span class="pre">$f</span>&#160; <span class="pre">${f%%_L*}.fastq;</span></code> rename $f  (i.e F3D0_S188_L001_R1_001.fastq) to ${f%%_L*}.fastq (i.e F3D0_S188.fastq)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">done</span></code> finish the loop</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Data Explanation</p></li>
+</ol>
+<p>Files and experiment are discribed as follows in <a class="reference external" href="https://www.mothur.org/wiki/MiSeq_SOP">Schloss Wiki</a>.</p>
+<blockquote>
+<div><p>Because of the large size of the original dataset (3.9 GB) we are giving you 21 of the 362 pairs of fastq files.For example, you will see two files: F3D0_S188_L001_R1_001.fastq and F3D0_S188_L001_R2_001.fastq. These two files correspond to Female 3 on Day 0 (i.e. the day of weaning). The first and all those with R1 correspond to read 1 while the second and all those with R2 correspond to the second or reverse read. These sequences are 250 bp and overlap in the V4 region of the 16S rRNA gene; this region is about 253 bp long. So looking at the files in the MiSeq_SOP folder that you’ve downloaded you will see 22 fastq files representing 10 time points from Female 3 and 1 mock community. You will also see HMP_MOCK.v35.fasta which contains the sequences used in the mock community that we sequenced in fasta format.</p>
+</div></blockquote>
+</div>
+<div class="section" id="gbsv2-pipeline-plugins">
+<h3>2.1.3. GBSv2 Pipeline Plugins<a class="headerlink" href="#gbsv2-pipeline-plugins" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Plugin</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GBSSeqToTagDBPlugin</p></td>
+<td><p>Executed to pull distinct tags from the database and export them in the fastq format. <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/GBSSeqToTagDBPlugin">More</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>TagExportToFastqPlugin</p></td>
+<td><p>Retrieves distinct tags stored in the database and reformats them to a FASTQ file. <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/TagExportToFastqPlugin">More</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SAMToGBSdbPlugin</p></td>
+<td><p>Used to identify SNPs from aligned tags using the GBS DB. <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SAMToGBSdbPlugin">More</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>DiscoverySNPCallerPluginV2</p></td>
+<td><p>Takes a GBSv2 database file as input and identifies SNPs from the aligned tags. <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/DiscoverySNPCallerPluginV2">More</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SNPQualityProfilerPlugin</p></td>
+<td><p>Scores all discovered SNPs for various coverage depth and genotypic statistics for a given set of taxa. <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SNPQualityProfilerPlugin">More</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>UpdateSNPPositionQualityPlugin</p></td>
+<td><p>Reads a quality score file to obtain quality score data for positions stored in the snpposition table. <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SNPCutPosTagVerificationPlugin">More</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SNPCutPosTagVerificationPlugin</p></td>
+<td><p>Allows a user to specify a Cut or SNP position for which they would like data printed. <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SNPCutPosTagVerificationPlugin">More</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>GetTagSequenceFromDBPlugin</p></td>
+<td><p>Takes an existing GBSv2 SQLite database file as input and returns a tab-delimited file containing a list of Tag Sequences stored in the specified database file. <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/GetTagSequenceFromDBPlugin">More</a></p></td>
+</tr>
+<tr class="row-even"><td><p>ProductionSNPCallerPluginV2</p></td>
+<td><p>Converts data from fastq and keyfile to genotypes then adds these to a genotype file in VCF or HDF5 format. <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/ProductionSNPCallerPluginV2">More</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="gbsv2-pipeline">
+<h3>2.1.4. GBSv2 Pipeline<a class="headerlink" href="#gbsv2-pipeline" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Load Tassel 5.0 module</p></li>
+</ol>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ module load Tassel/5.0
+</pre></div>
+</td></tr></table></div>
+<ol class="arabic simple" start="2">
+<li><p>Useful commands</p></li>
+</ol>
+<p>To check all the plugins available, type</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ run_pipeline.pl -Xmx200g -ListPlugins
+</pre></div>
+</td></tr></table></div>
+<p>To check all the parameters for given Plugin, <em>Ex: GBSSeqToTagDBPlugin</em>, type</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ run_pipeline.pl -fork1 -GBSSeqToTagDBPlugin   -endPlugin -runfork1
+</pre></div>
+</td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Users are recommended to read more about GBS command line options in <a class="reference external" href="https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf">here. Page 1-2</a></p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Create necessary folders and copy your raw data (fastqs), reference file and key file to appropriate folder,</p></li>
+</ol>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ mkdir fastq ref key db tagsForAlign hd5
+</pre></div>
+</td></tr></table></div>
+<ol class="arabic simple" start="4">
+<li><p>Commands for the pipeline</p></li>
+</ol>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ run_pipeline.pl -Xmx200g -fork1 -GBSSeqToTagDBPlugin -i fastq  -k key/Tomato_key.txt -e ApeKI -db db/Tomato.db  -kmerLength <span class="m">85</span> -mnQS <span class="m">20</span>  -endPlugin -runfork1
+$ run_pipeline.pl -fork1 -TagExportToFastqPlugin  -db db/Tomato.db -o tagsForAlign/tagsForAlign.fa.gz -c <span class="m">5</span>  -endPlugin -runfork1
+$ <span class="nb">cd</span> ref
+$ bwa index -a is S_lycopersicum_chromosomes.2.50.fa
+$ <span class="nb">cd</span> ../
+$ bwa samse ref/S_lycopersicum_chromosomes.2.50.fa tagsForAlign/tagsForAlign.sai tagsForAlign/tagsForAlign.fa.gz &gt; tagsForAlign/tagsForAlign.sam
+$ run_pipeline.pl -fork1 -SAMToGBSdbPlugin -i tagsForAlign/tagsForAlign.sam  -db db/Tomato.db  -aProp <span class="m">0</span>.0 -aLen <span class="m">0</span> -endPlugin -runfork1
+$ run_pipeline.pl -fork1 -DiscoverySNPCallerPluginV2 -db db/Tomato.db  -sC <span class="s2">&quot;chr00&quot;</span> -eC <span class="s2">&quot;chr12&quot;</span> -mnLCov <span class="m">0</span>.1 -mnMAF <span class="m">0</span>.01  -endPlugin -runfork1
+$ run_pipeline.pl -fork1 -ProductionSNPCallerPluginV2 -db db/Tomato.db  -e ApeKI -i fastq -k key/Tomato_key2.txt  -kmerLength <span class="m">85</span> -mnQS <span class="m">20</span> -o hd5/HapMap_tomato.h5 -endPlugin -runfork1
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="mothur">
+<h2>2.2. Mothur<a class="headerlink" href="#mothur" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mcbl-datadownloads.html" class="btn btn-neutral float-right" title="1. Data Downloading from Cloud Services" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mcbl-gbs.html" class="btn btn-neutral float-left" title="1. Genotyping by Sequencing (GBS) pipeline documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2016, Saranga Wijeratne
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
