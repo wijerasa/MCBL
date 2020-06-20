@@ -15,7 +15,7 @@
    :align: right
 
 **********************************************
- MCIC Computational Biology Lab
+ MCIC Computational Biology Lab -  TEST
 **********************************************
 
 Our Goal
