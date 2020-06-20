@@ -1,13 +1,8 @@
 
 
-.. MCBL documentation master file, created by
-   sphinx-quickstart on Wed Sep 23 17:00:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 .. module:: Introduction
    :synopsis: Introduction to MCBL
-.. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
+.. moduleauthor:: Jelmer Poelstra<poelstra.1@osu.edu>
 
 .. highlight:: rest
 
@@ -34,8 +29,7 @@ MCBL Services
    "* Handling large data sets
    * Quality control
    * Using standard and custome scripts to do data analysis
-   * Using Big Standalone servers", "* Dr. Vitor Pavinato
-   * Saranga Wijeratne"
+   * Using Big Standalone servers", "* Jelmer Poelstra"
 
 .. csv-table::
    :header: "Workshops & Training", "Contacts"
