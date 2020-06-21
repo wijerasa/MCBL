@@ -7,20 +7,23 @@
 .. figure:: Logo.png
    :align: right
 
-MCBL Membership
+
+MCBL membership
 ***************
 
-Why you need an MCBL Membership
--------------------------------
-We are happy to help you to carry out your own analysis. This will include helping with experimental design,
-discussing the most effective way to carry out your data analysis, providing the computational
-infrastructure (software, scripts and computers), interpreting results,
-and answering questions you might come across along the way.
 
-We can also process and analyze HTS data for you, using either standardized or custom pipelines.
+MCBL membership benefits
+------------------------
 
-How to Apply for an MCBL Membership
+- Access to the MCBL and MCBL computers 24/7.
+- Free access to all MCBL activities: workshops, user group meeting, etc.
+- Access to 1 TB data storage space for the duraton of the membership.
+- Assistance with experimental design, bioinformatic analyses, and interpretation of your data.
+
+
+How to apply for an MCBL membership
 -----------------------------------
+
 :Step 1: Fill out and submit the MCBL application form: `MCBL Application <https://mcic.osu.edu/bioinformatics/mcbl-registration-form>`_.
 :Step 2: Submit your membership fee to MCIC.
 :Step 3: Contact `Jelmer Poelstra <mailto:poelstra.1@osu.edu>`_ for login credentials.
@@ -28,22 +31,19 @@ How to Apply for an MCBL Membership
 .. Note:: Access to MCBL resources will be granted till we receive the payment.
           Once the form is completed and submitted a notification e-mail will be sent to the membership applicant and the PI.
 
-MCBL Membership Benefits
+
+MCBL membership duration
 ------------------------
 
-- Access to the MCBL and MCBL computers 24/7.
-- Free access to all MCBL activities: workshops, user group meeting, etc.
-- Access to 1 TB data storage space for the duraton of the membership.
-- Assistance with bioinformatic analyses of your data.
-
-MCBL Membership Duration
-------------------------
 Membership is offered for a 6 month or 1 year period at a time.
 
-MCBL Membership Termination
+
+MCBL membership termination
 ----------------------------
-MCBL Membership will be terminated after the membership period ends,
+
+MCBL membership will be terminated after the membership period ends,
 or upon a written request from user or PI to terminate the membership. 
+
 
 Contacts
 --------

@@ -12,7 +12,7 @@ MCIC Computational Biology Lab
 ===============================
 
 .. toctree::
-   :maxdepth: 150
+   :maxdepth: 1
    :caption: About MCBL and Membership
 
    mcbl
@@ -20,7 +20,7 @@ MCIC Computational Biology Lab
    mcbl-computers
 
 .. toctree::
-   :maxdepth: 100
+   :maxdepth: 1
    :caption: Tutorials
 
    mcbl-datadownloads
@@ -29,7 +29,7 @@ MCIC Computational Biology Lab
    mcbl-tutorials-DESeq2-phyloseq
    
 .. toctree::
-   :maxdepth: 150
+   :maxdepth: 1
    :caption: Pipelines
 
    mcbl-gbs
