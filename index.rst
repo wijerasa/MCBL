@@ -13,7 +13,7 @@ MCIC Computational Biology Lab
 
 .. toctree::
    :maxdepth: 150
-   :caption: User Documentation
+   :caption: About MCBL and Membership
 
    mcbl
    mcbl-application
@@ -21,25 +21,19 @@ MCIC Computational Biology Lab
 
 .. toctree::
    :maxdepth: 100
-   :caption: Data Downloading
+   :caption: Tutorials
 
    mcbl-datadownloads
-
-.. toctree::
-   :maxdepth: 150
-   :caption: Pipelinesz
-
-   mcbl-gbs
-   microbiome-analysis
-
-.. toctree::
-   :maxdepth: 100
-   :caption: MCBL Tutorials
-
    mcbl-tutorials-PF-clean
    mcbl-tutorials-AD-clean
    mcbl-tutorials-DESeq2-phyloseq
    
+.. toctree::
+   :maxdepth: 150
+   :caption: Pipelines
+
+   mcbl-gbs
+   microbiome-analysis
 
 Indices and tables
 ==================
