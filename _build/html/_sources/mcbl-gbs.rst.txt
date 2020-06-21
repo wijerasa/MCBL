@@ -1,11 +1,5 @@
 
-.. MCBL documentation master file, created by
-   sphinx-quickstart on Wed Sep 23 17:00:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-
-.. module:: GBS analysis
+.. module:: GBS
    :synopsis: GBS analysis
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
@@ -13,9 +7,10 @@
 .. highlight:: rest
 
 
-**********************************************
-Genotyping by Sequencing (GBS) pipeline documentation
-**********************************************
+GBS
+***
+
+This documents a pipeline for the analysis of GBS (Genotyping-By-Sequencing) data.
 
 .. Note::
 
@@ -24,8 +19,9 @@ Genotyping by Sequencing (GBS) pipeline documentation
    :Documentation: `Tassel 5.0 Wiki <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Home>`_
    :Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
-File Formats
-----------------
+
+File formats
+------------
 
 #. File formats that will be using in this analysis:
 
@@ -46,36 +42,37 @@ File Formats
    - `Table Report <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
    - `TOPM (Tags on Physical Map) <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
 
-Files You Need to Have 
-----------------
 
-Following files need to be created or present before you start the pipeline:
+Files you need to have 
+----------------------
+
+The following files need to be present before you start the pipeline:
 
 1. Sequencing data files (.fastq or .fastq.gz)
 
 .. Note::
    
-   Fastq files should rename as follows, `more on page 7 <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
-
-   :FLOWCELL_LANE_fastq.gz: example: AL2P1XXX_2_fastq.gz 
-   :FLOWCELL_s_LANE_fastq.gz:  example: AL2P1XXX_s_2_fastq.gz 
-   :code_FLOWCELL_s_LANE_fastq.gz:   example: 00000000_AL2P1XXX_s_2_fastq.gz
+   Fastq files should follow this naming convention: `(more on page 7 here) <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
+   - FLOWCELL_LANE_fastq.gz (e.g. AL2P1XXX_2_fastq.gz)
+   - FLOWCELL_s_LANE_fastq.gz  (e.g. AL2P1XXX_s_2_fastq.gz) 
+   - code_FLOWCELL_s_LANE_fastq.gz (e.g.: 00000000_AL2P1XXX_s_2_fastq.gz)
 
 
 .. code-block:: bash
       :linenos:
 
-      #To rename original .fastq.gz file, 
+      # To rename a .fastq.gz file: 
       $ mv  AE_S1_L001_R1_001.fastq.gz AL2P1XXX_1_fastq.gz
 
    
-2. GBSv2 Key File. Example `key file <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt>`_, `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample>`_
-
-3. Referance Genome.   
+2. GBSv2 key file  `(example key file <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt>`_, `more information) <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample>`_.
 
 
-GBSv2 Pipeline Plugins
-----------------
+3. A reference genome.   
+
+
+GBSv2 pipeline plugins
+----------------------
 
 .. csv-table::
    :header: "Plugin", "Description"
@@ -92,26 +89,28 @@ GBSv2 Pipeline Plugins
    ProductionSNPCallerPluginV2,Converts data from fastq and keyfile to genotypes then adds these to a genotype file in VCF or HDF5 format. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/ProductionSNPCallerPluginV2>`_
 
 
-GBSv2 Pipeline 
-----------------
+GBSv2 pipeline 
+--------------
 
-1. Load Tassel 5.0 module 
+
+**1. Load Tassel 5.0 module**
 
 .. code-block:: bash
    :linenos:
 
    $ module load Tassel/5.0
 
-2. Useful commands
 
-To check all the plugins available, type
+**2. Useful commands**
+
+To check all the plugins available, type:
 
 .. code-block:: bash
    :linenos:
 
    $ run_pipeline.pl -Xmx200g -ListPlugins
 
-To check all the parameters for given Plugin, *Ex: GBSSeqToTagDBPlugin*, type
+To check all the parameters for given Plugin, *Ex: GBSSeqToTagDBPlugin*, type:
 
 .. code-block:: bash
    :linenos:
@@ -122,15 +121,18 @@ To check all the parameters for given Plugin, *Ex: GBSSeqToTagDBPlugin*, type
    
    Users are recommended to read more about GBS command line options in `here. Page 1-2 <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
 
-3. Create necessary folders and copy your raw data (fastqs), reference file and key file to appropriate folder,
 
+**3. File preparation**
+
+Create necessary folders and copy your raw data (fastqs), reference file and key file to appropriate folder:
 
 .. code-block:: bash
    :linenos:
 
    $ mkdir fastq ref key db tagsForAlign hd5
 
-4. Commands for the pipeline
+
+**4. Execute the pipeline**
 
 .. code-block:: bash
    :linenos:
@@ -144,4 +146,3 @@ To check all the parameters for given Plugin, *Ex: GBSSeqToTagDBPlugin*, type
    $ run_pipeline.pl -fork1 -SAMToGBSdbPlugin -i tagsForAlign/tagsForAlign.sam  -db db/Tomato.db  -aProp 0.0 -aLen 0 -endPlugin -runfork1
    $ run_pipeline.pl -fork1 -DiscoverySNPCallerPluginV2 -db db/Tomato.db  -sC "chr00" -eC "chr12" -mnLCov 0.1 -mnMAF 0.01  -endPlugin -runfork1
    $ run_pipeline.pl -fork1 -ProductionSNPCallerPluginV2 -db db/Tomato.db  -e ApeKI -i fastq -k key/Tomato_key2.txt  -kmerLength 85 -mnQS 20 -o hd5/HapMap_tomato.h5 -endPlugin -runfork1
-

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Genotyping by Sequencing (GBS) pipeline documentation &mdash; MCBL 1.0 documentation</title>
+  <title>GBS &mdash; MCBL 1.0 documentation</title>
   
 
   
@@ -84,18 +84,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mcbl.html">MCIC Computational Biology Lab (MCBL)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">MCBL membership</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">MCBL Servers and Computing Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">MCBL servers and computing resources</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">Data Downloading from Cloud Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">Filter a Fastq File (CASAVA generated)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">Adapter Removing and Quality Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">Downloading data from cloud services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">Filter a CASAVA-generated fastq file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">Fastq adapter removal and QC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">DESeq2 with phyloseq</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Pipelines</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Genotyping by Sequencing (GBS) pipeline documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GBS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="microbiome-analysis.html">Basic Microbiome Analysis</a></li>
 </ul>
 
@@ -143,7 +143,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Genotyping by Sequencing (GBS) pipeline documentation</li>
+      <li>GBS</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -162,8 +162,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="genotyping-by-sequencing-gbs-pipeline-documentation">
-<h1>Genotyping by Sequencing (GBS) pipeline documentation<a class="headerlink" href="#genotyping-by-sequencing-gbs-pipeline-documentation" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="module-GBS"></span><div class="section" id="gbs">
+<h1>GBS<a class="headerlink" href="#gbs" title="Permalink to this headline">¶</a></h1>
+<p>This documents a pipeline for the analysis of GBS (Genotyping-By-Sequencing) data.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <dl class="field-list simple">
@@ -182,7 +183,7 @@
 </dl>
 </div>
 <div class="section" id="file-formats">
-<h2>File Formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h2>
+<h2>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>File formats that will be using in this analysis:</p>
 <ul class="simple">
@@ -212,38 +213,30 @@
 </ol>
 </div>
 <div class="section" id="files-you-need-to-have">
-<h2>Files You Need to Have<a class="headerlink" href="#files-you-need-to-have" title="Permalink to this headline">¶</a></h2>
-<p>Following files need to be created or present before you start the pipeline:</p>
+<h2>Files you need to have<a class="headerlink" href="#files-you-need-to-have" title="Permalink to this headline">¶</a></h2>
+<p>The following files need to be present before you start the pipeline:</p>
 <ol class="arabic simple">
 <li><p>Sequencing data files (.fastq or .fastq.gz)</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Fastq files should rename as follows, <a class="reference external" href="https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf">more on page 7</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">FLOWCELL_LANE_fastq.gz</dt>
-<dd class="field-odd"><p>example: AL2P1XXX_2_fastq.gz</p>
-</dd>
-<dt class="field-even">FLOWCELL_s_LANE_fastq.gz</dt>
-<dd class="field-even"><p>example: AL2P1XXX_s_2_fastq.gz</p>
-</dd>
-<dt class="field-odd">code_FLOWCELL_s_LANE_fastq.gz</dt>
-<dd class="field-odd"><p>example: 00000000_AL2P1XXX_s_2_fastq.gz</p>
-</dd>
-</dl>
+<p>Fastq files should follow this naming convention: <a class="reference external" href="https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf">(more on page 7 here)</a>
+- FLOWCELL_LANE_fastq.gz (e.g. AL2P1XXX_2_fastq.gz)
+- FLOWCELL_s_LANE_fastq.gz  (e.g. AL2P1XXX_s_2_fastq.gz)
+- code_FLOWCELL_s_LANE_fastq.gz (e.g.: 00000000_AL2P1XXX_s_2_fastq.gz)</p>
 </div>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#To rename original .fastq.gz file,</span>
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># To rename a .fastq.gz file:</span>
 $ mv  AE_S1_L001_R1_001.fastq.gz AL2P1XXX_1_fastq.gz
 </pre></div>
 </td></tr></table></div>
 <ol class="arabic simple" start="2">
-<li><p>GBSv2 Key File. Example <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt">key file</a>, <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample">More</a></p></li>
-<li><p>Referance Genome.</p></li>
+<li><p>GBSv2 key file  <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt">(example key file</a>, <a class="reference external" href="https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample">more information)</a>.</p></li>
+<li><p>A reference genome.</p></li>
 </ol>
 </div>
 <div class="section" id="gbsv2-pipeline-plugins">
-<h2>GBSv2 Pipeline Plugins<a class="headerlink" href="#gbsv2-pipeline-plugins" title="Permalink to this headline">¶</a></h2>
+<h2>GBSv2 pipeline plugins<a class="headerlink" href="#gbsv2-pipeline-plugins" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -286,21 +279,17 @@ $ mv  AE_S1_L001_R1_001.fastq.gz AL2P1XXX_1_fastq.gz
 </table>
 </div>
 <div class="section" id="gbsv2-pipeline">
-<h2>GBSv2 Pipeline<a class="headerlink" href="#gbsv2-pipeline" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li><p>Load Tassel 5.0 module</p></li>
-</ol>
+<h2>GBSv2 pipeline<a class="headerlink" href="#gbsv2-pipeline" title="Permalink to this headline">¶</a></h2>
+<p><strong>1. Load Tassel 5.0 module</strong></p>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ module load Tassel/5.0
 </pre></div>
 </td></tr></table></div>
-<ol class="arabic simple" start="2">
-<li><p>Useful commands</p></li>
-</ol>
-<p>To check all the plugins available, type</p>
+<p><strong>2. Useful commands</strong></p>
+<p>To check all the plugins available, type:</p>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ run_pipeline.pl -Xmx200g -ListPlugins
 </pre></div>
 </td></tr></table></div>
-<p>To check all the parameters for given Plugin, <em>Ex: GBSSeqToTagDBPlugin</em>, type</p>
+<p>To check all the parameters for given Plugin, <em>Ex: GBSSeqToTagDBPlugin</em>, type:</p>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ run_pipeline.pl -fork1 -GBSSeqToTagDBPlugin   -endPlugin -runfork1
 </pre></div>
 </td></tr></table></div>
@@ -308,15 +297,12 @@ $ mv  AE_S1_L001_R1_001.fastq.gz AL2P1XXX_1_fastq.gz
 <p class="admonition-title">Tip</p>
 <p>Users are recommended to read more about GBS command line options in <a class="reference external" href="https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf">here. Page 1-2</a></p>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>Create necessary folders and copy your raw data (fastqs), reference file and key file to appropriate folder,</p></li>
-</ol>
+<p><strong>3. File preparation</strong></p>
+<p>Create necessary folders and copy your raw data (fastqs), reference file and key file to appropriate folder:</p>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ mkdir fastq ref key db tagsForAlign hd5
 </pre></div>
 </td></tr></table></div>
-<ol class="arabic simple" start="4">
-<li><p>Commands for the pipeline</p></li>
-</ol>
+<p><strong>4. Execute the pipeline</strong></p>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
