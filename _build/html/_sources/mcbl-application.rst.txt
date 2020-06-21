@@ -1,58 +1,57 @@
 .. module:: Membership
    :synopsis: MCBL Membership Information 
-.. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
-
-.. index::
+.. moduleauthor:: Jelmer Poelstra<poelstra.1@osu.edu>
 
 .. highlight:: rest
 
 .. figure:: Logo.png
    :align: right
 
-********************
 MCBL Membership
-********************
+***************
 
+Why you need an MCBL Membership
+-------------------------------
+We are happy to help you to carry out your own analysis. This will include helping with experimental design,
+discussing the most effective way to carry out your data analysis, providing the computational
+infrastructure (software, scripts and computers), interpreting results,
+and answering questions you might come across along the way.
 
-Why you need a MCBL Membership
-------------------------------
-We are happy to help you to carry out your own analysis. This will include helping on your experiment design; discussion on the most effective way to carry out your data analysis; providing necessary computational infrastructure (Software,Scripts and Computers) and answering your questions you might come across along the way.
+We can also process and analyze HTS data for you, using either standardized or custom pipelines.
 
-How to Apply to MCBL Membership
---------------------------------
-:Step 1: Fill and submit complete MCBL application form: `MCBL Application <http://www.oardc.ohio-state.edu/mcic/MCBL_registration/mcbl_registration.html>`_.
+How to Apply for an MCBL Membership
+-----------------------------------
+:Step 1: Fill out and submit the MCBL application form: `MCBL Application <https://mcic.osu.edu/bioinformatics/mcbl-registration-form>`_.
 :Step 2: Submit your membership fee to MCIC.
-:Step 3: Contact `MCBL adminstrator (Saranga Wijeratne) <mailto:wijeratne.3@osu.edu>`_ for login credentials.
+:Step 3: Contact `Jelmer Poelstra <mailto:poelstra.1@osu.edu>`_ for login credentials.
 
-.. Note:: Access to the MCBL, to the computers and software resources will not be granted till we receive the payment. Once the form is completed and submitted a notification e-mail will be sent to the membership applicant and the PI.
+.. Note:: Access to MCBL resources will be granted till we receive the payment.
+          Once the form is completed and submitted a notification e-mail will be sent to the membership applicant and the PI.
 
 MCBL Membership Benefits
 ------------------------
 
-- Access to MCBL and most powerful `MCBL computers <http>`_  24/7.
-- Free access to MCBL Workshops and Bioinformatic user group meetings.
+- Access to the MCBL and MCBL computers 24/7.
+- Free access to all MCBL activities: workshops, user group meeting, etc.
 - Access to 1 TB data storage space for the duraton of the membership.
+- Assistance with bioinformatic analyses of your data.
 
 MCBL Membership Duration
 ------------------------
-Membership is offered for 6 months or 1 year period. Minimum membership period is 6 months and membership request for shorter period(less than 6 months) won't be considered.
+Membership is offered for a 6 month or 1 year period at a time.
 
 MCBL Membership Termination
 ----------------------------
-MCBL Membership will be terminated after membership period over or upon written request from user or PI to terminate the membership. 
+MCBL Membership will be terminated after the membership period ends,
+or upon a written request from user or PI to terminate the membership. 
 
 Contacts
----------
+--------
 
 .. csv-table::
    :header: "Person", "Information"
    :widths: 10, 40
 
-   `Dr. Vitor Pavinato <mailto:correapavinato.1@osu.edu>`_,Questions regarding membership
-   `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_, MCBL Server access and remote access
+   `Tea Meulia (director) <mailto:meulia.1@osu.edu>`_, Questions regarding membership
+   `Jelmer Poelstra <mailto:poelstra.1@osu.edu>`_, MCBL server access and remote access
    `Jody Whittier <whittier.2@osu.edu>`_,MCBL payments
-
-   
-
-   
-
