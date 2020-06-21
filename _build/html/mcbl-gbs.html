@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Genotyping by Sequencing (GBS) pipeline documentation &mdash; MCBL 1.0 documentation</title>
+  <title>Genotyping by Sequencing (GBS) pipeline documentation &mdash; MCBL 1.0 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Basic Microbiome Analysis" href="microbiome-analysis.html" />
-    <link rel="prev" title="3. MCBL Servers and Computing Resources" href="mcbl-computers.html" /> 
+    <link rel="next" title="Basic Microbiome Analysis" href="microbiome-analysis.html" />
+    <link rel="prev" title="Data Downloading from Cloud Services" href="mcbl-datadownloads.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,30 +89,30 @@
             
               <p class="caption"><span class="caption-text">User Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mcbl.html">1. MCIC Computational Biology Lab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">2. MCBL Membership</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">3. MCBL Servers and Computing Resources</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Pipelines</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Genotyping by Sequencing (GBS) pipeline documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#file-formats">1.1. File Formats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#files-you-need-to-have">1.2. Files You Need to Have</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gbsv2-pipeline-plugins">1.3. GBSv2 Pipeline Plugins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gbsv2-pipeline">1.4. GBSv2 Pipeline</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="microbiome-analysis.html">2. Basic Microbiome Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl.html">MCIC Computational Biology Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">MCBL Membership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">MCBL Servers and Computing Resources</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data Downloading</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">1. Data Downloading from Cloud Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">Data Downloading from Cloud Services</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pipelinesz</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Genotyping by Sequencing (GBS) pipeline documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#file-formats">File Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#files-you-need-to-have">Files You Need to Have</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gbsv2-pipeline-plugins">GBSv2 Pipeline Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gbsv2-pipeline">GBSv2 Pipeline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="microbiome-analysis.html">Basic Microbiome Analysis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">MCBL Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">1. Filter a Fastq File (CASAVA generated)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">2. Adapter Removing and Quality Filtering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">3. DESeq2 with phyloseq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">Filter a Fastq File (CASAVA generated)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">Adapter Removing and Quality Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">DESeq2 with phyloseq</a></li>
 </ul>
 
             
@@ -159,7 +159,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>1. Genotyping by Sequencing (GBS) pipeline documentation</li>
+      <li>Genotyping by Sequencing (GBS) pipeline documentation</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +179,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="genotyping-by-sequencing-gbs-pipeline-documentation">
-<h1>1. Genotyping by Sequencing (GBS) pipeline documentation<a class="headerlink" href="#genotyping-by-sequencing-gbs-pipeline-documentation" title="Permalink to this headline">¶</a></h1>
+<h1>Genotyping by Sequencing (GBS) pipeline documentation<a class="headerlink" href="#genotyping-by-sequencing-gbs-pipeline-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <dl class="field-list simple">
@@ -198,7 +198,7 @@
 </dl>
 </div>
 <div class="section" id="file-formats">
-<h2>1.1. File Formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h2>
+<h2>File Formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>File formats that will be using in this analysis:</p>
 <ul class="simple">
@@ -228,7 +228,7 @@
 </ol>
 </div>
 <div class="section" id="files-you-need-to-have">
-<h2>1.2. Files You Need to Have<a class="headerlink" href="#files-you-need-to-have" title="Permalink to this headline">¶</a></h2>
+<h2>Files You Need to Have<a class="headerlink" href="#files-you-need-to-have" title="Permalink to this headline">¶</a></h2>
 <p>Following files need to be created or present before you start the pipeline:</p>
 <ol class="arabic simple">
 <li><p>Sequencing data files (.fastq or .fastq.gz)</p></li>
@@ -259,7 +259,7 @@ $ mv  AE_S1_L001_R1_001.fastq.gz AL2P1XXX_1_fastq.gz
 </ol>
 </div>
 <div class="section" id="gbsv2-pipeline-plugins">
-<h2>1.3. GBSv2 Pipeline Plugins<a class="headerlink" href="#gbsv2-pipeline-plugins" title="Permalink to this headline">¶</a></h2>
+<h2>GBSv2 Pipeline Plugins<a class="headerlink" href="#gbsv2-pipeline-plugins" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -302,7 +302,7 @@ $ mv  AE_S1_L001_R1_001.fastq.gz AL2P1XXX_1_fastq.gz
 </table>
 </div>
 <div class="section" id="gbsv2-pipeline">
-<h2>1.4. GBSv2 Pipeline<a class="headerlink" href="#gbsv2-pipeline" title="Permalink to this headline">¶</a></h2>
+<h2>GBSv2 Pipeline<a class="headerlink" href="#gbsv2-pipeline" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Load Tassel 5.0 module</p></li>
 </ol>
@@ -363,10 +363,10 @@ $ run_pipeline.pl -fork1 -ProductionSNPCallerPluginV2 -db db/Tomato.db  -e ApeKI
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="microbiome-analysis.html" class="btn btn-neutral float-right" title="2. Basic Microbiome Analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="microbiome-analysis.html" class="btn btn-neutral float-right" title="Basic Microbiome Analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mcbl-computers.html" class="btn btn-neutral float-left" title="3. MCBL Servers and Computing Resources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mcbl-datadownloads.html" class="btn btn-neutral float-left" title="Data Downloading from Cloud Services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

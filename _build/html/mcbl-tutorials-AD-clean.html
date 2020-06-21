@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Adapter Removing and Quality Filtering &mdash; MCBL 1.0 documentation</title>
+  <title>Adapter Removing and Quality Filtering &mdash; MCBL 1.0 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. DESeq2 with phyloseq" href="mcbl-tutorials-DESeq2-phyloseq.html" />
-    <link rel="prev" title="1. Filter a Fastq File (CASAVA generated)" href="mcbl-tutorials-PF-clean.html" /> 
+    <link rel="next" title="DESeq2 with phyloseq" href="mcbl-tutorials-DESeq2-phyloseq.html" />
+    <link rel="prev" title="Filter a Fastq File (CASAVA generated)" href="mcbl-tutorials-PF-clean.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,29 +89,29 @@
             
               <p class="caption"><span class="caption-text">User Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mcbl.html">1. MCIC Computational Biology Lab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">2. MCBL Membership</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">3. MCBL Servers and Computing Resources</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Pipelines</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-gbs.html">1. Genotyping by Sequencing (GBS) pipeline documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="microbiome-analysis.html">2. Basic Microbiome Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl.html">MCIC Computational Biology Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">MCBL Membership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">MCBL Servers and Computing Resources</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data Downloading</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">1. Data Downloading from Cloud Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">Data Downloading from Cloud Services</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pipelinesz</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-gbs.html">Genotyping by Sequencing (GBS) pipeline documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="microbiome-analysis.html">Basic Microbiome Analysis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">MCBL Tutorials</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">1. Filter a Fastq File (CASAVA generated)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Adapter Removing and Quality Filtering</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#load-the-software">2.1. Load the Software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#file-needed">2.2. File Needed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#code-examples">2.3. Code Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">Filter a Fastq File (CASAVA generated)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Adapter Removing and Quality Filtering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#load-the-software">Load the Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-needed">File Needed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-examples">Code Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">3. DESeq2 with phyloseq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">DESeq2 with phyloseq</a></li>
 </ul>
 
             
@@ -158,7 +158,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>2. Adapter Removing and Quality Filtering</li>
+      <li>Adapter Removing and Quality Filtering</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -178,7 +178,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="adapter-removing-and-quality-filtering">
-<h1>2. Adapter Removing and Quality Filtering<a class="headerlink" href="#adapter-removing-and-quality-filtering" title="Permalink to this headline">¶</a></h1>
+<h1>Adapter Removing and Quality Filtering<a class="headerlink" href="#adapter-removing-and-quality-filtering" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <dl class="field-list simple">
@@ -200,7 +200,7 @@
 </dl>
 </div>
 <div class="section" id="load-the-software">
-<h2>2.1. Load the Software<a class="headerlink" href="#load-the-software" title="Permalink to this headline">¶</a></h2>
+<h2>Load the Software<a class="headerlink" href="#load-the-software" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are runing this on MCBL <em>mcic-ender-svr</em> following command will load the software module to your environment.</p>
@@ -214,7 +214,7 @@
 </td></tr></table></div>
 </div>
 <div class="section" id="file-needed">
-<h2>2.2. File Needed<a class="headerlink" href="#file-needed" title="Permalink to this headline">¶</a></h2>
+<h2>File Needed<a class="headerlink" href="#file-needed" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Input Files</dt>
 <dd class="field-odd"><p>In put files should be in fastq format/compressed fastq( .fq, .fastq, .fq.gz, .fastq.gz). Read <a class="reference external" href="http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf">Introduction</a>
@@ -237,7 +237,7 @@ e.g :C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq, C8EC8ANXX_s2_1_illumina12i
 </div>
 </div>
 <div class="section" id="code-examples">
-<h2>2.3. Code Examples<a class="headerlink" href="#code-examples" title="Permalink to this headline">¶</a></h2>
+<h2>Code Examples<a class="headerlink" href="#code-examples" title="Permalink to this headline">¶</a></h2>
 <p><em>Single End Fastq Files</em></p>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nv">$java</span> -jar <span class="nv">$TRIMHOME</span>/trimmomatic-0.33.jar SE -threads <span class="m">12</span> s_1_1_sequence.txt.gz lane1_forward.fq.gz ILLUMINACLIP:<span class="nv">$TRIMHOME</span>/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 </pre></div>
@@ -302,10 +302,10 @@ C6EF7ANXX_s3_2_illumina12index_5_SL100995.fastq.gz</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mcbl-tutorials-DESeq2-phyloseq.html" class="btn btn-neutral float-right" title="3. DESeq2 with phyloseq" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mcbl-tutorials-DESeq2-phyloseq.html" class="btn btn-neutral float-right" title="DESeq2 with phyloseq" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mcbl-tutorials-PF-clean.html" class="btn btn-neutral float-left" title="1. Filter a Fastq File (CASAVA generated)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mcbl-tutorials-PF-clean.html" class="btn btn-neutral float-left" title="Filter a Fastq File (CASAVA generated)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

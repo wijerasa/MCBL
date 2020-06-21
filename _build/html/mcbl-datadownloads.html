@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Data Downloading from Cloud Services &mdash; MCBL 1.0 documentation</title>
+  <title>Data Downloading from Cloud Services &mdash; MCBL 1.0 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Filter a Fastq File (CASAVA generated)" href="mcbl-tutorials-PF-clean.html" />
-    <link rel="prev" title="2. Basic Microbiome Analysis" href="microbiome-analysis.html" /> 
+    <link rel="next" title="Genotyping by Sequencing (GBS) pipeline documentation" href="mcbl-gbs.html" />
+    <link rel="prev" title="MCBL Servers and Computing Resources" href="mcbl-computers.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,30 +89,30 @@
             
               <p class="caption"><span class="caption-text">User Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mcbl.html">1. MCIC Computational Biology Lab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">2. MCBL Membership</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">3. MCBL Servers and Computing Resources</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Pipelines</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-gbs.html">1. Genotyping by Sequencing (GBS) pipeline documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="microbiome-analysis.html">2. Basic Microbiome Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl.html">MCIC Computational Biology Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">MCBL Membership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">MCBL Servers and Computing Resources</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Data Downloading</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Data Downloading from Cloud Services</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#downloading-from-hudsonalpha-org">1.1. Downloading from hudsonalpha.org</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#check-checksum">1.1.1. Check <em>checksum</em></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Downloading from Cloud Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-from-hudsonalpha-org">Downloading from hudsonalpha.org</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#check-checksum">Check <em>checksum</em></a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">Pipelinesz</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-gbs.html">Genotyping by Sequencing (GBS) pipeline documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="microbiome-analysis.html">Basic Microbiome Analysis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">MCBL Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">1. Filter a Fastq File (CASAVA generated)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">2. Adapter Removing and Quality Filtering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">3. DESeq2 with phyloseq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">Filter a Fastq File (CASAVA generated)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">Adapter Removing and Quality Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">DESeq2 with phyloseq</a></li>
 </ul>
 
             
@@ -159,7 +159,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>1. Data Downloading from Cloud Services</li>
+      <li>Data Downloading from Cloud Services</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -182,7 +182,7 @@
 <img alt="_images/Logo.png" src="_images/Logo.png" />
 </div>
 <div class="section" id="data-downloading-from-cloud-services">
-<h1>1. Data Downloading from Cloud Services<a class="headerlink" href="#data-downloading-from-cloud-services" title="Permalink to this headline">¶</a></h1>
+<h1>Data Downloading from Cloud Services<a class="headerlink" href="#data-downloading-from-cloud-services" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <dl class="field-list">
@@ -205,7 +205,7 @@
 </dl>
 </div>
 <div class="section" id="downloading-from-hudsonalpha-org">
-<h2>1.1. Downloading from hudsonalpha.org<a class="headerlink" href="#downloading-from-hudsonalpha-org" title="Permalink to this headline">¶</a></h2>
+<h2>Downloading from hudsonalpha.org<a class="headerlink" href="#downloading-from-hudsonalpha-org" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>Create a Samples.txt file with your sample links(the links are provided in the Excelsheet) as follows:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>#Content of the Samples.txt
@@ -235,7 +235,7 @@ $ <span class="nb">cd</span> ~/Downloads
 </li>
 </ol>
 <div class="section" id="check-checksum">
-<h3>1.1.1. Check <em>checksum</em><a class="headerlink" href="#check-checksum" title="Permalink to this headline">¶</a></h3>
+<h3>Check <em>checksum</em><a class="headerlink" href="#check-checksum" title="Permalink to this headline">¶</a></h3>
 <p>To detect errors which may have been introduced during the downloading, you have to run checksum on your downloaded files.</p>
 <ol class="arabic">
 <li><p>Navigate to the location where you have downloaded your files.</p>
@@ -283,10 +283,10 @@ d47d8cd98dfds0b204e9800998ecf8427e  C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDua
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mcbl-tutorials-PF-clean.html" class="btn btn-neutral float-right" title="1. Filter a Fastq File (CASAVA generated)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mcbl-gbs.html" class="btn btn-neutral float-right" title="Genotyping by Sequencing (GBS) pipeline documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="microbiome-analysis.html" class="btn btn-neutral float-left" title="2. Basic Microbiome Analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mcbl-computers.html" class="btn btn-neutral float-left" title="MCBL Servers and Computing Resources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
