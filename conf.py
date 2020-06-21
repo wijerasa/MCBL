@@ -107,9 +107,10 @@ html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
-# documentation.
+# documentation. https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
 html_theme_options = {
-    "titles_only": True
+    "titles_only": True, # If true, only page titles are show in the sidebar, does not expand to show sections
+    "display_version": False #If True, the version number is shown at the top of the sidebar.
     }
 	
 # Add any paths that contain custom themes here, relative to this directory.

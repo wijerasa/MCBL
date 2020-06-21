@@ -8,7 +8,7 @@
 .. figure:: Logo.png
    :align: right
 
-MCBL Servers and Computing Resources
+MCBL servers and computing resources
 ************************************
 
 Servers

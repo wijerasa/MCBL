@@ -1,22 +1,16 @@
-.. MCBL documentation master file, created by
-   sphinx-quickstart on Wed Sep 23 17:00:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 
 .. module:: DESeq2-phyloseq 
    :synopsis: DESeq2 phyloseq
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
-
 
 .. highlight:: rest
 
 .. figure:: Logo.png
    :align: right
 
-**********************************************
+
 DESeq2 with phyloseq
-**********************************************
+********************
 
 .. Note::
 
@@ -26,8 +20,9 @@ DESeq2 with phyloseq
 	:More: Read more about `phyloseq DEseq2: <http://joey711.github.io/phyloseq-extensions/DESeq2.html>`_ and `here <https://joey711.github.io/phyloseq/>`_
 	:Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
+
 Software Installation
---------
+---------------------
 
 .. Note::
 	If you are runing this on MCBL *mcic-sel019-d*, please skip the installation. The following command in R-Studio will load the software module to your environment.
@@ -53,13 +48,13 @@ On your own server,
 Import data with phyloseq
 --------
 
-For this step you need Biom and mapping  file generated from Qiime pipeline.
+For this step, you need Biom and mapping file generated from Qiime pipeline.
 
 :Input Biom File: otu_table_mc10_w_tax.biom
 :Qiime Mapping File: mapping.txt
 :Output File: DESeq2_Out
 
-Copy all the input files to your "Working Directory" before you execute following commands.
+Copy all the input files to your "Working Directory" before you execute the following commands.
 
 .. code-block:: r
 	:linenos:
@@ -128,14 +123,13 @@ To remove taxonomy level tags assigned to each level (k__, p__, etc..) issue the
 	tax_table(merged_mapping_biom)<-gsub("s__(\\[)","\\1",tax_table(merged_mapping_biom))
 
 
-
-Differential Abundance OTU call
+Differential abundance OTU call
 ------
 
 :Input File: merged_mapping_biom
 :Output Files: DESeq2_Out.txt
 
-#. Load the DESeq2 into your R enviornment:
+#. Load the DESeq2 into your R environment:
 
    .. code-block:: r
       :linenos:
@@ -201,11 +195,3 @@ Differential Abundance OTU call
       sigtab = res[which(res$padj < alpha), ]
       sigtab = cbind(as(sigtab, "data.frame"), as(tax_table(merged_mapping_biom)[rownames(sigtab), ], "matrix")) #Bind taxanomic information to final results table.
       write.csv(sigtab, as.character(filename_out)) #Writing `sigtab` to 
-
-
-
-
-
-
-
-

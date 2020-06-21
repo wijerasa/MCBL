@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Filter a Fastq File (CASAVA generated) &mdash; MCBL 1.0 documentation</title>
+  <title>Filter a CASAVA-generated fastq file &mdash; MCBL 1.0 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Adapter Removing and Quality Filtering" href="mcbl-tutorials-AD-clean.html" />
-    <link rel="prev" title="Data Downloading from Cloud Services" href="mcbl-datadownloads.html" /> 
+    <link rel="next" title="Fastq adapter removal and QC" href="mcbl-tutorials-AD-clean.html" />
+    <link rel="prev" title="Downloading data from cloud services" href="mcbl-datadownloads.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -58,13 +58,6 @@
           
           </a>
 
-          
-            
-            
-              <div class="version">
-                1.0
-              </div>
-            
           
 
           
@@ -91,13 +84,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mcbl.html">MCIC Computational Biology Lab (MCBL)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">MCBL membership</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">MCBL Servers and Computing Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">MCBL servers and computing resources</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">Data Downloading from Cloud Services</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Filter a Fastq File (CASAVA generated)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">Adapter Removing and Quality Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">Downloading data from cloud services</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Filter a CASAVA-generated fastq file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">Fastq adapter removal and QC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">DESeq2 with phyloseq</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Pipelines</span></p>
@@ -150,7 +143,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Filter a Fastq File (CASAVA generated)</li>
+      <li>Filter a CASAVA-generated fastq file</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -169,11 +162,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="figure align-right">
+  <span class="target" id="module-FilterFastq"></span><div class="figure align-right">
 <img alt="_images/Logo.png" src="_images/Logo.png" />
 </div>
-<div class="section" id="filter-a-fastq-file-casava-generated">
-<h1>Filter a Fastq File (CASAVA generated)<a class="headerlink" href="#filter-a-fastq-file-casava-generated" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="filter-a-casava-generated-fastq-file">
+<h1>Filter a CASAVA-generated fastq file<a class="headerlink" href="#filter-a-casava-generated-fastq-file" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <dl class="field-list simple">
@@ -190,12 +183,12 @@
 <dd class="field-even"><p>Read more about <a class="reference external" href="http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_PercentageofClustersP.htm">PF here:</a> and <a class="reference external" href="http://cancan.cshl.edu/labmembers/gordon/fastq_illumina_filter/">here</a></p>
 </dd>
 <dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>This document is created by <a class="reference external" href="mailto:wijeratne&#46;3&#37;&#52;&#48;osu&#46;edu">Saranga Wijeratne</a></p>
+<dd class="field-odd"><p>This document was created by <a class="reference external" href="mailto:wijeratne&#46;3&#37;&#52;&#48;osu&#46;edu">Saranga Wijeratne</a></p>
 </dd>
 </dl>
 </div>
 <div class="section" id="software-installation">
-<h2>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this headline">¶</a></h2>
+<h2>Software installation<a class="headerlink" href="#software-installation" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are runing this on MCBL <em>mcic-ender-svr</em>, please skip the installation. Following command will load the software module to your environment.</p>
@@ -224,8 +217,8 @@ $ sudo cp fastq_illumina_filter /usr/local/bin
 <p>Put your executables in <code class="docutils literal notranslate"><span class="pre">~/bin</span></code> or full-path to executables in <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> in the absence of <code class="docutils literal notranslate"><span class="pre">sudo</span></code> privilages.</p>
 </div>
 </div>
-<div class="section" id="filter-a-fastq">
-<h2>Filter a Fastq<a class="headerlink" href="#filter-a-fastq" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="filter-a-fastq-file">
+<h2>Filter a fastq file<a class="headerlink" href="#filter-a-fastq-file" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Input File</dt>
 <dd class="field-odd"><p>C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq.gz</p>
@@ -238,8 +231,8 @@ $ sudo cp fastq_illumina_filter /usr/local/bin
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="section" id="filter-multiple-fastqs">
-<h2>Filter Multiple Fastqs<a class="headerlink" href="#filter-multiple-fastqs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="filter-multiple-fastq-files">
+<h2>Filter multiple fastq files<a class="headerlink" href="#filter-multiple-fastq-files" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Input File</dt>
 <dd class="field-odd"><p>Fastq_filenames.txt</p>
@@ -250,7 +243,7 @@ $ sudo cp fastq_illumina_filter /usr/local/bin
 </dl>
 <ol class="arabic">
 <li><p>Create a Fastq_filenames.txt file with your Fastq filenames in seperate lines as follows:</p>
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>#Content of the Samples.txt
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>#Content of Samples.txt
 C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDual_D508_SL104628.fastq.gz
 C6V7FANXX_s3_0_TruseqHTDual_D703-TruseqHTDual_D501_SL104549.fastq.gz
 C6V7FANXX_s5_0_TruseqHTDual_D709-TruseqHTDual_D506_SL104602.fastq.gz
@@ -283,10 +276,10 @@ $ <span class="nb">cd</span> ~/Downloads
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mcbl-tutorials-AD-clean.html" class="btn btn-neutral float-right" title="Adapter Removing and Quality Filtering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mcbl-tutorials-AD-clean.html" class="btn btn-neutral float-right" title="Fastq adapter removal and QC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mcbl-datadownloads.html" class="btn btn-neutral float-left" title="Data Downloading from Cloud Services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mcbl-datadownloads.html" class="btn btn-neutral float-left" title="Downloading data from cloud services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Adapter Removing and Quality Filtering &mdash; MCBL 1.0 documentation</title>
+  <title>Fastq adapter removal and QC &mdash; MCBL 1.0 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="DESeq2 with phyloseq" href="mcbl-tutorials-DESeq2-phyloseq.html" />
-    <link rel="prev" title="Filter a Fastq File (CASAVA generated)" href="mcbl-tutorials-PF-clean.html" /> 
+    <link rel="prev" title="Filter a CASAVA-generated fastq file" href="mcbl-tutorials-PF-clean.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -58,13 +58,6 @@
           
           </a>
 
-          
-            
-            
-              <div class="version">
-                1.0
-              </div>
-            
           
 
           
@@ -91,13 +84,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mcbl.html">MCIC Computational Biology Lab (MCBL)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">MCBL membership</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">MCBL Servers and Computing Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">MCBL servers and computing resources</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">Data Downloading from Cloud Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">Filter a Fastq File (CASAVA generated)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Adapter Removing and Quality Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">Downloading data from cloud services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">Filter a CASAVA-generated fastq file</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fastq adapter removal and QC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">DESeq2 with phyloseq</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Pipelines</span></p>
@@ -150,7 +143,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Adapter Removing and Quality Filtering</li>
+      <li>Fastq adapter removal and QC</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -169,8 +162,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="adapter-removing-and-quality-filtering">
-<h1>Adapter Removing and Quality Filtering<a class="headerlink" href="#adapter-removing-and-quality-filtering" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="module-fastq_qc"></span><div class="section" id="fastq-adapter-removal-and-qc">
+<h1>Fastq adapter removal and QC<a class="headerlink" href="#fastq-adapter-removal-and-qc" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <dl class="field-list simple">
@@ -192,7 +185,7 @@
 </dl>
 </div>
 <div class="section" id="load-the-software">
-<h2>Load the Software<a class="headerlink" href="#load-the-software" title="Permalink to this headline">¶</a></h2>
+<h2>Load the software<a class="headerlink" href="#load-the-software" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are runing this on MCBL <em>mcic-ender-svr</em> following command will load the software module to your environment.</p>
@@ -205,8 +198,8 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="section" id="file-needed">
-<h2>File Needed<a class="headerlink" href="#file-needed" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="files-needed">
+<h2>Files needed<a class="headerlink" href="#files-needed" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Input Files</dt>
 <dd class="field-odd"><p>In put files should be in fastq format/compressed fastq( .fq, .fastq, .fq.gz, .fastq.gz). Read <a class="reference external" href="http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf">Introduction</a>
@@ -229,8 +222,8 @@ e.g :C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq, C8EC8ANXX_s2_1_illumina12i
 </div>
 </div>
 <div class="section" id="code-examples">
-<h2>Code Examples<a class="headerlink" href="#code-examples" title="Permalink to this headline">¶</a></h2>
-<p><em>Single End Fastq Files</em></p>
+<h2>Code examples<a class="headerlink" href="#code-examples" title="Permalink to this headline">¶</a></h2>
+<p><em>Single-end fastq files</em></p>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nv">$java</span> -jar <span class="nv">$TRIMHOME</span>/trimmomatic-0.33.jar SE -threads <span class="m">12</span> s_1_1_sequence.txt.gz lane1_forward.fq.gz ILLUMINACLIP:<span class="nv">$TRIMHOME</span>/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 </pre></div>
 </td></tr></table></div>
@@ -238,7 +231,7 @@ e.g :C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq, C8EC8ANXX_s2_1_illumina12i
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nv">$java</span> -jar <span class="nv">$TRIMHOME</span>/trimmomatic-0.33.jar PE -threads <span class="m">12</span> C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq.gz C8EC8ANXX_s2_2_illumina12index_1_SL143785.fastq.gz C8EC8ANXX_s2_1_Trimmed_1P.fastq.gz C8EC8ANXX_s2_1_Trimmed_1U.fastq.gz C8EC8ANXX_s2_2_Trimmed_1P.fastq.gz C8EC8ANXX_s2_2_Trimmed_1U.fastq.gz ILLUMINACLIP:<span class="nv">$TRIMHOME</span>/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 </pre></div>
 </td></tr></table></div>
-<p><em>Multiple Fastqs</em></p>
+<p><em>Multiple fastq files</em></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Assumption has been made that your data in “Raw_Data” folder</p>
@@ -261,13 +254,13 @@ C6EF7ANXX_s3_2_illumina12index_3_SL100994.fastq.gz
 C6EF7ANXX_s3_2_illumina12index_5_SL100995.fastq.gz</p>
 </dd>
 </dl>
-<p>These are Paired End Fasq files. <strong>e.g</strong> <em>C6EF7ANXX_s3_1_illumina12index_10_SL100996.fastq.gz and C6EF7ANXX_s3_2_illumina12index_10_SL100996.fastq.gz</em> belongs to single sample.</p>
+<p>These are paired-end fastq files. <strong>e.g</strong> <em>C6EF7ANXX_s3_1_illumina12index_10_SL100996.fastq.gz and C6EF7ANXX_s3_2_illumina12index_10_SL100996.fastq.gz</em> belongs to single sample.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Adapter File</dt>
-<dd class="field-odd"><p>$TRIMHOME/adapters/TruSeq3-PE.fa (Make sure you change this accrodingly)</p>
+<dd class="field-odd"><p>$TRIMHOME/adapters/TruSeq3-PE.fa (Make sure you change this accordingly)</p>
 </dd>
 <dt class="field-even">Output Files</dt>
-<dd class="field-even"><p>Each Paired End read (<strong>e.g</strong> <em>C6EF7ANXX_s3_1_illumina12index_10_SL100996.fastq.gz and C6EF7ANXX_s3_2_illumina12index_10_SL100996.fastq.gz</em>) will give 4 outputs</p>
+<dd class="field-even"><p>Each paired-end read (<strong>e.g</strong> <em>C6EF7ANXX_s3_1_illumina12index_10_SL100996.fastq.gz and C6EF7ANXX_s3_2_illumina12index_10_SL100996.fastq.gz</em>) will give 4 outputs:</p>
 <ul class="simple">
 <li><p>Q_trimmed_6EF7ANXX_s3_1_illumina12index_10_SL100996_1P.fastq.gz - for paired forwad reads</p></li>
 <li><p>Q_trimmed_6EF7ANXX_s3_1_illumina12index_10_SL100996_1U.fastq.gz - for unpaired forward reads</p></li>
@@ -279,7 +272,7 @@ C6EF7ANXX_s3_2_illumina12index_5_SL100995.fastq.gz</p>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nv">$cd</span> Raw_Data <span class="c1">#make sure you change the folder name accordingly</span>
-<span class="nv">$mkdir</span> Trimmed_Data <span class="c1"># Output will be staved here</span>
+<span class="nv">$mkdir</span> Trimmed_Data <span class="c1"># Output will be saved here</span>
 <span class="nv">$files_1</span><span class="o">=(</span>*_s3_1_*.fastq.gz<span class="o">)</span><span class="p">;</span><span class="nv">files_2</span><span class="o">=(</span>*_s3_2_*.fastq.gz<span class="o">)</span><span class="p">;</span><span class="nv">sorted_files_1</span><span class="o">=(</span><span class="k">$(</span><span class="nb">printf</span> <span class="s2">&quot;%s\n&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">files_1</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">|</span> sort -u<span class="k">)</span><span class="o">)</span><span class="p">;</span><span class="nv">sorted_files_2</span><span class="o">=(</span><span class="k">$(</span><span class="nb">printf</span> <span class="s2">&quot;%s\n&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">files_2</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">|</span> sort -u<span class="k">)</span><span class="o">)</span><span class="p">;</span><span class="k">for</span> <span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span> i&lt;<span class="si">${#</span><span class="nv">sorted_files_1</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="nv">i</span><span class="o">+=</span><span class="m">1</span><span class="o">))</span><span class="p">;</span><span class="k">do</span> java -jar <span class="nv">$TRIMHOME</span>/trimmomatic-0.33.jar PE -threads <span class="m">12</span>  -trimlog Trimmed_Data/log-j3.stat -phred33   <span class="si">${</span><span class="nv">sorted_files_1</span><span class="p">[i]</span><span class="si">}</span> <span class="si">${</span><span class="nv">sorted_files_2</span><span class="p">[i]</span><span class="si">}</span> Trimmed_Data/Q_trimmed_<span class="si">${</span><span class="nv">sorted_files_1</span><span class="p">[i]%%.*</span><span class="si">}</span>_1P.fastq.gz Trimmed_Data/Q_trimmed_<span class="si">${</span><span class="nv">sorted_files_1</span><span class="p">[i]%%.*</span><span class="si">}</span>-U.fastq.gz Trimmed_Data/Q_trimmed_<span class="si">${</span><span class="nv">sorted_files_2</span><span class="p">[i]%%.*</span><span class="si">}</span>_1P.fastq.gz Trimmed_Data/Q_trimmed_<span class="si">${</span><span class="nv">sorted_files_1</span><span class="p">[i]%%.*</span><span class="si">}</span>-U.fastq.gz ILLUMINACLIP:<span class="nv">$TRIMHOME</span>/adapters/TruSeq3-PE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:40  <span class="p">&amp;</span>&gt;Trimmed_Data/stat.txt<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 </td></tr></table></div>
@@ -297,7 +290,7 @@ C6EF7ANXX_s3_2_illumina12index_5_SL100995.fastq.gz</p>
         <a href="mcbl-tutorials-DESeq2-phyloseq.html" class="btn btn-neutral float-right" title="DESeq2 with phyloseq" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mcbl-tutorials-PF-clean.html" class="btn btn-neutral float-left" title="Filter a Fastq File (CASAVA generated)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mcbl-tutorials-PF-clean.html" class="btn btn-neutral float-left" title="Filter a CASAVA-generated fastq file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
