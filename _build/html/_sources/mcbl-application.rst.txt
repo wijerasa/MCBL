@@ -8,11 +8,11 @@
    :align: right
 
 
-MCBL Membership
+MCBL membership
 ***************
 
 
-MCBL Membership Benefits
+MCBL membership benefits
 ------------------------
 
 - Access to the MCBL and MCBL computers 24/7.
@@ -21,7 +21,7 @@ MCBL Membership Benefits
 - Assistance with experimental design, bioinformatic analyses, and interpretation of your data.
 
 
-How to Apply for an MCBL Membership
+How to apply for an MCBL membership
 -----------------------------------
 
 :Step 1: Fill out and submit the MCBL application form: `MCBL Application <https://mcic.osu.edu/bioinformatics/mcbl-registration-form>`_.
@@ -32,16 +32,16 @@ How to Apply for an MCBL Membership
           Once the form is completed and submitted a notification e-mail will be sent to the membership applicant and the PI.
 
 
-MCBL Membership Duration
+MCBL membership duration
 ------------------------
 
 Membership is offered for a 6 month or 1 year period at a time.
 
 
-MCBL Membership Termination
+MCBL membership termination
 ----------------------------
 
-MCBL Membership will be terminated after the membership period ends,
+MCBL membership will be terminated after the membership period ends,
 or upon a written request from user or PI to terminate the membership. 
 
 
