@@ -13,7 +13,7 @@ MCIC Computational Biology Lab
 
 .. toctree::
    :maxdepth: 1
-   :caption: About MCBL and Membership
+   :caption: About The MCBL
 
    mcbl
    mcbl-application
