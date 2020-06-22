@@ -1,0 +1,148 @@
+
+.. module:: GBS
+   :synopsis: GBS analysis
+.. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
+
+
+.. highlight:: rest
+
+
+GBS
+***
+
+This documents a pipeline for the analysis of GBS (Genotyping-By-Sequencing) data.
+
+.. Note::
+
+   :Required OS: OS x or Linux. 
+   :Software: `Tassel 5 <http://www.maizegenetics.net/#!tassel/c17q9>`_ 
+   :Documentation: `Tassel 5.0 Wiki <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Home>`_
+   :Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
+
+
+File formats
+------------
+
+#. File formats that will be using in this analysis:
+
+   - `HDF5 <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `VCF <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Hapmap <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Plink <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Projection Alignment <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Phylip <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `FASTA <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_, `more <http://en.wikipedia.org/wiki/FASTA_format>`_
+   - `Fastq <https://en.wikipedia.org/wiki/FASTQ_format>`_
+   - `Numerical Data <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+      - `Phenotype Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+      - `Trait Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+      - `Covariate Format <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+      - `Marker Values as Numerical Co-variates <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Square Numerical Matrix <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `Table Report <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+   - `TOPM (Tags on Physical Map) <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual/Load/Load>`_
+
+
+Files you need to have 
+----------------------
+
+The following files need to be present before you start the pipeline:
+
+1. Sequencing data files (.fastq or .fastq.gz)
+
+.. Note::
+   
+   Fastq files should follow this naming convention: `(more on page 7 here) <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
+   - FLOWCELL_LANE_fastq.gz (e.g. AL2P1XXX_2_fastq.gz)
+   - FLOWCELL_s_LANE_fastq.gz  (e.g. AL2P1XXX_s_2_fastq.gz) 
+   - code_FLOWCELL_s_LANE_fastq.gz (e.g.: 00000000_AL2P1XXX_s_2_fastq.gz)
+
+
+.. code-block:: bash
+      :linenos:
+
+      # To rename a .fastq.gz file: 
+      $ mv  AE_S1_L001_R1_001.fastq.gz AL2P1XXX_1_fastq.gz
+
+   
+2. GBSv2 key file  `(example key file <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/Pipeline_Testing_key.txt>`_, `more information) <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/KeyFileExample>`_.
+
+
+3. A reference genome.   
+
+
+GBSv2 pipeline plugins
+----------------------
+
+.. csv-table::
+   :header: "Plugin", "Description"
+   :widths: 10, 40
+
+   GBSSeqToTagDBPlugin,Executed to pull distinct tags from the database and export them in the fastq format. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/GBSSeqToTagDBPlugin>`_
+   TagExportToFastqPlugin,Retrieves distinct tags stored in the database and reformats them to a FASTQ file. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/TagExportToFastqPlugin>`_
+   SAMToGBSdbPlugin,Used to identify SNPs from aligned tags using the GBS DB. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SAMToGBSdbPlugin>`_
+   DiscoverySNPCallerPluginV2,Takes a GBSv2 database file as input and identifies SNPs from the aligned tags. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/DiscoverySNPCallerPluginV2>`_
+   SNPQualityProfilerPlugin,Scores all discovered SNPs for various coverage depth and genotypic statistics for a given set of taxa. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SNPQualityProfilerPlugin>`_
+   UpdateSNPPositionQualityPlugin,Reads a quality score file to obtain quality score data for positions stored in the snpposition table. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SNPCutPosTagVerificationPlugin>`_
+   SNPCutPosTagVerificationPlugin,Allows a user to specify a Cut or SNP position for which they would like data printed. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/SNPCutPosTagVerificationPlugin>`_
+   GetTagSequenceFromDBPlugin,Takes an existing GBSv2 SQLite database file as input and returns a tab-delimited file containing a list of Tag Sequences stored in the specified database file. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/GetTagSequenceFromDBPlugin>`_
+   ProductionSNPCallerPluginV2,Converts data from fastq and keyfile to genotypes then adds these to a genotype file in VCF or HDF5 format. `More <https://bitbucket.org/tasseladmin/tassel-5-source/wiki/Tassel5GBSv2Pipeline/ProductionSNPCallerPluginV2>`_
+
+
+GBSv2 pipeline 
+--------------
+
+
+**1. Load Tassel 5.0 module**
+
+.. code-block:: bash
+   :linenos:
+
+   $ module load Tassel/5.0
+
+
+**2. Useful commands**
+
+To check all the plugins available, type:
+
+.. code-block:: bash
+   :linenos:
+
+   $ run_pipeline.pl -Xmx200g -ListPlugins
+
+To check all the parameters for given Plugin, *Ex: GBSSeqToTagDBPlugin*, type:
+
+.. code-block:: bash
+   :linenos:
+
+   $ run_pipeline.pl -fork1 -GBSSeqToTagDBPlugin   -endPlugin -runfork1
+
+.. tip::
+   
+   Users are recommended to read more about GBS command line options in `here. Page 1-2 <https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/TasselPipelineGBS.pdf>`_
+
+
+**3. File preparation**
+
+Create necessary folders and copy your raw data (fastqs), reference file and key file to appropriate folder:
+
+.. code-block:: bash
+   :linenos:
+
+   $ mkdir fastq ref key db tagsForAlign hd5
+
+
+**4. Execute the pipeline**
+
+.. code-block:: bash
+   :linenos:
+
+   $ run_pipeline.pl -Xmx200g -fork1 -GBSSeqToTagDBPlugin -i fastq  -k key/Tomato_key.txt -e ApeKI -db db/Tomato.db  -kmerLength 85 -mnQS 20  -endPlugin -runfork1
+   $ run_pipeline.pl -fork1 -TagExportToFastqPlugin  -db db/Tomato.db -o tagsForAlign/tagsForAlign.fa.gz -c 5  -endPlugin -runfork1
+   $ cd ref
+   $ bwa index -a is S_lycopersicum_chromosomes.2.50.fa
+   $ cd ../
+   $ bwa samse ref/S_lycopersicum_chromosomes.2.50.fa tagsForAlign/tagsForAlign.sai tagsForAlign/tagsForAlign.fa.gz > tagsForAlign/tagsForAlign.sam
+   $ run_pipeline.pl -fork1 -SAMToGBSdbPlugin -i tagsForAlign/tagsForAlign.sam  -db db/Tomato.db  -aProp 0.0 -aLen 0 -endPlugin -runfork1
+   $ run_pipeline.pl -fork1 -DiscoverySNPCallerPluginV2 -db db/Tomato.db  -sC "chr00" -eC "chr12" -mnLCov 0.1 -mnMAF 0.01  -endPlugin -runfork1
+   $ run_pipeline.pl -fork1 -ProductionSNPCallerPluginV2 -db db/Tomato.db  -e ApeKI -i fastq -k key/Tomato_key2.txt  -kmerLength 85 -mnQS 20 -o hd5/HapMap_tomato.h5 -endPlugin -runfork1

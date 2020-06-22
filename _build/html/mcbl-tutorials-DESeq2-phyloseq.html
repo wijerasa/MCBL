@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DESeq2 with phyloseq &mdash; MCBL 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/cutome.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="GBS" href="mcbl-gbs.html" />
+    <link rel="prev" title="Fastq adapter removal and QC" href="mcbl-tutorials-AD-clean.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> MCBL
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About MCBL and Membership</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mcbl.html">MCIC Computational Biology Lab (MCBL)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-application.html">MCBL membership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-computers.html">MCBL servers and computing resources</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="mcbl-datadownloads.html">Downloading data from cloud services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">Filter a CASAVA-generated fastq file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">Fastq adapter removal and QC</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DESeq2 with phyloseq</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pipelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mcbl-gbs.html">GBS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="microbiome-analysis.html">A basic microbiome analysis</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MCBL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>DESeq2 with phyloseq</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/mcbl-tutorials-DESeq2-phyloseq.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-DESeq2-phyloseq"></span><div class="figure align-right">
+<img alt="_images/Logo.png" src="_images/Logo.png" />
+</div>
+<div class="section" id="deseq2-with-phyloseq">
+<h1>DESeq2 with phyloseq<a class="headerlink" href="#deseq2-with-phyloseq" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="field-list simple">
+<dt class="field-odd">Required OS</dt>
+<dd class="field-odd"><p>OS x or Linux.</p>
+</dd>
+<dt class="field-even">Software</dt>
+<dd class="field-even"><p>R, phyloseq R library</p>
+</dd>
+<dt class="field-odd">Purpose</dt>
+<dd class="field-odd"><p>This document provides instructions about how to find differentially abundant OTUs for Microbiome Data</p>
+</dd>
+<dt class="field-even">More</dt>
+<dd class="field-even"><p>Read more about <a class="reference external" href="http://joey711.github.io/phyloseq-extensions/DESeq2.html">phyloseq DEseq2:</a> and <a class="reference external" href="https://joey711.github.io/phyloseq/">here</a></p>
+</dd>
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>This document is created by <a class="reference external" href="mailto:wijeratne&#46;3&#37;&#52;&#48;osu&#46;edu">Saranga Wijeratne</a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="software-installation">
+<h2>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are runing this on MCBL <em>mcic-sel019-d</em>, please skip the installation. The following command in R-Studio will load the software module to your environment.</p>
+</div>
+<div class="highlight-r notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="nf">library</span><span class="p">(</span><span class="s">&quot;phyloseq&quot;</span><span class="p">);</span> <span class="nf">packageVersion</span><span class="p">(</span><span class="s">&quot;phyloseq&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Version:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>[1] ‘1.16.2’
+</pre></div>
+</div>
+<p>On your own server,</p>
+<div class="highlight-r notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="nf">source</span><span class="p">(</span><span class="s">&#39;http://bioconductor.org/biocLite.R&#39;</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="nf">biocLite</span><span class="p">(</span><span class="s">&#39;phyloseq&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="import-data-with-phyloseq">
+<h2>Import data with phyloseq<a class="headerlink" href="#import-data-with-phyloseq" title="Permalink to this headline">¶</a></h2>
+<p>For this step, you need Biom and mapping file generated from Qiime pipeline.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Input Biom File</dt>
+<dd class="field-odd"><p>otu_table_mc10_w_tax.biom</p>
+</dd>
+<dt class="field-even">Qiime Mapping File</dt>
+<dd class="field-even"><p>mapping.txt</p>
+</dd>
+<dt class="field-odd">Output File</dt>
+<dd class="field-odd"><p>DESeq2_Out</p>
+</dd>
+</dl>
+<p>Copy all the input files to your “Working Directory” before you execute the following commands.</p>
+<div class="highlight-r notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">biom_file</span><span class="o">&lt;-</span><span class="s">&quot;otu_table_mc10_w_tax.biom&quot;</span>
+<span class="o">&gt;</span> <span class="n">mapping_file</span><span class="o">&lt;-</span><span class="s">&quot;mapping.txt&quot;</span>
+<span class="o">&gt;</span> <span class="n">biom_otu_tax</span><span class="o">&lt;-</span><span class="nf">import_biom</span><span class="p">(</span><span class="n">biom_file</span><span class="p">)</span> <span class="c1">#Importing biomfile with phyloseq</span>
+<span class="o">&gt;</span> <span class="n">mapping_file</span><span class="o">&lt;-</span><span class="nf">import_qiime_sample_data</span><span class="p">(</span><span class="n">mapping_file</span><span class="p">)</span>  <span class="c1">#Importing mapping file with phyloseq</span>
+<span class="o">&gt;</span> <span class="n">merged_mapping_biom</span><span class="o">&lt;-</span><span class="nf">merge_phyloseq</span><span class="p">(</span><span class="n">biom_otu_tax</span><span class="p">,</span><span class="n">mapping_file</span><span class="p">)</span> <span class="c1">#Merging Biom and mapping file with phyloseq</span>
+<span class="o">&gt;</span> <span class="nf">colnames</span><span class="p">(</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;kingdom&quot;</span><span class="p">,</span> <span class="s">&quot;Phylum&quot;</span><span class="p">,</span><span class="s">&quot;Class&quot;</span><span class="p">,</span> <span class="s">&quot;Order&quot;</span><span class="p">,</span> <span class="s">&quot;Family&quot;</span><span class="p">,</span> <span class="s">&quot;Genus&quot;</span><span class="p">,</span> <span class="s">&quot;species&quot;</span><span class="p">)</span> <span class="c1">#Setting headings in the taxa table</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-r notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">merged_mapping_biom</span>
+</pre></div>
+</td></tr></table></div>
+<p>Merged mapping and Biom output:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>phyloseq-class experiment-level object
+otu_table()   OTU Table:         [ 315 taxa and 9 samples ]
+sample_data() Sample Data:       [ 9 samples by 8 sample variables ]
+tax_table()   Taxonomy Table:    [ 315 taxa by 7 taxonomic ranks ]
+</pre></div>
+</div>
+<p>Mapping file should be looked like this:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>    Sample Data:        [40 samples by 7 sample variables]:
+X.SampleID BarcodeSequence LinkerPrimerSequence InputFileName IncubationDate Treatment Description
+    S1          S1              NA                   NA      S1.fasta              0        CO         CO1
+    S2          S2              NA                   NA      S2.fasta              0        CO         CO2
+    S3          S3              NA                   NA      S3.fasta              0        CO         CO3
+    S4          S4              NA                   NA      S4.fasta             15        CO         CO4
+    S5          S5              NA                   NA      S5.fasta             15        CO         CO5
+    S6          S6              NA                   NA      S6.fasta             15        CO         CO6
+    S7          S7              NA                   NA      S7.fasta             30        CO         CO7
+    S23        S23              NA                   NA     S23.fasta             15        RE        RE22
+    S24        S24              NA                   NA     S24.fasta             15        RE        RE23
+    S25        S25              NA                   NA     S25.fasta             15        RE        RE24
+    S26        S26              NA                   NA     S26.fasta             30        RE        RE25
+    S27        S27              NA                   NA     S27.fasta             30        RE        RE26
+    S28        S28              NA                   NA     S28.fasta             30        RE        RE27
+    S29        S29              NA                   NA     S29.fasta             45        RE        RE28
+</pre></div>
+</div>
+<p>To remove taxonomy level tags assigned to each level (<a href="#id1"><span class="problematic" id="id2">k__</span></a>, <a href="#id1"><span class="problematic" id="id3">p__</span></a>, etc..) issue the following codes:</p>
+<div class="highlight-r notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nf">tax_table</span><span class="p">(</span> <span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;k__([[:alpha:]])&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span> <span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;p__([[:alpha:]])&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;c__([[:alpha:]])&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;o__([[:alpha:]])&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;f__([[:alpha:]])&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;g__([[:alpha:]])&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;s__([[:alpha:]])&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;p__(\\[)&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;c__(\\[)&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;o__(\\[)&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;f__(\\[)&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;g__(\\[)&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+<span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&quot;s__(\\[)&quot;</span><span class="p">,</span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="differential-abundance-otu-call">
+<h2>Differential abundance OTU call<a class="headerlink" href="#differential-abundance-otu-call" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Input File</dt>
+<dd class="field-odd"><p>merged_mapping_biom</p>
+</dd>
+<dt class="field-even">Output Files</dt>
+<dd class="field-even"><p>DESeq2_Out.txt</p>
+</dd>
+</dl>
+<ol class="arabic">
+<li><p>Load the DESeq2 into your R environment:</p>
+<div class="highlight-r notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;DESeq2&quot;</span><span class="p">)</span>
+<span class="nf">packageVersion</span><span class="p">(</span><span class="s">&quot;DESeq2&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>[1] ‘1.12.4’
+</pre></div>
+</div>
+</li>
+<li><p>Assign DESeq2 output name and padj-cutoff</p>
+<div class="highlight-r notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">filename_out</span><span class="o">&lt;-</span><span class="s">&quot;DESeq2_Out.txt&quot;</span>
+<span class="n">alpha</span><span class="o">&lt;-</span><span class="m">0.01</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p><em>phyloseq_to_deseq2</em> function in the following lines converts phyloseq-format microbiom data (i.e merged_mapping_biom) into a <em>DESeqDataSet</em> with dispersion estimated, using experimental design formula (i.e ~ Treatment).</p>
+<div class="highlight-r notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">diagdds</span> <span class="o">&lt;-</span> <span class="nf">phyloseq_to_deseq2</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">,</span> <span class="o">~</span> <span class="n">Treatment</span><span class="p">)</span>
+<span class="n">diagdds</span> <span class="o">&lt;-</span> <span class="nf">DESeq</span><span class="p">(</span><span class="n">diagdds</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="s">&quot;Wald&quot;</span><span class="p">,</span> <span class="n">fitType</span><span class="o">=</span><span class="s">&quot;parametric&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>## estimating size factors
+## estimating dispersions
+## gene-wise dispersion estimates
+## mean-dispersion relationship
+## final dispersion estimates
+## fitting model and testing
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are getting the following error, please execute the code block below. <a class="reference external" href="https://github.com/joey711/phyloseq/issues/387">More…</a></p>
+<pre class="literal-block"><em>Error in estimateSizeFactorsForMatrix(counts(object), locfunc, geoMeans = geoMeans) : every gene contains at least one zero, cannot compute log geometric means</em>
+<em>Calls: estimateSizeFactors ... estimateSizeFactors -&gt; .local -&gt; estimateSizeFactorsForMatrix</em></pre>
+</div>
+<div class="highlight-r notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">gm_mean</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">){</span> <span class="nf">exp</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">x[x</span> <span class="o">&gt;</span> <span class="m">0</span><span class="n">]</span><span class="p">),</span> <span class="n">na.rm</span><span class="o">=</span><span class="n">na.rm</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">))}</span>
+<span class="n">geoMeans</span> <span class="o">=</span> <span class="nf">apply</span><span class="p">(</span><span class="nf">counts</span><span class="p">(</span><span class="n">diagdds</span><span class="p">),</span> <span class="m">1</span><span class="p">,</span> <span class="n">gm_mean</span><span class="p">)</span>
+<span class="n">diagdds</span> <span class="o">=</span> <span class="nf">estimateSizeFactors</span><span class="p">(</span><span class="n">diagdds</span><span class="p">,</span> <span class="n">geoMeans</span> <span class="o">=</span> <span class="n">geoMeans</span><span class="p">)</span>
+<span class="n">diagdds</span> <span class="o">=</span> <span class="nf">DESeq</span><span class="p">(</span><span class="n">diagdds</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="s">&quot;Wald&quot;</span><span class="p">,</span> <span class="n">fitType</span><span class="o">=</span><span class="s">&quot;parametric&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">results</span></code> function creats a table of results. Then the <code class="docutils literal notranslate"><span class="pre">res</span></code> table is filtered by <code class="docutils literal notranslate"><span class="pre">padj</span> <span class="pre">&lt;</span> <span class="pre">alpha</span></code>.</p>
+<div class="highlight-r notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="nf">results</span><span class="p">(</span><span class="n">diagdds</span><span class="p">,</span> <span class="n">cooksCutoff</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="n">sigtab</span> <span class="o">=</span> <span class="n">res</span><span class="nf">[which</span><span class="p">(</span><span class="n">res</span><span class="o">$</span><span class="n">padj</span> <span class="o">&lt;</span> <span class="n">alpha</span><span class="p">),</span> <span class="n">]</span>
+<span class="n">sigtab</span> <span class="o">=</span> <span class="nf">cbind</span><span class="p">(</span><span class="nf">as</span><span class="p">(</span><span class="n">sigtab</span><span class="p">,</span> <span class="s">&quot;data.frame&quot;</span><span class="p">),</span> <span class="nf">as</span><span class="p">(</span><span class="nf">tax_table</span><span class="p">(</span><span class="n">merged_mapping_biom</span><span class="p">)</span><span class="nf">[rownames</span><span class="p">(</span><span class="n">sigtab</span><span class="p">),</span> <span class="n">]</span><span class="p">,</span> <span class="s">&quot;matrix&quot;</span><span class="p">))</span> <span class="c1">#Bind taxanomic information to final results table.</span>
+<span class="nf">write.csv</span><span class="p">(</span><span class="n">sigtab</span><span class="p">,</span> <span class="nf">as.character</span><span class="p">(</span><span class="n">filename_out</span><span class="p">))</span> <span class="c1">#Writing `sigtab` to</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mcbl-gbs.html" class="btn btn-neutral float-right" title="GBS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mcbl-tutorials-AD-clean.html" class="btn btn-neutral float-left" title="Fastq adapter removal and QC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2016-2020, Saranga Wijeratne &amp; Jelmer Poelstra.
+      <span class="lastupdated">
+        Last updated on Jun 22, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
