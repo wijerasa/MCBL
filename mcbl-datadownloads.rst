@@ -1,23 +1,16 @@
 
-.. MCBL documentation master file, created by
-   sphinx-quickstart on Wed Sep 23 17:00:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-
-.. module:: Data Downloading
-   :synopsis: Data Download
+.. module:: DataDownloading
+   :synopsis: Data Downloading
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
-
 
 .. highlight:: rest
 
 .. figure:: Logo.png
    :align: right
 
-**********************************************
-Data Downloading from Cloud Services
-**********************************************
+
+Downloading data from cloud services
+************************************
 
 .. Note::
 
@@ -28,12 +21,13 @@ Data Downloading from Cloud Services
             - Terminal (OS x)
             - Genome Terminal or Other Emulator (Linux)
 
-   :Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
+   :Author: This document was created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
+
 
 Downloading from hudsonalpha.org
-----------------
+--------------------------------
 
-#. Create a Samples.txt file with your sample links(the links are provided in the Excelsheet) as follows:
+#. Create a Samples.txt file with your sample links (the links are provided in the Excelsheet) as follows:
 
    .. parsed-literal::
 
@@ -67,7 +61,7 @@ Downloading from hudsonalpha.org
 
 
 Check *checksum*
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 To detect errors which may have been introduced during the downloading, you have to run checksum on your downloaded files.
 
 #. Navigate to the location where you have downloaded your files.

@@ -1,25 +1,18 @@
 
-.. MCBL documentation master file, created by
-   sphinx-quickstart on Wed Sep 23 17:00:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-
-.. module:: Computing Resources
+.. module:: ComputingResources
    :synopsis: Servers at MCBL
-.. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
+.. moduleauthor:: Jelmer Poelstra<poelstra.1@osu.edu>
 
 .. highlight:: rest
 
 .. figure:: Logo.png
    :align: right
 
-**********************************************
-MCBL Servers and Computing Resources
-**********************************************
+MCBL servers and computing resources
+************************************
 
-Servers Overview
-----------------
+Servers
+-------
 
 .. csv-table::
    :header: "Server", "Processors","Cores","Memory", "Local Disk"
@@ -29,8 +22,9 @@ Servers Overview
    mcic-ender-svr2,four 2.00GHz ten-core Intel® Xeon processors E7-4850,40,1.2 TB,10TB
    mcic-ent-srvr,two 2.67GHz six-core Intel® Xeon processors X7542,12, 250GB, 2.0TB
 
-Workstations Overview
-----------------------
+Workstations
+------------
+
 .. csv-table::
    :header: "Workstation", "Processors","Cores","Memory", "Local Disk"
    :widths: 12, 38, 5,5,5
@@ -38,8 +32,9 @@ Workstations Overview
    mcic-galaxy-srvr,two 3.47GHz six-core Intel® Xeon processors X5690,12, 94 GB,2.6 TB
    mcic-mac-srvr,two 2.93GHz six-core Intel® Xeon processors X5670,12, 64 GB,4.0 TB
 
-Desktops Overview
-----------------------
+Desktops
+--------
+
 .. csv-table::
    :header: "Desktop", "Processors","Cores","Memory", "Local Disk"
    :widths: 12, 38, 5,5,5
@@ -52,21 +47,20 @@ Desktops Overview
    mcic-sel019-d6,one 3.00GHz four-core Intel® Xeon processors i7-4578U,7, 32 GB,1.0 TB
    mcic-sel019-d7,one 3.00GHz four-core Intel® Xeon processors i7-4578U,7, 32 GB,1.0 TB
 
-
-Software Overview
+Software
 ----------------------
-Following bioinformatics software are availabe through MCBL.Some of the commercial software are available for MCBL users.
-Please contact `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_ for availability of the software.
+The following bioinformatics software are availabe through the MCBL.
+Please contact `Jelmer Poelstra <mailto:poelstra.1@osu.edu>`_ for details on availability of the software.
 
 Commercial Software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. csv-table::
-   :header: "Application", "Version","Description","Contact"
-   :widths: 10, 12, 40,15
+   :header: "Application", "Version","Description"
+   :widths: 10, 12, 40
 
-   CLCBio Workbench,8.5.1,A comprehensive and user-friendly analysis package for analyzing comparing and visualizing next generation sequencing data,`Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
-   Blast2GO Pro,Pro,A complete framework for functional annotation and analysis,`Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
+   CLCBio Workbench,8.5.1,A comprehensive and user-friendly analysis package for analyzing comparing and visualizing next generation sequencing data
+   Blast2GO Pro,Pro,A complete framework for functional annotation and analysis
 
 Open Source Software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,13 +86,3 @@ Open Source Software
    SNAP,0.1.19,A new sequence aligner that is 3-20x faster and just as accurate as existing tools like BWA-mem Bowtie2 and Novoalign,SNAP/<version>
    Trim-fastq,1.2.2,A Fastq quality trimmer.,Trim-fastq-<version>
    Trinity,r20140717,a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-seq data.,Trinity
-
-
-Python Modules
-~~~~~~~~~~~~~~~~~~~~~~
-
-
-   
-
-
-

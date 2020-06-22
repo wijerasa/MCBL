@@ -1,20 +1,13 @@
-.. MCBL documentation master file, created by
-   sphinx-quickstart on Wed Sep 23 17:00:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-
-.. module:: Illumina Quality Filtering and Adapter Removing
-   :synopsis: Quality Assesment
+.. module:: fastq_qc
+   :synopsis: fastq_qc
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
-
 
 .. highlight:: rest
 
 
-**********************************************
- Adapter Removing and Quality Filtering
-**********************************************
+Fastq adapter removal and QC
+****************************
 
 .. Note::
 
@@ -24,8 +17,9 @@
 	:More: Read more about `Read trimming adapter removing  here: <http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf>`_ 
 	:Author: This document is created by `Saranga Wijeratne <mailto:wijeratne.3@osu.edu>`_
 
-Load the Software 
---------
+
+Load the software 
+-----------------
 
 .. Note::
 	If you are runing this on MCBL *mcic-ender-svr* following command will load the software module to your environment.
@@ -42,8 +36,9 @@ then you can get the help how to run Trimmomatic,
 
 	$ java -jar $TRIMHOME/trimmomatic-0.33.jar
 
-File Needed
---------
+
+Files needed
+------------
 
 :Input Files: In put files should be in fastq format/compressed fastq( .fq, .fastq, .fq.gz, .fastq.gz). Read `Introduction <http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf>`_ 
 				e.g :C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq, C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq.gz, s_1_1_sequence.txt.gz lane1_forward.fq.gz 
@@ -60,10 +55,10 @@ File Needed
 	If you want to make your own adapter sequence file, please read the `The Adapter Fasta section and Making cutome clipping files here <http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf>`_ before you make your Adapter sequence file.
 
 
-Code Examples
-----------
+Code examples
+-------------
 
-*Single End Fastq Files*
+*Single-end fastq files*
 
 .. code-block:: bash
 	:linenos:
@@ -78,8 +73,7 @@ Code Examples
 	$java -jar $TRIMHOME/trimmomatic-0.33.jar PE -threads 12 C8EC8ANXX_s2_1_illumina12index_1_SL143785.fastq.gz C8EC8ANXX_s2_2_illumina12index_1_SL143785.fastq.gz C8EC8ANXX_s2_1_Trimmed_1P.fastq.gz C8EC8ANXX_s2_1_Trimmed_1U.fastq.gz C8EC8ANXX_s2_2_Trimmed_1P.fastq.gz C8EC8ANXX_s2_2_Trimmed_1U.fastq.gz ILLUMINACLIP:$TRIMHOME/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
 
-
-*Multiple Fastqs*
+*Multiple fastq files*
 
 .. tip::
 	Assumption has been made that your data in "Raw_Data" folder
@@ -100,11 +94,11 @@ Code Examples
 				C6EF7ANXX_s3_2_illumina12index_5_SL100995.fastq.gz
 
 
-These are Paired End Fasq files. **e.g** *C6EF7ANXX_s3_1_illumina12index_10_SL100996.fastq.gz and C6EF7ANXX_s3_2_illumina12index_10_SL100996.fastq.gz* belongs to single sample.
+These are paired-end fastq files. **e.g** *C6EF7ANXX_s3_1_illumina12index_10_SL100996.fastq.gz and C6EF7ANXX_s3_2_illumina12index_10_SL100996.fastq.gz* belongs to single sample.
 
-:Adapter File:	$TRIMHOME/adapters/TruSeq3-PE.fa (Make sure you change this accrodingly)
+:Adapter File: $TRIMHOME/adapters/TruSeq3-PE.fa (Make sure you change this accordingly)
 
-:Output Files: Each Paired End read (**e.g** *C6EF7ANXX_s3_1_illumina12index_10_SL100996.fastq.gz and C6EF7ANXX_s3_2_illumina12index_10_SL100996.fastq.gz*) will give 4 outputs
+:Output Files: Each paired-end read (**e.g** *C6EF7ANXX_s3_1_illumina12index_10_SL100996.fastq.gz and C6EF7ANXX_s3_2_illumina12index_10_SL100996.fastq.gz*) will give 4 outputs:
 
 				* Q_trimmed_6EF7ANXX_s3_1_illumina12index_10_SL100996_1P.fastq.gz - for paired forwad reads
 				* Q_trimmed_6EF7ANXX_s3_1_illumina12index_10_SL100996_1U.fastq.gz - for unpaired forward reads
@@ -112,21 +106,9 @@ These are Paired End Fasq files. **e.g** *C6EF7ANXX_s3_1_illumina12index_10_SL10
 				* Q_trimmed_6EF7ANXX_s3_2_illumina12index_10_SL100996_1U.fastq.gz - for unpaired reverse reads
 
 
-
-
-
 .. code-block:: bash
 	:linenos:
 
 	$cd Raw_Data #make sure you change the folder name accordingly 
-	$mkdir Trimmed_Data # Output will be staved here
+	$mkdir Trimmed_Data # Output will be saved here
 	$files_1=(*_s3_1_*.fastq.gz);files_2=(*_s3_2_*.fastq.gz);sorted_files_1=($(printf "%s\n" "${files_1[@]}" | sort -u));sorted_files_2=($(printf "%s\n" "${files_2[@]}" | sort -u));for ((i=0; i<${#sorted_files_1[@]}; i+=1));do java -jar $TRIMHOME/trimmomatic-0.33.jar PE -threads 12  -trimlog Trimmed_Data/log-j3.stat -phred33   ${sorted_files_1[i]} ${sorted_files_2[i]} Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}_1P.fastq.gz Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}-U.fastq.gz Trimmed_Data/Q_trimmed_${sorted_files_2[i]%%.*}_1P.fastq.gz Trimmed_Data/Q_trimmed_${sorted_files_1[i]%%.*}-U.fastq.gz ILLUMINACLIP:$TRIMHOME/adapters/TruSeq3-PE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:40  &>Trimmed_Data/stat.txt; done
-
-
-
-
-
-
-
-
-
