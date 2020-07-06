@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Downloading data from cloud services &mdash; MCBL 1.0 documentation</title>
+  <title>Downloading from hudsonalpha.org &mdash; MCBL 1.0 documentation</title>
   
 
   
@@ -88,7 +88,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Downloading data from cloud services</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Downloading from hudsonalpha.org</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-PF-clean.html">Filter a CASAVA-generated fastq file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-AD-clean.html">Fastq adapter removal and QC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mcbl-tutorials-DESeq2-phyloseq.html">DESeq2 with phyloseq</a></li>
@@ -144,7 +144,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Downloading data from cloud services</li>
+      <li>Downloading from hudsonalpha.org</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -164,10 +164,10 @@
            <div itemprop="articleBody">
             
   <span class="target" id="module-DataDownloading"></span><div class="figure align-right">
-<img alt="_images/Logo.png" src="_images/Logo.png" />
+<img alt="_images/Logo1.png" src="_images/Logo1.png" />
 </div>
-<div class="section" id="downloading-data-from-cloud-services">
-<h1>Downloading data from cloud services<a class="headerlink" href="#downloading-data-from-cloud-services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="downloading-from-hudsonalpha-org">
+<h1>Downloading from hudsonalpha.org<a class="headerlink" href="#downloading-from-hudsonalpha-org" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <dl class="field-list">
@@ -189,8 +189,8 @@
 </dd>
 </dl>
 </div>
-<div class="section" id="downloading-from-hudsonalpha-org">
-<h2>Downloading from hudsonalpha.org<a class="headerlink" href="#downloading-from-hudsonalpha-org" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="download">
+<h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>Create a Samples.txt file with your sample links (the links are provided in the Excelsheet) as follows:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>#Content of the Samples.txt
@@ -219,8 +219,9 @@ $ <span class="nb">cd</span> ~/Downloads
 </td></tr></table></div>
 </li>
 </ol>
+</div>
 <div class="section" id="check-checksum">
-<h3>Check <em>checksum</em><a class="headerlink" href="#check-checksum" title="Permalink to this headline">¶</a></h3>
+<h2>Check <em>checksum</em><a class="headerlink" href="#check-checksum" title="Permalink to this headline">¶</a></h2>
 <p>To detect errors which may have been introduced during the downloading, you have to run checksum on your downloaded files.</p>
 <ol class="arabic">
 <li><p>Navigate to the location where you have downloaded your files.</p>
@@ -255,7 +256,6 @@ d47d8cd98dfds0b204e9800998ecf8427e  C6V7FANXX_s8_0_TruseqHTDual_D712-TruseqHTDua
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Match these checksum values with the values provided in the Excelsheet. For any samples with mismatching checksum, you have to re-download the samples.</p>
-</div>
 </div>
 </div>
 </div>
