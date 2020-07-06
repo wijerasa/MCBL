@@ -3,7 +3,6 @@
    :synopsis: GBS analysis
 .. moduleauthor:: Saranga Wijeratne<wijeratne.3@osu.edu>
 
-
 .. highlight:: rest
 
 

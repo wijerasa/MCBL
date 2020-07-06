@@ -5,7 +5,7 @@
 
 .. highlight:: rest
 
-.. figure:: Logo.png
+.. figure:: _static/Logo.png
    :align: right
 
 MCBL servers and computing resources
