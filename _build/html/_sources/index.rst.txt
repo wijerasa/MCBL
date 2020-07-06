@@ -24,6 +24,7 @@ MCIC Computational Biology Lab
    :caption: Tutorials
 
    mcbl-datadownloads-basespace
+   mcbl-share-basespace
    mcbl-basemount
    mcbl-datadownloads-hudsonalpha
    mcbl-tutorials-PF-clean
