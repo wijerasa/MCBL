@@ -9,7 +9,7 @@
    :align: right
 
 
-Downloading from hudsonalpha.org
+Download from hudsonalpha.org
 ********************************
 
 .. Note::

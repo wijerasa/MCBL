@@ -23,12 +23,12 @@ MCIC Computational Biology Lab
    :maxdepth: 1
    :caption: Tutorials
 
-   mcbl-datadownloads-hudsonalpha
    mcbl-datadownloads-basespace
+   mcbl-basemount
+   mcbl-datadownloads-hudsonalpha
    mcbl-tutorials-PF-clean
    mcbl-tutorials-AD-clean
    mcbl-tutorials-DESeq2-phyloseq
-   mcbl-basemount
    
 .. toctree::
    :maxdepth: 1
