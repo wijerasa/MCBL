@@ -4,114 +4,136 @@
 
 .. highlight:: rest
 
+|
+
 .. figure:: _static/Logo.png
    :align: right
 
-Share runs and projects in BaseSpace
-************************************
+Download from BaseSpace
+***********************
+
+
+|
 
 .. Note::
 
-	:OS: Any operating system.
-	:Software: A web browser.
-	:Purpose: These two short tutorials will show you how to share sequencing runs and projects, respectively, on Illumina BaseSpace.
+	:Purpose: This short tutorial will show you how to download MiSeq sequencing data from Illumina BaseSpace.
 	:Author: `Wirat Pipatpongpinyo <mailto:pipatpongpinyo.1@osu.edu>`_
-	:Date: July 6, 2020
+	:Date: July 6, 2020 
 
-Sharing individual sequencing runs
-----------------------------------
 
-.. figure:: _static/basespace-share_1.png
+|
+
+Step-by-step guide to download your sequence data from BaseSpace
+----------------------------------------------------------------
+
+|
+
+.. figure:: _static/basespace_1.png
    :align: right
    :width: 300px
 
-1. Got to the `Illumina BaseSpace website <`http://basespace.illumina.com>`_ and sign in.
+**1.** You will receive two invitation emails from ``basespace-noreply@illumina.com``
+for the transfer of ownership to you, one for the **sequencing run** and another for the **project**.
+To be able to fully access the data, you must accept both invitations.
 
-.. figure:: _static/basespace-share_2.png
+.. figure:: _static/basespace_2.png
    :align: right
    :width: 300px
 
 |
 |
+|
 
-2. Click on the ``RUNS`` tab.
+**2.** Once you click the link (``Click here to accept this transfer of ownership``) in one of the invitation emails,
+you will be taken to the Illumina BaseSpace website, where you can log in to your account.
 
-.. figure:: _static/basespace-share_3.png
+|
+|
+
+.. figure:: _static/basespace_3.png
    :align: right
-   :width: 500px
+   :width: 450px
+
 
 |
 |
 
-3. Select the name of the run you want to share.
+**3.** After you have logged in, BaseSpace will bring you to the ``DASHBOARD`` tab.
+Click ``Accept`` in both boxes to take the ownership of both the run and project.
 
-.. figure:: _static/basespace-share_4.png
+|
+
+.. figure:: _static/basespace_4.png
    :align: right
    :width: 200px
 
 |
-|
 
-4. Go to the ``SUMMARY`` tab.
-
-5. Click the ``SHARE`` button.
+| **4.** Once transfer is accepted,
+| click on the name of the run.
 
 |
 |
 
-.. figure:: _static/basespace-share_5.png
+.. figure:: _static/basespace_5.png
+   :align: right
+   :width: 300px
+
+|
+|
+|
+
+**5.** Under the ``SUMMARY`` tab, click ``Download``.
+
+|
+|
+|
+|
+
+.. figure:: _static/basespace_6.png
    :align: right
    :width: 300px
 
 |
 |
 
-6. Add the email address (linked to a BaseSpace account) of the person you want to share the run with.
-
-7. Click ``Add Collaborator``. (Repeat Steps 6 and 7 if you want to share with more people.)
-
-| 8. Click ``Save Settings``.
-| Your collaborator will receive an email from `basespace-noreply@illumina.com`.
-
-Sharing projects
-----------------
-
-.. figure:: _static/basespace-share_1.png
-   :align: right
-   :width: 250px
+| **6.** The ``Download Run`` screen will pop up. 
+| If this is the first time you download from BaseSpace, you will need to install the downloader software: click ``Install the BaseSpace Sequence Hub Downloader``.
 
 |
 |
-
-1. Got to the `Illumina BaseSpace website <`http://basespace.illumina.com>`_ and sign in.
-
-2. Click on the ``PROJECTS`` tab.
-
-3. Select the Project that you would like to share.
-
-|
 |
 
-.. figure:: _static/basespace-share_6.png
-   :align: right
-   :width: 250px
-
-|
-|
-
-4. Click the ``Share Project`` button.
-
-|
-|
-
-.. figure:: _static/basespace-share_5.png
+.. figure:: _static/basespace_7.png
    :align: right
    :width: 300px
 
+|
+|
+|
+|
 
-5. Add the email address (linked to a BaseSpace account) of the person you want to share the run with.
+| **7.** After the BaseSpace downloader has been
+| installed, select ``FASTQ`` as the file type,
+| and click ``Download``.
 
-6. Click ``Add Collaborator``. (Repeat Steps 6 and 7 if you want to share with more people.)
+|
+|
+|
+|
+|
+|
 
-| 7. Click ``Save Settings``.
-| Your collaborator will receive an email from `basespace-noreply@illumina.com`.
+.. figure:: _static/basespace_8.png
+   :align: right
+   :width: 300px
+
+|
+| **8.** The ``Confirm Download`` screen will pop up, where
+| you can select a directory to download the files
+| into. In this case, the files will be stored at
+| ``C:\BaseSpace``. Click ``START DOWNLOAD``.
+
+|
+|
