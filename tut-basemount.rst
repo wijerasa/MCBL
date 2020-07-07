@@ -4,71 +4,62 @@
 
 .. highlight:: rest
 
+|
+
 .. figure:: _static/Logo.png
    :align: right
 
-Illumina's BaseMount
-********************
+Using BaseMount
+***************
 
-1. Introduction
-###############
+.. contents:: :local:
 
-1.1. File Access (Traditional Way)
-----------------------------------
+|
 
-.. figure:: _static/basespace_web_1.png
-   :align: left
+Introduction to BaseMount
+#########################
 
-1.2. File Access (with BaseMount)
----------------------------------
+**What is BaseMount?**
 
-.. figure:: _static/basemount_intro.jpg
-   :align: left
+BaseMount is Illumina software that enables access to your **BaseSpace storage** as a **Linux file system** on the command line
 
-1.4. What is BaseMount?
------------------------
-
-**BaseMount** is a mechanisum that enables access to your **basespace storage** as a **Linux file system**.
-
-1.5. Advantages of BaseMount?
----------------------------------
+**Advantages of BaseMount:**
 
 - Have access to your Projects, Runs, and App results as your local files.
 - Can run **local apps** on basespace data **without downloading data to your local computer.**
-- Can save your local storage space.:
+- Can save your local storage space:
 
-   "Although BaseMount does facilitate file download, we would recommend that since BaseMount allows convenient, fast, cached access to your BaseSpace metadata and files, you may find that many operations can be carried out without the need to download locally. Duringour testing, we have used BaseMount to grep through fastq files, extract blocks of reads from bam files and even use IGV on the bam files directly all without downloading files locally. This can be more convenient than including a download step and saves on the overheads of local storage." -Illumina
+   *"Although BaseMount does facilitate file download, we would recommend that since BaseMount allows convenient, fast, cached access
+   to your BaseSpace metadata and files, you may find that many operations can be carried out without the need to download locally.
+   During our testing, we have used BaseMount to grep through fastq files, extract blocks of reads from bam files
+   and even use IGV on the bam files directly all without downloading files locally.
+   This can be more convenient than including a download step and saves on the overheads of local storage."* -Illumina
 
-1.6. Official page
-------------------
+**Official page**
+
 .. raw:: html
 
     <div style="margin-top:10px;">
-      <iframe width="900" height="600" src="https://basemount.basespace.illumina.com" frameborder="0" allowfullscreen></iframe>
+      <iframe width="700" height="500" src="https://basemount.basespace.illumina.com" frameborder="0" allowfullscreen></iframe>
     </div>
 
 
-2. BaseMount Installation
-#########################
 
-2.1. Quick Install
-------------------
+Getting Started with BaseMount
+##############################
+
+**Quick Install**
 
 .. code-block:: bash
    :linenos:
    
    sudo bash -c "$(curl -L https://basemount.basespace.illumina.com/install/)"
 
-2.2. Manual install
--------------------
+**Manual install**
 
+**Supported Operating Systems:** Ubuntu, CentOS
 
-**Supported Operating Systems:** Ubuntu, Centos
-
------
-
-Ubuntu 14 & 15
-
+Ubuntu 14 & 15:
 
 .. code-block:: bash
    :linenos:
@@ -79,8 +70,7 @@ Ubuntu 14 & 15
    sudo dpkg -i basemount_0.1.2.463-20150714_amd64.deb
 
 
-2.3. Mounting Your BaseSpace Account
-------------------------------------
+**Mounting Your BaseSpace Account**
 
 .. code-block:: bash
    :linenos:
@@ -88,9 +78,9 @@ Ubuntu 14 & 15
    basemount --config {config_file_prefix} {mount-point folder}
    basemount --config user1 ~/BaseSpace_Mount
 
-**Example:**
 
-------
+Example
+-------
 
 .. code-block:: bash
    :linenos:
@@ -104,12 +94,10 @@ Ubuntu 14 & 15
    :align: left
 
 
-Then open your internet browser,
+Then open your internet browser:
 
 .. figure:: _static/basemount_sec.png
    :align: left
-
-
 
 After you click "Accept",
 
@@ -120,7 +108,7 @@ After you click "Accept",
    :align: left
 
 
-To access the folder, type,
+To access the folder, type:
 
 .. code-block:: bash
    :linenos:
@@ -132,7 +120,7 @@ To access the folder, type,
 
    Projects  Runs
 
-To see the contents in the Projects,
+To see the contents in the Projects:
 
 .. code-block:: bash
    :linenos:
@@ -150,22 +138,19 @@ To see the contents in the Projects,
    62M -r--r--r-- 1 root root 62M Oct  5 14:09 Brain11_S23_L001_R1_001.fastq.gz
 
 
+Basic analysis of fastq files
+#############################
 
-
-3. Basic analysis on fastq files
-################################
-
-You can get basic information about your Fastq files without having to download them.
-Such as:
+You can get basic information about your ``fastq`` files without having to download them.
+For instance:
 
 - View sequences inside Fastq files
-- Number of reads for each Fastq file
-- Basic statistics and read length distribution 
-
-
-**Example: View your data**
+- Get the number of reads for each ``fastq`` file
+- Get basic statistics and read length distribution 
 
 --------------
+
+**Example: View your data**
 
 .. code-block:: bash
    :linenos:
@@ -179,10 +164,10 @@ Such as:
    +
    #88ABFFGCFEEG<FF<FDFFEGGFGGFCFGFFGGEGGGGGGFGGFGGGGG
 
-
-**Example: Count the  number of sequneces using native Linux commands**
-
 --------------
+
+
+**Example: Count the  number of sequences using native Linux commands**
 
 .. code-block:: bash
    :linenos:
@@ -196,11 +181,9 @@ Such as:
 :FILE SIZE: 85M
 :TIME TAKEN: 1.327s
 
-
+--------------
 
 **Example: Count the  number of sequneces using using** `fastqutils <http://ngsutils.org/modules/fastqutils/>`_ .
-
---------------
 
 .. code-block:: bash
    :linenos:
@@ -214,10 +197,10 @@ Such as:
 :FILE SIZE: 85M
 :TIME TAKEN: 23.00s
 
+--------------
+
 
 **Example: Get the Length distribution and other statistics**
-
---------------
 
 .. code-block:: bash
    :linenos:
@@ -301,12 +284,11 @@ Such as:
 :FILE SIZE: 85M
 :TIME TAKEN: 1.10m
 
-4. Basic analysis on Alignment files (BAM)
-##########################################
+
+Basic analysis on Alignment files (BAM)
+#######################################
 
 **Example: Check bam headers**
-
---------------
 
 .. code-block:: bash
    :linenos:
@@ -347,10 +329,9 @@ Such as:
 :FILE SIZE: 17M
 :TIME TAKEN: 0.006s
 
-**Example: Check basic statistics on a Bam file**
-
 --------------
 
+**Example: Check basic statistics on a Bam file**
 
 .. code-block:: bash
    :linenos:
@@ -399,7 +380,7 @@ Such as:
    :maxdepth: 3
 
 
-5. Metadata
+Metadata
 ###########
 
 In each directory, BaseMount provides a number of hidden files with extra BaseSpace metadata.
@@ -420,9 +401,10 @@ These are hidden files and their names start with a ".".
    -r--r--r-- 1 swijeratne swijeratne      40674 Nov 16 11:29 .json
 
 
-**Display content of the .json file**
-
 --------
+
+
+**Display content of the .json file**
 
 .. code-block:: bash
    :linenos:
@@ -441,8 +423,8 @@ These are hidden files and their names start with a ".".
 
 
 
-6. Limitations of BaseMount
-###########################
+Limitations of BaseMount
+########################
 
 According to `Illumina <https://help.basespace.illumina.com/articles/descriptive/introduction-to-basemount/>`_,
 

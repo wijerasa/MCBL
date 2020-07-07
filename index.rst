@@ -28,7 +28,7 @@ MCIC Computational Biology Lab
    tut-basemount
    tut-hudsonalpha-download
    tut-casava
-   tut-adapters
+   tut-adapter
    tut-phyloseq
    
 .. toctree::

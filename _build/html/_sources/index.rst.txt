@@ -16,27 +16,27 @@ MCIC Computational Biology Lab
    :caption: About The MCBL
 
    mcbl
-   mcbl-application
+   mcbl-membership
    mcbl-computers
 
 .. toctree::
    :maxdepth: 1
    :caption: Tutorials
 
-   mcbl-datadownloads-basespace
-   mcbl-share-basespace
-   mcbl-basemount
-   mcbl-datadownloads-hudsonalpha
-   mcbl-tutorials-PF-clean
-   mcbl-tutorials-AD-clean
-   mcbl-tutorials-DESeq2-phyloseq
+   tut-basespace-download
+   tut-basespace-share
+   tut-basemount
+   tut-hudsonalpha-download
+   tut-casava
+   tut-adapter
+   tut-phyloseq
    
 .. toctree::
    :maxdepth: 1
    :caption: Pipelines
 
-   mcbl-gbs
-   microbiome-analysis
+   pip-gbs
+   pip-microbiome
 
 Indices and tables
 ==================

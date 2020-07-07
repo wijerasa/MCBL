@@ -20,6 +20,9 @@ Share runs and projects in BaseSpace
 	:Author: `Wirat Pipatpongpinyo <mailto:pipatpongpinyo.1@osu.edu>`_
 	:Date: July 6, 2020
 
+
+.. contents:: :local:
+
 |
 
 Sharing runs
