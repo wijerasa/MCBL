@@ -17,7 +17,7 @@ MCBL membership benefits
 
 - Access to the MCBL and MCBL computers 24/7.
 - Free access to all MCBL activities: workshops, user group meeting, etc.
-- Access to 1 TB data storage space for the duraton of the membership.
+- Access to 1 TB data storage space for the duration of the membership.
 - Assistance with experimental design, bioinformatic analyses, and interpretation of your data.
 
 
